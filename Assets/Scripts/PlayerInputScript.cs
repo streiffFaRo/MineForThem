@@ -14,6 +14,8 @@ public class PlayerInputScript : MonoBehaviour
     private Interaction interactionScript;
     private SpriteRenderer spriteRenderer;
     private float currentMoveSpeed;
+    private bool gameIsPaused;
+    private bool canMove = true;
 
     [Header("Movement")]
     [SerializeField] private float accelerationSpeed;
@@ -23,6 +25,9 @@ public class PlayerInputScript : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+
+    [Header("Gameobjects")] [SerializeField]
+    private Canvas PauseMenuCanvas;
 
 
     private void Awake()
@@ -52,6 +57,7 @@ public class PlayerInputScript : MonoBehaviour
         input.Player.Move.canceled += OnMoveInput;
         input.Player.Jump.performed += OnJumpInput;
         input.Player.Interact.performed += OnInterationInput;
+        input.Player.Back.performed += OnBackInput;
     }
 
     private void OnDisable()
@@ -61,11 +67,12 @@ public class PlayerInputScript : MonoBehaviour
         input.Player.Move.canceled -= OnMoveInput;
         input.Player.Jump.performed -= OnJumpInput;
         input.Player.Interact.performed -= OnInterationInput;
+        input.Player.Back.performed -= OnBackInput;
     }
     
     private void OnMoveInput(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && canMove)
         {
             moveInput = context.ReadValue<Vector2>().normalized;
             Flip();
@@ -78,9 +85,12 @@ public class PlayerInputScript : MonoBehaviour
     
     private void OnJumpInput(InputAction.CallbackContext context)
     {
-        
-        Jump();
-        
+
+        if (context.performed && canMove)
+        {
+            Jump();
+        }
+
     }
 
     private void Jump()
@@ -140,4 +150,31 @@ public class PlayerInputScript : MonoBehaviour
         }
     }
     
+    private void OnBackInput(InputAction.CallbackContext context)
+    {
+
+        if (context.performed)
+        {
+            PauseMenu();
+            //TODO Firstselected
+        } 
+    }
+
+    public void PauseMenu()
+    {
+        if (!gameIsPaused)
+        {
+            PauseMenuCanvas.gameObject.SetActive(true);
+            gameIsPaused = true;
+            //TODO PauseSound
+        }
+        else
+        {
+            PauseMenuCanvas.gameObject.SetActive(false);
+            gameIsPaused = false;
+            //TODO UnpauseGameSound
+        }
+        
+    }
+
 }
