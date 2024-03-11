@@ -30,29 +30,92 @@ public class HomeModeController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI specialOccasionText;
     [SerializeField] private TextMeshProUGUI totalAmount;
 
-    private bool hasSpecialExpenses;
+    [Header("Checkboxen")]
+    [SerializeField] Toggle heatToggle;
+    [SerializeField] Toggle foodToggle;
+    [SerializeField] Toggle specialToggle;
+
+    [Header("Anderes")]
+    [SerializeField] private GameObject specialGameObject;
+    public bool hasSpecialExpenses;
 
 
     private void Start()
     {
         CalculateCompanyCut();
-        //
-        //
-        //
-        //TODO SpecialExpensesCheck
+        CalculateRent();
+        CalculateHeat();
+        CalculateFood();
+
+        if (hasSpecialExpenses)
+        {
+            specialGameObject.SetActive(true);
+            CalculateSpecial();
+        }
+
         SetAmounts();
     }
+    
+        
+    
 
     public void CalculateCompanyCut()
     {
         float cutMoneyFromEarnings;
         cutMoneyFromEarnings = goldEarned / 100f * companyCut;
         money = money + goldEarned - cutMoneyFromEarnings;
-        total = money;
+        
+    }
+
+    public void CalculateRent()
+    {
+        money = money - rent;
+    }
+
+    public void CalculateHeat()
+    {
+        if (heatToggle.isOn)
+        {
+            money = money - heat;
+        }
+        else
+        {
+            money = money + heat;
+        }
+
+        SetAmounts();
+    }
+
+    public void CalculateFood()
+    {
+        if (foodToggle.isOn)
+        {
+            money = money - food;
+        }
+        else
+        {
+            money = money + food;
+        }
+        SetAmounts();
+    }
+
+    public void CalculateSpecial()
+    {
+        if (specialToggle.isOn)
+        {
+            money = money - special;
+        }
+        else
+        {
+            money = money + special;
+        }
+        SetAmounts();
     }
 
     public void SetAmounts()
     {
+        total = money;
+        
         savingAmount.SetText("$"+savings);
         earnedAmount.SetText("$"+goldEarned);
         cutAmount.SetText(companyCut+"%");
