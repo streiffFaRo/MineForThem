@@ -55,16 +55,12 @@ public class HomeModeController : MonoBehaviour
 
         SetAmounts();
     }
-    
-        
-    
 
     public void CalculateCompanyCut()
     {
         float cutMoneyFromEarnings;
         cutMoneyFromEarnings = goldEarned / 100f * companyCut;
         money = money + goldEarned - cutMoneyFromEarnings;
-        
     }
 
     public void CalculateRent()

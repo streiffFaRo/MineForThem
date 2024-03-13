@@ -19,6 +19,11 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Credits");
         //TODO Cameraswipe left
     }
+    
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 
     public void Quit()
     {

@@ -9,11 +9,7 @@ public class Interaction : MonoBehaviour
     
     public float radius = 5f;
     public bool showGizmos = true;
-
-    private void Awake()
-    {
-        
-    }
+    
 
     private void OnDrawGizmos()
     {
@@ -38,13 +34,21 @@ public class Interaction : MonoBehaviour
             {
                 npcdialog.Speech();
             }
-        }
-
-        /*
+            
+            if (collider.CompareTag("Interaction") && 
+                Vector2.Distance(transform.position, collider.transform.position) <= collider.GetComponent<BoxCollider2D>().size.x/2)
+            {
+                FindObjectOfType<GridGenerator>().LoadGrid();
+            }
+            
+            /*
          *  ->Minecarttrack
          *  ->Enter/leave Area
          *  ->
          */
+        }
+
+        
     }
     
     
