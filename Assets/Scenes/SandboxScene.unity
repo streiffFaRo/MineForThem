@@ -767,7 +767,7 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -1121,8 +1121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentGridNumber: 0
-  gridSizeX: 10
-  gridSizeY: 10
+  gridSizeX: 14
+  gridSizeY: 14
   tilemap: {fileID: 884761514}
   noCollisionTileMap: {fileID: 1492049542}
   barrierTile: {fileID: 11400000, guid: 0655a8ae2fede654c8bbf2a45b09d83b, type: 2}
@@ -1368,6 +1368,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1307560654357108211, guid: f926909af797f424ea9b7e8b9a4cd7de, type: 3}
+      propertyPath: gridGenerator
+      value: 
+      objectReference: {fileID: 1689238146}
+    - target: {fileID: 1307560654357108211, guid: f926909af797f424ea9b7e8b9a4cd7de, type: 3}
       propertyPath: PauseMenuCanvas
       value: 
       objectReference: {fileID: 849671579}
@@ -1391,6 +1395,18 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1390790650942822999, guid: f926909af797f424ea9b7e8b9a4cd7de, type: 3}
+      propertyPath: radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978030645461387513, guid: f926909af797f424ea9b7e8b9a4cd7de, type: 3}
+      propertyPath: maxDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978030645461387513, guid: f926909af797f424ea9b7e8b9a4cd7de, type: 3}
+      propertyPath: gridGenerator
+      value: 
+      objectReference: {fileID: 1689238146}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f926909af797f424ea9b7e8b9a4cd7de, type: 3}
 --- !u!1001 &5356918053965360035

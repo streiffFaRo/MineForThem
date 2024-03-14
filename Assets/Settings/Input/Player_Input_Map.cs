@@ -240,7 +240,7 @@ public partial class @Player_Input_Map : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""e2765e78-cf85-450c-b37d-5fab01220979"",
-                    ""path"": """",
+                    ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -251,7 +251,7 @@ public partial class @Player_Input_Map : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""ea58c9f5-e9fa-49d6-bd74-3f299f121661"",
-                    ""path"": """",
+                    ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

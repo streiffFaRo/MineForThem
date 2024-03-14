@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Tilemaps;
 using UnityEngine.XR;
 
 public class PlayerInputScript : MonoBehaviour
@@ -26,8 +27,10 @@ public class PlayerInputScript : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
-    [Header("Gameobjects")] [SerializeField]
-    private Canvas PauseMenuCanvas;
+    [Header("Gameobjects")] 
+    [SerializeField] private Canvas PauseMenuCanvas;
+
+    private MiningSystem miningSystem;
 
 
     private void Awake()
@@ -37,6 +40,7 @@ public class PlayerInputScript : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         interactionScript = GetComponent<Interaction>();
+        miningSystem = GetComponent<MiningSystem>();
     }
 
     private void Update()
@@ -58,6 +62,8 @@ public class PlayerInputScript : MonoBehaviour
         input.Player.Jump.performed += OnJumpInput;
         input.Player.Interact.performed += OnInterationInput;
         input.Player.Back.performed += OnBackInput;
+        input.Player.Destroy.performed += OnDestroyInput;
+        input.Player.Place.performed += OnPlaceInput;
     }
 
     private void OnDisable()
@@ -68,8 +74,10 @@ public class PlayerInputScript : MonoBehaviour
         input.Player.Jump.performed -= OnJumpInput;
         input.Player.Interact.performed -= OnInterationInput;
         input.Player.Back.performed -= OnBackInput;
+        input.Player.Destroy.performed -= OnDestroyInput;
+        input.Player.Place.performed -= OnPlaceInput;
     }
-    
+
     private void OnMoveInput(InputAction.CallbackContext context)
     {
         if (context.performed && canMove)
@@ -175,6 +183,24 @@ public class PlayerInputScript : MonoBehaviour
             //TODO UnpauseGameSound
         }
         
+    }
+    
+    private void OnDestroyInput(InputAction.CallbackContext obj)
+    {
+        //TODO groundcheck
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3Int mousePos2D = new Vector3Int(Mathf.FloorToInt(mouseWorldPos.x), Mathf.FloorToInt(mouseWorldPos.y), 0);
+
+        miningSystem.DestroyBlock(mousePos2D);
+    }
+    
+    private void OnPlaceInput(InputAction.CallbackContext obj)
+    {
+        //TODO groundcheck
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3Int mousePos2D = new Vector3Int(Mathf.FloorToInt(mouseWorldPos.x), Mathf.FloorToInt(mouseWorldPos.y), 0);
+        
+        miningSystem.PlaceBlock(mousePos2D);
     }
 
 }
