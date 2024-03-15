@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 
@@ -30,6 +31,9 @@ public class GridGenerator : MonoBehaviour
     public Vector2Int startToEndDistance = new Vector2Int(14,16);
     public GameObject exitDoor;
 
+    [Header("UI")]
+    public UIController uIController;
+    
     private int goldProbability;
     private Vector2 currentStartPosition;
     
@@ -37,6 +41,9 @@ public class GridGenerator : MonoBehaviour
     private void Start()
     {
         LoadGrid();
+        GameManager.instance.ClearGoldMined();
+        GameManager.instance.UpdateCurrentDay();
+        uIController.UpdateGoldMined();
     }
 
     public void LoadGrid()
@@ -44,7 +51,7 @@ public class GridGenerator : MonoBehaviour
         currentGridNumber++;
         if (currentGridNumber > 3)
         {
-            Debug.Log("feddig");
+            SceneManager.LoadScene("Home-Mode");
             return;
         }
         tilemap.ClearAllTiles();
@@ -55,6 +62,8 @@ public class GridGenerator : MonoBehaviour
         SetRandomTiles();
         FindObjectOfType<PlayerInputScript>().transform.position = currentStartPosition;
         ChanceGoldProbability();
+        GameManager.instance.ClearBlocksInInv();
+        uIController.UpdateBlocksInInv();
         
     }
 

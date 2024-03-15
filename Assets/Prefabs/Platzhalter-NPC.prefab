@@ -323,7 +323,7 @@ MonoBehaviour:
   text: {fileID: 7390911622437947038}
   speechLines:
   - Guten Tag
-  - "Ausl\xE4nder Raus"
+  - Ich hab mir in die Hose gekackt
 --- !u!61 &6091284482486947663
 BoxCollider2D:
   m_ObjectHideFlags: 0

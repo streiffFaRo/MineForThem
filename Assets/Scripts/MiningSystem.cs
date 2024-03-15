@@ -1,15 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using Random = UnityEngine.Random;
 
 public class MiningSystem : MonoBehaviour
 {
 
-    [SerializeField] private GridGenerator gridGenerator;
+    public UIController uIController;
+    public GridGenerator gridGenerator;
     public float maxDistance = 2;
-    public int blocksInInv = 0;
+    public GameObject goldNugget;
     
     public void DestroyBlock(Vector3Int mousePos2D)
     {
@@ -19,11 +22,20 @@ public class MiningSystem : MonoBehaviour
         {
             if (foundTile == gridGenerator.blocks[3].tile)
             {
-                //TODO Gold Int++ (GameManager)
+                int rdmNuggetCount = Random.Range(1, 5);
+
+                for (int i = 0; i < rdmNuggetCount; i++)
+                {
+                    Instantiate(goldNugget, mousePos2D, Quaternion.identity);
+                    i++;
+                    //TODO Nuggets buggen in die Tilemap
+                }
+                
             }
             else
             {
-                blocksInInv++;
+                GameManager.instance.UpdateBlocksInInv(true);
+                uIController.UpdateBlocksInInv();
             }
 
 
@@ -35,12 +47,15 @@ public class MiningSystem : MonoBehaviour
     {
         TileBase foundTile = gridGenerator.tilemap.GetTile(mousePos2D);
 
-        if (foundTile == null && IsInRange(mousePos2D) && blocksInInv > 0)
+        if (foundTile == null && IsInRange(mousePos2D) && GameManager.instance.blocksInInv > 0)
         {
             gridGenerator.tilemap.SetTile(mousePos2D, gridGenerator.blocks[0].tile);
-            blocksInInv--;
+            GameManager.instance.UpdateBlocksInInv(false);
+            uIController.UpdateBlocksInInv();
             
+            //TODO Check: Block nicht auf Start oder Ende setzen
             //TODO Check: Block nicht auf Spieler setzen
+            //TODO Was wenn Block auf Gold gesetzt?
             //if (mousePos2D.x != Mathf.FloorToInt(transform.position.x) && mousePos2D.y != Mathf.FloorToInt(transform.position.y)){}
             
         }
@@ -51,7 +66,6 @@ public class MiningSystem : MonoBehaviour
         float distance = Vector3Int.Distance(mousePos, new Vector3Int(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.y)));
 
         return distance <= maxDistance;
-
     }
 
 }

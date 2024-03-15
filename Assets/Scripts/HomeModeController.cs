@@ -38,10 +38,11 @@ public class HomeModeController : MonoBehaviour
     [Header("Anderes")]
     [SerializeField] private GameObject specialGameObject;
     public bool hasSpecialExpenses;
-
+    
 
     private void Start()
     {
+        goldEarned = 20 * GameManager.instance.goldMined;
         CalculateCompanyCut();
         CalculateRent();
         CalculateHeat();
@@ -58,8 +59,7 @@ public class HomeModeController : MonoBehaviour
 
     public void CalculateCompanyCut()
     {
-        float cutMoneyFromEarnings;
-        cutMoneyFromEarnings = goldEarned / 100f * companyCut;
+        int cutMoneyFromEarnings = Mathf.RoundToInt(goldEarned / 100f * companyCut);
         money = money + goldEarned - cutMoneyFromEarnings;
     }
 
