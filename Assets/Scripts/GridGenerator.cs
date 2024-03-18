@@ -34,7 +34,6 @@ public class GridGenerator : MonoBehaviour
     [Header("UI")]
     public UIController uIController;
     
-    private int goldProbability;
     private Vector2 currentStartPosition;
     
 
@@ -201,13 +200,19 @@ public class GridGenerator : MonoBehaviour
     public void SetRandomTiles()
     {
         int totalProbability = 0;
-
-        goldProbability = blocks[3].probability;
         
-        for (int i = 0; i < blocks.Count; i++)
+
+        if (blocks[3].probability != 100)
         {
-            totalProbability += blocks[i].probability;
-            blocks[i].probability = totalProbability;
+            for (int i = 0; i < blocks.Count; i++)
+            {
+                totalProbability += blocks[i].probability;
+                blocks[i].probability = totalProbability;
+            }
+        }
+        else
+        {
+            totalProbability = 100;
         }
 
         for (int x = 0; x < gridSizeX; x++)
@@ -235,9 +240,12 @@ public class GridGenerator : MonoBehaviour
 
     public void ChanceGoldProbability()
     {
-        int reduceAmount = goldProbability / 100 * goldChangeRate;
-        goldProbability = goldProbability - reduceAmount;
-        blocks[3].probability -= reduceAmount;
+        float cleanGoldProbability = blocks[3].probability - blocks[2].probability;
+        float reduceCleanGoldProbability = (cleanGoldProbability / 100) * goldChangeRate;
+        blocks[2].probability += Mathf.RoundToInt(reduceCleanGoldProbability);
+        blocks[3].probability = 100;
+        //TODO 100% Modular machen
+
     }
 
 

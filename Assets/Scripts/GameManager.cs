@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public int familyHappiness = 4;
     public float pickaxeStrength = 1;
     public float currentDay = 0;
+    public float savings = 4;
     
 
     [Header("GameStats")]

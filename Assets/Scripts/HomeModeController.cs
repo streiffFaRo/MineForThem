@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class HomeModeController : MonoBehaviour
 {
@@ -29,6 +31,7 @@ public class HomeModeController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI specialAmount;
     [SerializeField] private TextMeshProUGUI specialOccasionText;
     [SerializeField] private TextMeshProUGUI totalAmount;
+    [SerializeField] private TextMeshProUGUI familyHappinessAmount;
 
     [Header("Checkboxen")]
     [SerializeField] Toggle heatToggle;
@@ -42,6 +45,7 @@ public class HomeModeController : MonoBehaviour
 
     private void Start()
     {
+        SetSavings();
         goldEarned = 20 * GameManager.instance.goldMined;
         CalculateCompanyCut();
         CalculateRent();
@@ -54,6 +58,13 @@ public class HomeModeController : MonoBehaviour
             CalculateSpecial();
         }
 
+        SetAmounts();
+    }
+
+    public void SetSavings()
+    {
+        savings = GameManager.instance.savings;
+        money = savings;
         SetAmounts();
     }
 
@@ -121,5 +132,84 @@ public class HomeModeController : MonoBehaviour
         specialAmount.SetText("$"+special);
         specialOccasionText.SetText(specialOccasion);
         totalAmount.SetText("$"+total);
+        familyHappinessAmount.SetText(GameManager.instance.familyHappiness.ToString());
     }
+
+    public void EndHomeMode()
+    {
+        if (total >= 0)
+        {
+            GameManager.instance.savings = total;
+            Debug.Log(GameManager.instance.savings);
+            CalcualteFamilyHappy();
+            SceneManager.LoadScene("SandboxScene");
+        }
+        else
+        {
+            Debug.Log("GameOver - kein Geld mehr");
+        }
+    }
+
+    public void CalcualteFamilyHappy()
+    {
+        if (heatToggle.isOn && foodToggle.isOn)
+        {
+            int increaseHappinessAmount = Random.Range(1, 3);
+            GameManager.instance.familyHappiness += increaseHappinessAmount;
+        }
+        else if (heatToggle.isOn || foodToggle.isOn)
+        {
+            GameManager.instance.familyHappiness -= 1;
+        }
+        else if (!heatToggle.isOn && !foodToggle.isOn)
+        {
+            GameManager.instance.familyHappiness -= 2;
+        }
+        
+        
+        
+        CheckIfFamilyLeaves();
+    }
+
+    public void CheckIfFamilyLeaves()
+    {
+        int leaveProbability = Random.Range(1, 101);
+        
+        if (GameManager.instance.familyHappiness <= 1)
+        {
+            FamilyLeaves();
+        }
+        else if (GameManager.instance.familyHappiness <= 2)
+        {
+            if (leaveProbability >= 75)
+            {
+                FamilyLeaves();
+            }
+            else
+            {
+                Debug.Log("Family might leave");
+                //TODO Info pop up: "Family might leave"
+            }
+        }
+        else if (GameManager.instance.familyHappiness <= 3)
+        {
+            if (leaveProbability >= 95)
+            {
+                FamilyLeaves();
+            }
+            else
+            {
+                Debug.Log("Family might leave");
+                //TODO Info pop up: "Family might leave"
+            }
+        }
+        
+        Debug.Log(GameManager.instance.familyHappiness);
+    }
+
+    public void FamilyLeaves()
+    {
+        Debug.Log("Family left");
+    }
+
 }
