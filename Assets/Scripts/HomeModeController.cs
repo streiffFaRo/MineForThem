@@ -141,13 +141,27 @@ public class HomeModeController : MonoBehaviour
         {
             GameManager.instance.savings = total;
             Debug.Log(GameManager.instance.savings);
-            CalcualteFamilyHappy();
-            SceneManager.LoadScene("SandboxScene");
+            if (!specialToggle.isOn)
+            {
+                NoActivity();
+            }
+            else
+            {
+                SceneManager.LoadScene("Activity");
+            }
         }
         else
         {
             Debug.Log("GameOver - kein Geld mehr");
         }
+    }
+
+    public void NoActivity()
+    {
+        GameManager.instance.familyHappiness++;    //Increases Happiness because Player stayed with Family
+        //TODO Animation
+        CalcualteFamilyHappy();
+        SceneManager.LoadScene("SandboxScene");
     }
 
     public void CalcualteFamilyHappy()
@@ -166,7 +180,7 @@ public class HomeModeController : MonoBehaviour
             GameManager.instance.familyHappiness -= 2;
         }
         
-        
+        //TODO Animation
         
         CheckIfFamilyLeaves();
     }

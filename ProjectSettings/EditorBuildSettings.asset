@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Home-Mode.unity
     guid: 11486378a7b78924cbcf94153c2a8987
+  - enabled: 1
+    path: Assets/Scenes/Activity.unity
+    guid: 47bf208315c6b1644ba529f9a4dd3b51
   m_configObjects: {}

@@ -2319,7 +2319,7 @@ MonoBehaviour:
   heat: 0.5
   food: 1.5
   special: 2
-  specialOccasion: Hochzeit
+  specialOccasion: Attend Wedding
   money: 3
   total: 0
   savingAmount: {fileID: 125328246}
