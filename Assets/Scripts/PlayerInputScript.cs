@@ -14,6 +14,7 @@ public class PlayerInputScript : MonoBehaviour
     private Rigidbody2D rigidbody;
     private Interaction interactionScript;
     private SpriteRenderer spriteRenderer;
+    private ActivityController activityController;
     private float currentMoveSpeed;
     private bool gameIsPaused;
     private bool canMove = true;
@@ -41,6 +42,7 @@ public class PlayerInputScript : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         interactionScript = GetComponent<Interaction>();
         miningSystem = GetComponent<MiningSystem>();
+        activityController = FindObjectOfType<ActivityController>();
     }
 
     private void Update()
@@ -50,7 +52,10 @@ public class PlayerInputScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rigidbody.velocity = new Vector2(lastInput.x * currentMoveSpeed * Time.deltaTime, rigidbody.velocity.y);
+        if (rigidbody != null)
+        {
+            rigidbody.velocity = new Vector2(lastInput.x * currentMoveSpeed * Time.deltaTime, rigidbody.velocity.y);
+        }
         
     }
 
@@ -64,6 +69,7 @@ public class PlayerInputScript : MonoBehaviour
         input.Player.Back.performed += OnBackInput;
         input.Player.Destroy.performed += OnDestroyInput;
         input.Player.Place.performed += OnPlaceInput;
+        input.Player.Enter.performed += OnEnterInput;
     }
 
     private void OnDisable()
@@ -76,6 +82,7 @@ public class PlayerInputScript : MonoBehaviour
         input.Player.Back.performed -= OnBackInput;
         input.Player.Destroy.performed -= OnDestroyInput;
         input.Player.Place.performed -= OnPlaceInput;
+        input.Player.Enter.performed -= OnEnterInput;
     }
 
     private void OnMoveInput(InputAction.CallbackContext context)
@@ -111,7 +118,15 @@ public class PlayerInputScript : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        if (groundCheck != null)
+        {
+            return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        }
+        else
+        {
+            return false;
+        }
+        
     }
 
     private void Flip()
@@ -203,4 +218,9 @@ public class PlayerInputScript : MonoBehaviour
         miningSystem.PlaceBlock(mousePos2D);
     }
 
+    private void OnEnterInput(InputAction.CallbackContext obj)
+    {
+        activityController?.ContinueStory();
+    }
+    
 }
