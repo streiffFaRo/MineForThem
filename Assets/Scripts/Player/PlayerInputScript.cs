@@ -101,20 +101,20 @@ public class PlayerInputScript : MonoBehaviour
     }
     
     
-    private void OnDestroyInput(InputAction.CallbackContext obj)
+    private void OnDestroyInput(InputAction.CallbackContext context)
     {
-        if (canMove)
+        if (context.performed && canMove)
         {
-            miningSystem.DestroyBlock(MousePos2D());
+            miningSystem?.DestroyBlock(MousePos2D());
         }
 
     }
     
-    private void OnPlaceInput(InputAction.CallbackContext obj)
+    private void OnPlaceInput(InputAction.CallbackContext context)
     {
-        if (canMove)
+        if (context.performed && canMove)
         {
-            miningSystem.PlaceBlock(MousePos2D());
+            miningSystem?.PlaceBlock(MousePos2D());
         }
     }
 
@@ -125,9 +125,12 @@ public class PlayerInputScript : MonoBehaviour
         return mousePos2D;
     }
 
-    private void OnEnterInput(InputAction.CallbackContext obj)
+    private void OnEnterInput(InputAction.CallbackContext context)
     {
-        activityController?.ContinueStory();
+        if (context.performed)
+        {
+            activityController?.ContinueStory();
+        }
     }
     
 }

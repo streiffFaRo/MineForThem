@@ -15,14 +15,28 @@ public class ActivityController : MonoBehaviour
     private Story currentStory;
     private bool dialogueIsPlaying;
     [SerializeField] private TextAsset inkDay0;
+
+    [Header("Choices UI")] 
+    [SerializeField] private GameObject[] choices;
+    private TextMeshProUGUI[] choicesText;
+    
     
     
     private void Start()
     {
         currentStory = new Story(inkDay0.text);
         LoadCurrentDayInkFile();
-        ContinueStory();
+
+        choicesText = new TextMeshProUGUI[choices.Length];
+        int index = 0;
+        foreach (GameObject choice in choices)
+        {
+            choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
+            index++;
+        }
         
+        ContinueStory();
+
     }
     
 
@@ -57,10 +71,38 @@ public class ActivityController : MonoBehaviour
         if (currentStory.canContinue)
         {
             textBox.text = currentStory.Continue();
+            DisplayChoices();
         }
         else
         {
             Debug.Log("No Dialogue to Display");
         }
+    }
+
+    public void DisplayChoices()
+    {
+        List<Choice> currenChoices = currentStory.currentChoices;
+
+        if (currenChoices.Count > choices.Length)
+        {
+            Debug.LogError("More choices were given than the UI can support");
+        }
+
+        
+
+        int index = 0;
+        foreach (Choice choice in currenChoices)
+        {
+            choices[index].gameObject.SetActive(true);
+            choicesText[index].text = choice.text;
+            index++;
+        }
+        
+    }
+
+    public void MakeChoice(int choiceIndex)
+    {
+        currentStory.ChooseChoiceIndex(choiceIndex);
+        ContinueStory();
     }
 }
