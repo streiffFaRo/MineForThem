@@ -53,12 +53,10 @@ public class ActivityController : MonoBehaviour
 
     public void ContinueStory()
     {
-        Debug.Log("AHHHHHH");
-        textBox.text = currentStory.Continue();
 
         if (currentStory.canContinue)
         {
-            
+            textBox.text = currentStory.Continue();
         }
         else
         {

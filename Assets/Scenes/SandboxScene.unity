@@ -1050,6 +1050,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2049285295998548015, guid: f926909af797f424ea9b7e8b9a4cd7de, type: 3}
+      propertyPath: PauseMenuCanvas
+      value: 
+      objectReference: {fileID: 849671579}
     - target: {fileID: 3978030645461387513, guid: f926909af797f424ea9b7e8b9a4cd7de, type: 3}
       propertyPath: uIController
       value: 
