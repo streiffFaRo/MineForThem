@@ -55,9 +55,7 @@ public class MiningSystem : MonoBehaviour
 
     public void PlaceBlock(Vector3Int mousePos2D)
     {
-        if (playerMovement.IsGrounded())
-        {
-            TileBase foundTile = gridGenerator.tilemap.GetTile(mousePos2D);
+        TileBase foundTile = gridGenerator.tilemap.GetTile(mousePos2D);
 
             if (foundTile == null && IsInRange(mousePos2D) && GameManager.instance.blocksInInv > 0)
             {
@@ -71,7 +69,6 @@ public class MiningSystem : MonoBehaviour
                 //if (mousePos2D.x != Mathf.FloorToInt(transform.position.x) && mousePos2D.y != Mathf.FloorToInt(transform.position.y)){}
             
             }
-        }
     }
 
     public bool IsInRange(Vector3Int mousePos)

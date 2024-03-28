@@ -63,6 +63,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1307560654357108220, guid: f926909af797f424ea9b7e8b9a4cd7de, type: 3}
   nugget: {fileID: 3024164110287596503}
+  uIController: {fileID: 0}
 --- !u!1 &3024164110287596503
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +119,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &3024164110287596500
 CircleCollider2D:
   m_ObjectHideFlags: 0

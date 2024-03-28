@@ -72,6 +72,9 @@ public class HomeModeController : MonoBehaviour
     {
         int cutMoneyFromEarnings = Mathf.RoundToInt(goldEarned / 100f * companyCut);
         money = money + goldEarned - cutMoneyFromEarnings;
+
+        GameManager.instance.earnedMoneyForCompany += cutMoneyFromEarnings;
+        GameManager.instance.earnedMoneyForSelf += Mathf.RoundToInt(goldEarned - cutMoneyFromEarnings);
     }
 
     public void CalculateRent()
@@ -152,6 +155,7 @@ public class HomeModeController : MonoBehaviour
         }
         else
         {
+            GameManager.instance.GetComponent<EndingManager>().InitEnding(4);
             Debug.Log("GameOver - kein Geld mehr");
         }
     }
@@ -223,6 +227,7 @@ public class HomeModeController : MonoBehaviour
 
     public void FamilyLeaves()
     {
+        GameManager.instance.GetComponent<EndingManager>().InitEnding(3);
         Debug.Log("Family left");
     }
 

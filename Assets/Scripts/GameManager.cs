@@ -24,7 +24,12 @@ public class GameManager : MonoBehaviour
     public float timeInMine = 0;
     public float earnedMoneyForCompany = 0;
     public int deathsUnlocked = 0;
-    
+
+    [Header("Score")]
+    public int earnedMoneyForSelf = 0;
+    public int scoreFromEnding = 0;
+
+
     private void Awake()
     {
         if (instance == null)

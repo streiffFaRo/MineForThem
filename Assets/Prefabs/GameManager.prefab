@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5782925810832783761}
   - component: {fileID: 5782925810832783760}
+  - component: {fileID: 8825955425244772016}
+  - component: {fileID: 5159248474377039212}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45,10 +47,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldMined: 0
+  blocksInInv: 0
   familyHappiness: 4
   pickaxeStrength: 1
+  currentDay: 0
+  savings: 4
   blocksMined: 0
   blocksPlaced: 0
   timeInMine: 0
   earnedMoneyForCompany: 0
   deathsUnlocked: 0
+  earnedMoneyForSelf: 0
+  scoreFromEnding: 0
+--- !u!114 &8825955425244772016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5782925810832783763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1379b95f3314bb64ebebedc5fd0730da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5159248474377039212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5782925810832783763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6beec0a18d8f84a8385f539cdf525c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
