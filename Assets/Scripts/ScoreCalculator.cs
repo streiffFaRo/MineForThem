@@ -6,7 +6,7 @@ using UnityEngine;
 public class ScoreCalculator : MonoBehaviour
 {
 
-    private int Score;
+    public int Score;
 
     private void Start()
     {

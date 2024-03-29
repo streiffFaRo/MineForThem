@@ -21,9 +21,9 @@ public class GameManager : MonoBehaviour
     [Header("GameStats")]
     public int blocksMined = 0;
     public int blocksPlaced = 0;
-    public float timeInMine = 0;
+    public float timeInMine = 0; //TODO Wenn Timesystem gemacht
     public float earnedMoneyForCompany = 0;
-    public int deathsUnlocked = 0;
+    public int deathsUnlocked = 0; //TODO Wenn Savesystem gemacht
 
     [Header("Score")]
     public int earnedMoneyForSelf = 0;

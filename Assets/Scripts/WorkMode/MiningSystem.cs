@@ -46,8 +46,8 @@ public class MiningSystem : MonoBehaviour
                     GameManager.instance.UpdateBlocksInInv(true);
                     uIController.UpdateBlocksInInv();
                 }
-
-
+                
+                GameManager.instance.blocksMined++;
                 gridGenerator.tilemap.SetTile(mousePos2D,null);
             }
         }
@@ -61,6 +61,7 @@ public class MiningSystem : MonoBehaviour
             {
                 gridGenerator.tilemap.SetTile(mousePos2D, gridGenerator.blocks[0].tile);
                 GameManager.instance.UpdateBlocksInInv(false);
+                GameManager.instance.blocksPlaced++;
                 uIController.UpdateBlocksInInv();
             
                 //TODO Check: Block nicht auf Start oder Ende setzen
