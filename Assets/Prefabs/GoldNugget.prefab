@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c70e5a5f2d5ac445941347cdcf3e702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1307560654357108220, guid: f926909af797f424ea9b7e8b9a4cd7de, type: 3}
+  collectSound: {fileID: 0}
   nugget: {fileID: 3024164110287596503}
   uIController: {fileID: 0}
 --- !u!1 &3024164110287596503

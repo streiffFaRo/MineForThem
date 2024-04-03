@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -22,8 +23,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    
     [Header("Gameobjects")] 
-    [SerializeField] private Canvas PauseMenuCanvas;
+    [SerializeField] private Canvas pauseMenuCanvas;
+    [SerializeField] private AudioSource atmo;
 
     private void Awake()
     {
@@ -122,14 +125,16 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!gameIsPaused)
         {
-            PauseMenuCanvas.gameObject.SetActive(true);
+            pauseMenuCanvas.gameObject.SetActive(true);
             gameIsPaused = true;
+            atmo.Pause();
             //TODO PauseSound
         }
         else
         {
-            PauseMenuCanvas.gameObject.SetActive(false);
+            pauseMenuCanvas.gameObject.SetActive(false);
             gameIsPaused = false;
+            atmo.UnPause();
             //TODO UnpauseGameSound
         }
         

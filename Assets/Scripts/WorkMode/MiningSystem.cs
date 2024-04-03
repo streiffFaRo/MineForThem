@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 
@@ -14,6 +15,9 @@ public class MiningSystem : MonoBehaviour
     public GridGenerator gridGenerator;
     public float maxDistance = 2;
     public GameObject goldNugget;
+    public PlayRandomSound pickaxeSound;
+    public PlayRandomSound placeSound;
+    
 
     private void Awake()
     {
@@ -29,6 +33,10 @@ public class MiningSystem : MonoBehaviour
 
             if (foundTile != null && foundTile != gridGenerator.barrierTile && IsInRange(mousePos2D))
             {
+                
+                //Debug.Log(foundTile.GameObject().GetComponent<Blocks>().durability);
+                Debug.Log(foundTile);
+                
                 if (foundTile == gridGenerator.blocks[3].tile)
                 {
                     int rdmNuggetCount = Random.Range(1, 5);
@@ -45,8 +53,10 @@ public class MiningSystem : MonoBehaviour
                 {
                     GameManager.instance.UpdateBlocksInInv(true);
                     uIController.UpdateBlocksInInv();
-                }
+                }    
                 
+                
+                pickaxeSound.PlaySound();
                 GameManager.instance.blocksMined++;
                 gridGenerator.tilemap.SetTile(mousePos2D,null);
             }
@@ -63,6 +73,7 @@ public class MiningSystem : MonoBehaviour
                 GameManager.instance.UpdateBlocksInInv(false);
                 GameManager.instance.blocksPlaced++;
                 uIController.UpdateBlocksInInv();
+                placeSound.PlaySound();
             
                 //TODO Check: Block nicht auf Start oder Ende setzen
                 //TODO Check: Block nicht auf Spieler setzen

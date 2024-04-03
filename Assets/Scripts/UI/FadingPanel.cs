@@ -50,8 +50,8 @@ public class FadingPanel : MonoBehaviour
     private IEnumerator DoAFade()
     {
         yield return new WaitForSeconds(3f);
-        FadeIn(1f);
+        FadeIn(0.5f);
         yield return new WaitForSeconds(2f);
-        FadeOut(1f);
+        FadeOut(0.5f);
     }
 }
