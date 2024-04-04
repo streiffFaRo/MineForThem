@@ -926,16 +926,16 @@ MonoBehaviour:
   blocks:
   - tile: {fileID: 11400000, guid: 8979f0993a89ffd4caab585439211db5, type: 2}
     probability: 50
-    durability: 3
+    maxDurability: 3
   - tile: {fileID: 11400000, guid: 55cf577ae75af454781a18b258641cce, type: 2}
     probability: 20
-    durability: 5
+    maxDurability: 5
   - tile: {fileID: 11400000, guid: 7971acdb9af1ee14a89a3c7a57d2952d, type: 2}
     probability: 20
-    durability: 1
+    maxDurability: 1
   - tile: {fileID: 11400000, guid: dbd6b05aac780b340b2b57fbf31abeb4, type: 2}
     probability: 10
-    durability: 4
+    maxDurability: 4
   goldChangeRate: 40
   walkerAmount: 10
   walkerRange: 6

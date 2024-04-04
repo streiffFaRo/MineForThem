@@ -41,34 +41,39 @@ public class MiningSystem : MonoBehaviour
             if (foundTile != null && foundTile != gridGenerator.barrierTile && IsInRange(mousePos2D))
             {
                 
-                //Debug.Log(foundTile.GameObject().GetComponent<Blocks>().durability);
-                
-                Debug.Log(foundTile);
-                
-                if (foundTile == gridGenerator.blocks[3].tile)
+                if (gridGenerator.blockGridDurabilityDictionary.ContainsKey(mousePos2D))
                 {
-                    int rdmNuggetCount = Random.Range(1, 5);
+                    gridGenerator.blockGridDurabilityDictionary[mousePos2D] -= 1;
 
-                    for (int i = 0; i < rdmNuggetCount; i++)
+                    if (gridGenerator.blockGridDurabilityDictionary[mousePos2D] <= 0)
                     {
-                        middleBlockPos = new Vector3(mousePos2D.x + Random.Range(0.3f, 0.7f), mousePos2D.y + Random.Range(0.3f, 0.7f), 0);
+                        if (foundTile == gridGenerator.blocks[3].tile)
+                        {
+                            int rdmNuggetCount = Random.Range(1, 5);
+
+                            for (int i = 0; i < rdmNuggetCount; i++)
+                            {
+                                middleBlockPos = new Vector3(mousePos2D.x + Random.Range(0.3f, 0.7f), mousePos2D.y + Random.Range(0.3f, 0.7f), 0);
                         
-                        gridGenerator.tilemap.SetTile(mousePos2D,null);
-                        Instantiate(goldNugget, middleBlockPos, Quaternion.identity);
-                        i++;
-                        //TODO Nuggets buggen in die Tilemap
-                    }
+                                gridGenerator.tilemap.SetTile(mousePos2D,null);
+                                Instantiate(goldNugget, middleBlockPos, Quaternion.identity);
+                                i++;
+                                //TODO Nuggets buggen in die Tilemap
+                            }
                 
+                        }
+                        else
+                        {
+                            gridGenerator.tilemap.SetTile(mousePos2D,null);
+                            GameManager.instance.UpdateBlocksInInv(true);
+                            uIController.UpdateBlocksInInv();
+                        }    
+                        GameManager.instance.blocksMined++;
+                    }
                 }
-                else
-                {
-                    gridGenerator.tilemap.SetTile(mousePos2D,null);
-                    GameManager.instance.UpdateBlocksInInv(true);
-                    uIController.UpdateBlocksInInv();
-                }    
                 
                 pickaxeSound.PlaySound();
-                GameManager.instance.blocksMined++;
+                
             }
         }
     }
@@ -89,6 +94,7 @@ public class MiningSystem : MonoBehaviour
                 else
                 {
                     gridGenerator.tilemap.SetTile(mousePos2D, gridGenerator.blocks[0].tile);
+                    gridGenerator.blockGridDurabilityDictionary[mousePos2D] = gridGenerator.blocks[0].maxDurability;
                     GameManager.instance.UpdateBlocksInInv(false);
                     GameManager.instance.blocksPlaced++;
                     uIController.UpdateBlocksInInv();

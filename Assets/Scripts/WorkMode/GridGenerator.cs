@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 
@@ -18,7 +19,8 @@ public class GridGenerator : MonoBehaviour
     public Tile barrierTile;
     public List<Blocks> blocks = new List<Blocks>();
     public int goldChangeRate = 40;
-    
+    public Dictionary<Vector3Int, int> blockGridDurabilityDictionary = new Dictionary<Vector3Int, int>();
+
 
     [Header("Walker")] 
     public int walkerAmount = 5;
@@ -230,6 +232,7 @@ public class GridGenerator : MonoBehaviour
                         if (randomValue <= block.probability)
                         {
                             tilemap.SetTile(new Vector3Int(x,y,0), block.tile);
+                            blockGridDurabilityDictionary[new Vector3Int(x, y, 0)] = block.maxDurability;
                             break;
                         }
                     }
@@ -237,6 +240,7 @@ public class GridGenerator : MonoBehaviour
             }
         }
     }
+    
 
     public void ChanceGoldProbability()
     {
@@ -245,7 +249,6 @@ public class GridGenerator : MonoBehaviour
         blocks[2].probability += Mathf.RoundToInt(reduceCleanGoldProbability);
         blocks[3].probability = 100;
         //TODO 100% Modular machen
-
     }
 
 
@@ -257,6 +260,6 @@ public class Blocks
 {
     public Tile tile;
     public int probability;
-    public float durability;
+    public int maxDurability;
 }
 
