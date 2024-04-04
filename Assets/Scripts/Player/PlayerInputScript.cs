@@ -3,21 +3,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 using UnityEngine.XR;
 
 public class PlayerInputScript : MonoBehaviour
 {
-    //Variablen
-    private Player_Input_Map input;
-    public Vector2 moveInput { get; private set; }
+    
+    
+    [Header("Variablen")]
     public Vector2 lastInput;
     public bool canMove = true;
+    public Vector2 moveInput { get; private set; }
     
+    
+    [Header("GameObjects")]
+    public Canvas pauseMenuCanvas;
+
+
     //Scripts
     private Interaction interactionScript;
     private MiningSystem miningSystem;
     private ActivityController activityController;
+    
+    //Variablen - Privat
+    private Player_Input_Map input;
+    private bool gameIsPaused;
     
     //Event
     public static event Action onMoveEvent;
@@ -32,7 +43,7 @@ public class PlayerInputScript : MonoBehaviour
         miningSystem = GetComponent<MiningSystem>();
         activityController = FindObjectOfType<ActivityController>();
     }
-
+    
     private void OnEnable()
     {
         input.Enable();
@@ -95,11 +106,31 @@ public class PlayerInputScript : MonoBehaviour
 
         if (context.performed)
         {
-            onBackEvent?.Invoke();
+            PauseMenu();
             //TODO Firstselected
         } 
     }
     
+    public void PauseMenu()
+    {
+        if (!gameIsPaused)
+        {
+            pauseMenuCanvas.gameObject.SetActive(true);
+            gameIsPaused = true;
+            VolumeManager.instance.GetComponent<AudioManager>().currentAtmo.Pause();
+            VolumeManager.instance.GetComponent<AudioManager>().MenuMusic.Play();
+            //TODO PauseSound
+        }
+        else
+        {
+            pauseMenuCanvas.gameObject.SetActive(false);
+            gameIsPaused = false;
+            VolumeManager.instance.GetComponent<AudioManager>().MenuMusic.Stop();
+            VolumeManager.instance.GetComponent<AudioManager>().currentAtmo.UnPause();
+            //TODO UnpauseGameSound
+        }
+        
+    }
     
     private void OnDestroyInput(InputAction.CallbackContext context)
     {

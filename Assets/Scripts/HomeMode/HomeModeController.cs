@@ -150,7 +150,7 @@ public class HomeModeController : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("Activity");
+                SceneManager.LoadScene("Activity_Scene");
             }
         }
         else
@@ -165,7 +165,7 @@ public class HomeModeController : MonoBehaviour
         GameManager.instance.familyHappiness++;    //Increases Happiness because Player stayed with Family
         //TODO Animation
         CalcualteFamilyHappy();
-        SceneManager.LoadScene("SandboxScene");
+        SceneManager.LoadScene("Mine_Scene");
     }
 
     public void CalcualteFamilyHappy()

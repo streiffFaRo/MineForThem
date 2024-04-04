@@ -13,8 +13,7 @@ public class PlayerMovement : MonoBehaviour
     
     //Variablen
     private float currentMoveSpeed;
-    private bool gameIsPaused;
-    
+
     [Header("Movement")]
     [SerializeField] private float accelerationSpeed;
     [SerializeField] private float decelerationSpeed;
@@ -23,10 +22,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    
-    [Header("Gameobjects")] 
-    [SerializeField] private Canvas pauseMenuCanvas;
-    [SerializeField] private AudioSource atmo;
+
 
     private void Awake()
     {
@@ -39,14 +35,12 @@ public class PlayerMovement : MonoBehaviour
     {
         PlayerInputScript.onMoveEvent += Flip;
         PlayerInputScript.onJumpEvent += Jump;
-        PlayerInputScript.onBackEvent += PauseMenu;
     }
     
     private void OnDisable()
     {
         PlayerInputScript.onMoveEvent -= Flip;
         PlayerInputScript.onJumpEvent -= Jump;
-        PlayerInputScript.onBackEvent -= PauseMenu;
     }
 
     private void FixedUpdate()
@@ -121,22 +115,4 @@ public class PlayerMovement : MonoBehaviour
         
     }
     
-    public void PauseMenu()
-    {
-        if (!gameIsPaused)
-        {
-            pauseMenuCanvas.gameObject.SetActive(true);
-            gameIsPaused = true;
-            atmo.Pause();
-            //TODO PauseSound
-        }
-        else
-        {
-            pauseMenuCanvas.gameObject.SetActive(false);
-            gameIsPaused = false;
-            atmo.UnPause();
-            //TODO UnpauseGameSound
-        }
-        
-    }
 }

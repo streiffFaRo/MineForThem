@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
     
     public void StartGame()
     {
-        SceneManager.LoadScene("SandboxScene");
+        SceneManager.LoadScene("Mine_Scene");
         //TODO Cameraswipe right to contract
     }
 

@@ -49,9 +49,7 @@ public class FadingPanel : MonoBehaviour
 
     private IEnumerator DoAFade()
     {
-        yield return new WaitForSeconds(3f);
-        FadeIn(0.5f);
-        yield return new WaitForSeconds(2f);
-        FadeOut(0.5f);
+        yield return new WaitForSeconds(1f);
+        FadeOut(1f);
     }
 }

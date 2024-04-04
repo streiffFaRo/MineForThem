@@ -8,7 +8,7 @@ public class EndingManager : MonoBehaviour
 
     public void InitEnding(int ending)
     {
-        SceneManager.LoadScene("EndScene");
+        SceneManager.LoadScene("End_Scene");
         
         switch (ending)
         {

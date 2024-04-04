@@ -50,7 +50,7 @@ public class GridGenerator : MonoBehaviour
         currentGridNumber++;
         if (currentGridNumber > 3)
         {
-            SceneManager.LoadScene("Home-Mode");
+            SceneManager.LoadScene("Home_Scene");
             return;
         }
         tilemap.ClearAllTiles();
