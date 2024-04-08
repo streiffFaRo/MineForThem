@@ -87,15 +87,18 @@ public class ActivityController : MonoBehaviour
         {
             Debug.LogError("More choices were given than the UI can support");
         }
-
         
-
         int index = 0;
         foreach (Choice choice in currenChoices)
         {
             choices[index].gameObject.SetActive(true);
             choicesText[index].text = choice.text;
             index++;
+        }
+
+        for (int i = index; i < choices.Length; i++)
+        {
+            choices[i].gameObject.SetActive(false);
         }
         
     }
