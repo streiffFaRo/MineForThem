@@ -4,10 +4,14 @@ using System.Collections.Generic;
 using Ink.Runtime;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ActivityController : MonoBehaviour
 {
 
+    [Header("GameObjects")]
+    public FadingPanel fadingPanel;
+    
     [Header("Text Positions")]
     [SerializeField] private TextMeshProUGUI textBox;
 
@@ -33,17 +37,18 @@ public class ActivityController : MonoBehaviour
 
     //Activity Scritps
     private Poker poker;
+    private Saloon saloon;
 
     private void Awake()
     {
         poker = GetComponent<Poker>();
+        saloon = GetComponent<Saloon>();
         gameState = GetComponent<GameState>();
 
     }
 
     private void Start()
     {
-        
         LoadCurrentDayInkFile();
 
         choicesText = new TextMeshProUGUI[choices.Length];
@@ -53,11 +58,9 @@ public class ActivityController : MonoBehaviour
             choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
             index++;
         }
-        
         BindExternalFunctions();
         
         ContinueStory();
-        
     }
 
     #region ExternalInkFunctions
@@ -68,21 +71,22 @@ public class ActivityController : MonoBehaviour
         currentStory.BindExternalFunction<string>("Get_State", Get_State, true);
         currentStory.BindExternalFunction<string, int>("Add_State", Add_State);
 
-        //Szenenenwechsel: (Wird in Events übernommen)
-        //currentStory.BindExternalFunction("endScene", (string specialOccasion) =>
-        //{
-        //    Debug.Log("END SCNENE");
-        //    //TODO Fade + Can not move + Switch Scene
-        //});
-        
         //Tag 0:
         currentStory.BindExternalFunction("poker", (string betAmount) =>
         {
             poker.BetAmount(betAmount);
-            
         });
         
         //Tag 1:
+        currentStory.BindExternalFunction("ordoredDrink", (string drink) =>
+        {
+            saloon.OrdoredDrink(drink);
+        });
+        
+        currentStory.BindExternalFunction("saloon", (string amount) =>
+        {
+            saloon.SaloonComp(amount);
+        });
         
         //Tag 2:
         
@@ -97,6 +101,8 @@ public class ActivityController : MonoBehaviour
     private void OnDisable()
     {
         currentStory.UnbindExternalFunction("poker");
+        currentStory.UnbindExternalFunction("ordoredDrink");
+        currentStory.UnbindExternalFunction("saloon");
         currentStory.UnbindExternalFunction("Unity_Event");
         currentStory.UnbindExternalFunction("Get_State");
         currentStory.UnbindExternalFunction("Add_State");
@@ -163,7 +169,6 @@ public class ActivityController : MonoBehaviour
         int index = 0;
         foreach (Choice choice in currenChoices)
         {
-            Debug.Log(choice.text);
             choices[index].gameObject.SetActive(true);
             choicesText[index].text = choice.text;
             index++;
@@ -178,9 +183,9 @@ public class ActivityController : MonoBehaviour
 
     public void MakeChoice(int choiceIndex)
     {
+        //TODO Fix -> (Selektiere Chioces werden automatisch ausgeführt)
         if (canMakeChoice)
         {
-            Debug.Log("Choice made index: " + choiceIndex);
             currentStory.ChooseChoiceIndex(choiceIndex);
             ContinueStory();
             canMakeChoice = false;
@@ -206,4 +211,20 @@ public class ActivityController : MonoBehaviour
         gameState.Add(id, amount);
     }
     //
+
+    public void MetFriend() //Aufgerufen über InkEvent
+    {
+        GameManager.instance.metFriend = true;
+    }
+    
+    public void EndDay() //Aufgrufen über InkEvent
+    {
+        StartCoroutine(EndDayCorutine());
+    }
+    public IEnumerator EndDayCorutine()
+    {
+        fadingPanel.FadeIn(0.8f);
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("Mine_Scene");
+    }
 }

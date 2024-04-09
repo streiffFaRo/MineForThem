@@ -257,6 +257,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6673790913574771904, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
   m_PrefabInstance: {fileID: 183362574}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &388746684 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1457470387540901164, guid: d45a041abb338b044b6f2ad6a1a6e369, type: 3}
+  m_PrefabInstance: {fileID: 8476461068275684254}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1111ec15fb5ab21448a1ec2353cac728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &397670412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,6 +1026,7 @@ GameObject:
   - component: {fileID: 1043148080}
   - component: {fileID: 1043148079}
   - component: {fileID: 1043148078}
+  - component: {fileID: 1043148081}
   - component: {fileID: 1043148076}
   m_Layer: 5
   m_Name: Choices (Activity Controller)
@@ -1084,6 +1096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d112695547742d249bbd460b4232bf13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadingPanel: {fileID: 388746684}
   textBox: {fileID: 397670414}
   inkDay0: {fileID: 4900000, guid: bd9a041bcd698c04fbb7eeee90db53ae, type: 3}
   inkDay1: {fileID: 4900000, guid: 7b3647696ad411649939d51893782800, type: 3}
@@ -1119,7 +1132,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4990e7c63621b25459f4a17a35b0bf08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkEvents: []
+  inkEvents:
+  - name: endDay
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1043148077}
+          m_TargetAssemblyTypeName: ActivityController, Assembly-CSharp
+          m_MethodName: EndDay
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: clearRound
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1043148078}
+          m_TargetAssemblyTypeName: Poker, Assembly-CSharp
+          m_MethodName: ClearRound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: metFriend
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1043148077}
+          m_TargetAssemblyTypeName: ActivityController, Assembly-CSharp
+          m_MethodName: MetFriend
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1043148080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1132,7 +1193,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40207a2502d4f7443b943bd285664d06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  states: []
+  states:
+  - id: round
+    amount: 0
+--- !u!114 &1043148081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043148074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1763a8fd2af717f4da05ba49747e03ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1211475967 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6673790913574769471, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
@@ -1239,6 +1314,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5782925810832783760, guid: 895388dabb9f76f4eb9748b6c8ccc236, type: 3}
+      propertyPath: currentDay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5782925810832783761, guid: 895388dabb9f76f4eb9748b6c8ccc236, type: 3}
       propertyPath: m_RootOrder
       value: 3

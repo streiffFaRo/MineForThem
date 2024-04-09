@@ -16,7 +16,11 @@ public class GameManager : MonoBehaviour
     public float pickaxeStrength = 1;
     public float currentDay = 0;
     public float savings = 4;
-    
+
+    [Header("Activity")] 
+    public bool visitedPoker;
+    public bool metFriend;
+    public bool agreedtoPlan;
 
     [Header("GameStats")]
     public int blocksMined = 0;

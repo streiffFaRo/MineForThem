@@ -13,7 +13,7 @@ public class FadingPanel : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(DoAFade());
+        StartCoroutine(DoAFadeOut());
     }
 
     public void FadeIn(float duration)
@@ -47,7 +47,13 @@ public class FadingPanel : MonoBehaviour
 
     }
 
-    private IEnumerator DoAFade()
+    public IEnumerator DoAFadeIn()
+    {
+        FadeIn(1f);
+        yield return new WaitForSeconds(1f);
+    }
+    
+    public IEnumerator DoAFadeOut()
     {
         yield return new WaitForSeconds(1f);
         FadeOut(1f);

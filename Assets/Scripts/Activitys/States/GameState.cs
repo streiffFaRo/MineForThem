@@ -48,6 +48,27 @@ public class GameState : MonoBehaviour
         }
     }
 
+    public void Clear(string id)
+    {
+        if (string.IsNullOrWhiteSpace(id))
+        {
+            Debug.LogError("Die Id ist leer, füge ihr einen Namen hinzu!", this);
+            return;
+        }
+        
+        State state = Get(id);
+        if (state == null)
+        {
+            State newState = new State(id, 0);
+            states.Add(newState);
+        }
+        else
+        {
+            state.amount = 0;
+        }
+
+    }
+
     public void Add(State state, bool invokeEvents = true)
     {
         Add(state.id, state.amount, false);
