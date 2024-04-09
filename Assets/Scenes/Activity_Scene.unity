@@ -292,8 +292,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5, y: -5}
-  m_SizeDelta: {x: -50, y: -50}
+  m_AnchoredPosition: {x: 0, y: -5}
+  m_SizeDelta: {x: -200, y: -50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &397670414
 MonoBehaviour:
@@ -1011,10 +1011,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1043148075}
-  - component: {fileID: 1043148076}
   - component: {fileID: 1043148077}
+  - component: {fileID: 1043148080}
+  - component: {fileID: 1043148079}
+  - component: {fileID: 1043148078}
+  - component: {fileID: 1043148076}
   m_Layer: 5
-  m_Name: Choices
+  m_Name: Choices (Activity Controller)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1082,11 +1085,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 397670414}
-  inkDay0: {fileID: 4900000, guid: 0cfd4f49f0856ca499d971f5a346d683, type: 3}
+  inkDay0: {fileID: 4900000, guid: bd9a041bcd698c04fbb7eeee90db53ae, type: 3}
+  inkDay1: {fileID: 4900000, guid: 7b3647696ad411649939d51893782800, type: 3}
+  inkDay2: {fileID: 4900000, guid: 1e41261320d777d4f8a93fb094dd21ec, type: 3}
+  inkDay3: {fileID: 4900000, guid: 0c9f62ff5fbcd9e42b2232ed39bfcccb, type: 3}
+  inkDay4: {fileID: 4900000, guid: 2a10f5e04454e2849a39f717d15cefc4, type: 3}
+  inkDay5: {fileID: 4900000, guid: 4ef0e76652d41e049a930b950afbb580, type: 3}
   choices:
   - {fileID: 1211475967}
   - {fileID: 435349083}
   - {fileID: 1307505526}
+--- !u!114 &1043148078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043148074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c05401a4e05cd7543882e125dcafe24b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1043148079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043148074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4990e7c63621b25459f4a17a35b0bf08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inkEvents: []
+--- !u!114 &1043148080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043148074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40207a2502d4f7443b943bd285664d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  states: []
 --- !u!1 &1211475967 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6673790913574769471, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
@@ -1097,6 +1143,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6673790913574771904, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
   m_PrefabInstance: {fileID: 6673790914784081088}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1211475969 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6673790913574771905, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
+  m_PrefabInstance: {fileID: 6673790914784081088}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211475967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1213612621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,6 +1385,7 @@ GameObject:
   - component: {fileID: 1339251262}
   - component: {fileID: 1339251261}
   - component: {fileID: 1339251265}
+  - component: {fileID: 1339251268}
   m_Layer: 5
   m_Name: ActivityCanvas
   m_TagString: Untagged
@@ -1460,6 +1518,19 @@ MonoBehaviour:
   lastInput: {x: 0, y: 0}
   canMove: 1
   pauseMenuCanvas: {fileID: 952395328}
+--- !u!114 &1339251268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339251260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e12a1221ea4f0b44bb7dad1d4b49af85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstSelected: {fileID: 1211475969}
 --- !u!82 &1405699731 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 1405699731, guid: 06baa6cc70bfa3d4c81c5fcd72bdbeca, type: 3}
