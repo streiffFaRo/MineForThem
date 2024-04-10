@@ -38,11 +38,13 @@ public class ActivityController : MonoBehaviour
     //Activity Scritps
     private Poker poker;
     private Saloon saloon;
+    private Kirche kirche;
 
     private void Awake()
     {
         poker = GetComponent<Poker>();
         saloon = GetComponent<Saloon>();
+        kirche = GetComponent<Kirche>();
         gameState = GetComponent<GameState>();
 
     }
@@ -89,7 +91,11 @@ public class ActivityController : MonoBehaviour
         });
         
         //Tag 2:
-        
+        currentStory.BindExternalFunction("spenden", (string amount) =>
+        {
+            kirche.Spenden(amount);
+        });
+                
         //Tag 3:
         
         //Tag 4:
@@ -103,6 +109,7 @@ public class ActivityController : MonoBehaviour
         currentStory.UnbindExternalFunction("poker");
         currentStory.UnbindExternalFunction("ordoredDrink");
         currentStory.UnbindExternalFunction("saloon");
+        currentStory.UnbindExternalFunction("spenden");
         currentStory.UnbindExternalFunction("Unity_Event");
         currentStory.UnbindExternalFunction("Get_State");
         currentStory.UnbindExternalFunction("Add_State");
