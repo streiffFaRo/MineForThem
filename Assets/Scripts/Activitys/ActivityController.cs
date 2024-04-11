@@ -39,6 +39,8 @@ public class ActivityController : MonoBehaviour
     private Poker poker;
     private Saloon saloon;
     private Kirche kirche;
+    private Angeln angeln;
+    private Schiessen schiessen;
 
     private void Awake()
     {
@@ -46,6 +48,8 @@ public class ActivityController : MonoBehaviour
         saloon = GetComponent<Saloon>();
         kirche = GetComponent<Kirche>();
         gameState = GetComponent<GameState>();
+        angeln = GetComponent<Angeln>();
+        schiessen = GetComponent<Schiessen>();
 
     }
 
@@ -99,8 +103,22 @@ public class ActivityController : MonoBehaviour
         //Tag 3:
         
         //Tag 4:
+        currentStory.BindExternalFunction("platz", (string amount) =>
+        {
+            angeln.Platz(amount);
+        });
+        
+        currentStory.BindExternalFunction("bait", (string amount) =>
+        {
+            angeln.Bait(amount);
+        });
         
         //Tag 5:
+        currentStory.BindExternalFunction("category", (string amount) =>
+        {
+            schiessen.Wettkampf(amount);
+        });
+        
         
     }
 
@@ -110,6 +128,8 @@ public class ActivityController : MonoBehaviour
         currentStory.UnbindExternalFunction("ordoredDrink");
         currentStory.UnbindExternalFunction("saloon");
         currentStory.UnbindExternalFunction("spenden");
+        currentStory.UnbindExternalFunction("platz");
+        currentStory.UnbindExternalFunction("bait");
         currentStory.UnbindExternalFunction("Unity_Event");
         currentStory.UnbindExternalFunction("Get_State");
         currentStory.UnbindExternalFunction("Add_State");

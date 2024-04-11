@@ -929,7 +929,7 @@ MonoBehaviour:
     maxDurability: 3
   - tile: {fileID: 11400000, guid: 55cf577ae75af454781a18b258641cce, type: 2}
     probability: 20
-    maxDurability: 5
+    maxDurability: 8
   - tile: {fileID: 11400000, guid: 7971acdb9af1ee14a89a3c7a57d2952d, type: 2}
     probability: 20
     maxDurability: 1

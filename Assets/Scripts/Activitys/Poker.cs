@@ -19,11 +19,13 @@ public class Poker : MonoBehaviour
     {
         gamestate.Clear("roundChange");
         int winorlose = Random.Range(0, 2);
+        
         if (winorlose >= 1)
         {
             Debug.Log("Gewonnen");
             gamestate.Add("round", 1, true);
         }
+        
         switch (betAmount)
         {
             case "25":

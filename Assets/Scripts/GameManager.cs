@@ -20,7 +20,9 @@ public class GameManager : MonoBehaviour
     [Header("Activity")] 
     public bool visitedPoker;
     public bool metFriend;
-    public bool agreedtoPlan;
+    public bool knowsPlan;
+    public bool hasBullet;
+    public bool snitched;
 
     [Header("GameStats")]
     public int blocksMined = 0;
