@@ -22,7 +22,6 @@ public class Interaction : MonoBehaviour
 
     public void Interact()
     {
-        Debug.Log("Interact");
 
         Collider2D[]foundCollider = Physics2D.OverlapCircleAll(transform.position, radius);
         
@@ -38,7 +37,9 @@ public class Interaction : MonoBehaviour
             if (collider.CompareTag("Interaction") && 
                 Vector2.Distance(transform.position, collider.transform.position) <= collider.GetComponent<BoxCollider2D>().size.x/2)
             {
-                FindObjectOfType<GridGenerator>().LoadGrid();
+                Debug.Log("Interacted with Door");
+                FindObjectOfType<GridGenerator>()?.LoadGrid();
+                FindObjectOfType<LobbyManager>()?.LoadMineScene();
             }
             
             /*

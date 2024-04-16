@@ -109,7 +109,7 @@ public class HomeModeController : MonoBehaviour
         SetAmounts();
     }
 
-    public void CalculateSpecial()
+    public void CalculateSpecial() //TODO Rework this
     {
         if (specialToggle.isOn)
         {
@@ -165,7 +165,7 @@ public class HomeModeController : MonoBehaviour
         GameManager.instance.familyHappiness++;    //Increases Happiness because Player stayed with Family
         //TODO Animation
         CalcualteFamilyHappy();
-        SceneManager.LoadScene("Mine_Scene");
+        SceneManager.LoadScene("Lobby_Scene");
     }
 
     public void CalcualteFamilyHappy()
