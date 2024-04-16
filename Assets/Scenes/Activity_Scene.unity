@@ -1030,6 +1030,7 @@ GameObject:
   - component: {fileID: 1043148082}
   - component: {fileID: 1043148083}
   - component: {fileID: 1043148084}
+  - component: {fileID: 1043148085}
   - component: {fileID: 1043148076}
   m_Layer: 5
   m_Name: Choices (Activity Controller)
@@ -1280,6 +1281,54 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - name: visitedPoker
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1043148078}
+          m_TargetAssemblyTypeName: Poker, Assembly-CSharp
+          m_MethodName: VisitedPoker
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: checkVisit
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1043148081}
+          m_TargetAssemblyTypeName: Saloon, Assembly-CSharp
+          m_MethodName: CheckVisit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: segnung
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1043148082}
+          m_TargetAssemblyTypeName: Kirche, Assembly-CSharp
+          m_MethodName: Segen
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1043148080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1341,6 +1390,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f0a6189f271d7a4d9cc833ff664df02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1043148085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043148074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050b04c01b441ec4384afe132cdcb0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1211475967 stripped
@@ -1451,7 +1512,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5782925810832783760, guid: 895388dabb9f76f4eb9748b6c8ccc236, type: 3}
       propertyPath: currentDay
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5782925810832783761, guid: 895388dabb9f76f4eb9748b6c8ccc236, type: 3}
       propertyPath: m_RootOrder

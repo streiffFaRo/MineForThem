@@ -7,7 +7,7 @@ Tag3 - Freund
 Du folgst der Einladung deines Freundes.
 Auf dem Weg zu seinem Haus fragst du dich um was es ihm wohl geht.
 Dein Freund freut sich sehr dich zu sehen. Er begrüss dich herzlich und bietet dir etwas zu trinken an.
-Er spricht:" Wie steht es um dich nun, da du weisst wie die Arbeit ist."
+Dein Freund:" Wie steht es um dich nun, da du weisst wie die Arbeit ist?"
 +[Passabel]
 -> Passabel
 +[Schlecht]

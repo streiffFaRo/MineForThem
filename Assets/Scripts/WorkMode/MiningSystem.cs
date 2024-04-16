@@ -43,7 +43,7 @@ public class MiningSystem : MonoBehaviour
                 
                 if (gridGenerator.blockGridDurabilityDictionary.ContainsKey(mousePos2D))
                 {
-                    gridGenerator.blockGridDurabilityDictionary[mousePos2D] -= 1;
+                    gridGenerator.blockGridDurabilityDictionary[mousePos2D] -= GameManager.instance.pickaxeStrength;
 
                     if (gridGenerator.blockGridDurabilityDictionary[mousePos2D] <= 0)
                     {

@@ -128,6 +128,7 @@ Du verlässt die Kirche.
 Du fühlst dich nach der Messe bereits schon viel besser.
 Es scheint so als ob deine Gebete erhört wurden.
 Du kannst morgen mit mehr Energie denn je an die Arbeit gehen.
+~Unity_Event("segnung")
 ~Unity_Event("endDay")
 -->END
 

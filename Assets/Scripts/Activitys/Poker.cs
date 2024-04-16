@@ -77,4 +77,9 @@ public class Poker : MonoBehaviour
     {
         gamestate.Clear("round");
     }
+
+    public void VisitedPoker() //Aufgerufen über InkEvent
+    {
+        GameManager.instance.visitedPoker = true;
+    }
 }

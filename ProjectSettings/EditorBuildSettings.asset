@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lobby_Scene.unity
     guid: 83fcb46760daef14091a7586fc2b1c0a
+  - enabled: 1
+    path: Assets/Scenes/Transitio_Scene.unity
+    guid: 548e9a52c0cc55f49bac7025c1d606db
   m_configObjects: {}

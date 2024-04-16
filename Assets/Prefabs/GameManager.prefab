@@ -49,9 +49,14 @@ MonoBehaviour:
   goldMined: 0
   blocksInInv: 0
   familyHappiness: 4
-  pickaxeStrength: 1
+  pickaxeStrength: 10
   currentDay: 0
   savings: 4
+  visitedPoker: 0
+  metFriend: 0
+  knowsPlan: 0
+  hasBullet: 0
+  snitched: 0
   blocksMined: 0
   blocksPlaced: 0
   timeInMine: 0
@@ -71,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1379b95f3314bb64ebebedc5fd0730da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Score: 0
 --- !u!114 &5159248474377039212
 MonoBehaviour:
   m_ObjectHideFlags: 0

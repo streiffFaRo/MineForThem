@@ -5,6 +5,7 @@ EXTERNAL saloon(betAmount)
 
 -> main
 === main === 
+~Unity_Event("checkVisit")
 ~Unity_Event("metFriend")
 Hallo, das ist Tag1 - Saloon
 Wie geht es dir?
@@ -20,19 +21,26 @@ Was trinkst du gerne? Ich gebe dir einen aus!
 === Wasser ===
 ~ ordoredDrink("Wasser")
 Ihr sezt euch hin und dir wird ein kühles Wasser gebracht.
-->MineInfo
+{Get_State("visited") ==1: ->visitedPoker} -> Spiel
 
 === Bier ===
 ~ ordoredDrink("Bier")
 Ihr sezt euch hin und dir wird ein kühles Bier gebracht.
-->MineInfo
+{Get_State("visited") ==1: ->visitedPoker} -> Spiel
 
 === Whiskey ===
 ~ ordoredDrink("Whiskey")
 Ihr sezt euch hin und dir wird ein Glas Whiskey gebracht.
-->MineInfo
+{Get_State("visited") ==1: ->visitedPoker} -> Spiel
 
-=== MineInfo
+
+===visitedPoker===
+Dein Freund: "Ich habe dich gestern beim Poker Spielen gesehen. Ich muss dich warnen, das kann ein dunkler Weg sein."
+Dein Freund: "Ich versuche dir nur zu helfen. Ich habe schon viele Leute gesehen die ihr elendes Ende fanden in dieser Stadt."
+Dein Freund: "Ich hoffe du wirst keiner von ihnen werden."
+->Spiel
+
+===Spiel
 Lust auf ein kleines Trinkspielchen?
 +[Annehmen ($1)]
 -> Eins

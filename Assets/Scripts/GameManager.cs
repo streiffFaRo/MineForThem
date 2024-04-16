@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public int blocksInInv = 0;
     [Range(0,10)]
     public int familyHappiness = 4;
-    public float pickaxeStrength = 1;
+    public int pickaxeStrength = 10;
     public float currentDay = 0;
     public float savings = 4;
 

@@ -63,4 +63,13 @@ public class Saloon : MonoBehaviour
         Debug.Log(betAmount);
     }
     
+    
+    public void CheckVisit() //Aufgerufen über InkEvent
+    {
+        if (GameManager.instance.visitedPoker)
+        {
+            gamestate.Add("visited", 1, true);
+        }
+    }
+    
 }

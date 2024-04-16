@@ -37,4 +37,11 @@ public class Kirche : MonoBehaviour
     {
         GameManager.instance.familyHappiness--;
     }
+
+    public void Segen() //Aufgerufen über InkEvent
+    {
+        Debug.Log("HALLLOOOO");
+        GameManager.instance.pickaxeStrength = 15;
+        //TODO -> Heiligenschein für Player
+    }
 }

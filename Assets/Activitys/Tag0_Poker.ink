@@ -3,15 +3,16 @@ EXTERNAL poker(betAmount)
 
 ->main
 === main ===
+~Unity_Event("visitedPoker")
 Du triffst dich mit ein paar Freunden der Minengesellschaft zum Pokerabend
 Die wird ein Stuhl angeboten und du setzt dich hin
-Dolores beführwortet deine Spielabende nicht, aber es ist eine möglichkeit mit ein wenig Geschick etwas mehr Geld für die Familie zu verdienen.
+Dolores beführwortet deine Spielabende nicht, aber es ist eine Möglichkeit mit ein wenig Geschick etwas mehr Geld für die Familie zu verdienen.
 
 -> r1
 === r1 === 
-Hallo, ich bin ein Test text.
+Du setzt dich an den Spieltisch.
 ~Add_State("round",0)
-Welches Vieh willst du?
+Wähle einen Einsatz!
 +[25c]
 -> r1_25c
 +[50c]
@@ -46,7 +47,7 @@ Du hast {Get_State("roundChange")}c verloren!
 
 === r2 ===
 Runde 2
-Hier sind die Choices
+Wähle einen Einsatz!
 +[25c]
 -> r2_25c
 +[50c]
@@ -79,8 +80,8 @@ Du hast {Get_State("roundChange")}c verloren!
 ->r3
 
 === r3 ===
-Runde 3
-Hier sind die Choices
+Letze Runde. 
+Wähle einen Einsatz!
 +[25c]
 -> r3_25c
 +[50c]
