@@ -165,7 +165,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &303323871
 PrefabInstance:
@@ -176,7 +176,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4663624697183316931, guid: 06baa6cc70bfa3d4c81c5fcd72bdbeca, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4663624697183316931, guid: 06baa6cc70bfa3d4c81c5fcd72bdbeca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -312,7 +312,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &547216761
 BoxCollider2D:
@@ -422,7 +422,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &677322183
 PrefabInstance:
@@ -433,7 +433,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5442221223298333034, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5442221223298333034, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -475,70 +475,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLines.Array.data[0]
+      value: Guten Tag, Willkommen an deinem neuen Arbeitsplatz!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLines.Array.data[1]
+      value: Begib dich zum Schacht um deine Arbeit zu beginnen.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLines.Array.data[2]
+      value: "Du verdienst f\xFCr jeden Klumpen Gold gutes Geld."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLines.Array.data[3]
+      value: Vergiss nicht bis zum Ende des Tages den dritten Stollen zu verlassen!
+      objectReference: {fileID: 0}
     - target: {fileID: 8364846229157914703, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: m_Name
       value: Platzhalter-NPC
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
---- !u!1001 &726533441
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 593810220494756135, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
-      propertyPath: m_FlipX
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5442221223298333034, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5442221223298333034, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 19.44
-      objectReference: {fileID: 0}
-    - target: {fileID: 5442221223298333034, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.07812762
-      objectReference: {fileID: 0}
-    - target: {fileID: 5442221223298333034, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5442221223298333034, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5442221223298333034, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5442221223298333034, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5442221223298333034, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5442221223298333034, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5442221223298333034, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5442221223298333034, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8364846229157914703, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
-      propertyPath: m_Name
-      value: Platzhalter-NPC (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
@@ -551,7 +510,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5782925810832783761, guid: 895388dabb9f76f4eb9748b6c8ccc236, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5782925810832783761, guid: 895388dabb9f76f4eb9748b6c8ccc236, type: 3}
       propertyPath: m_LocalPosition.x
@@ -708,7 +667,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1634380329
 PrefabInstance:
@@ -919,7 +878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6001632577394279905, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6001632577394279905, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1044,7 +1003,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1307560654357108208, guid: f926909af797f424ea9b7e8b9a4cd7de, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1307560654357108208, guid: f926909af797f424ea9b7e8b9a4cd7de, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1175,7 +1134,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4768372023184637102
 PrefabInstance:

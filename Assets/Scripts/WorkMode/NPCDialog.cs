@@ -9,7 +9,7 @@ public class NPCDialog : MonoBehaviour
 
     private BoxCollider2D boxcollider;
     [SerializeField] GameObject speechbubble;
-    [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private TextMeshPro text;
     [SerializeField] string[] speechLines;
     private bool isTalking;
     private int currentLine = 0;
@@ -32,21 +32,30 @@ public class NPCDialog : MonoBehaviour
             Debug.Log("Speech");
             StartCoroutine(Bubble());
         }
-        
+        else
+        {
+            StopCoroutine(Bubble());
+            if (speechLines.Length <= currentLine)
+            {
+                currentLine = 0;
+            }
+            Debug.Log("Speech");
+            new WaitForEndOfFrame();
+            StartCoroutine(Bubble());
+        }
         
     }
 
     public IEnumerator Bubble()
     {
         speechbubble.SetActive(true);
-        
         text.SetText(speechLines[currentLine]);
+        currentLine++;
         //TODO Set TEXT
         //TODO Play Sound
         //TODO Animation Bubble Pop up
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3f);
         speechbubble.SetActive(false);
-        currentLine++;
         isTalking = false;
     }
 }
