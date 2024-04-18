@@ -16,8 +16,6 @@ public class HomeModeController : MonoBehaviour
     public float rent = 4f;
     public float heat = 0.5f;
     public float food = 1.5f;
-    public float special = 2f;
-    public string specialOccasion = "Hochzeit";
     public float money = 3f;
     public float total;
 
@@ -28,15 +26,17 @@ public class HomeModeController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI rentAmount;
     [SerializeField] private TextMeshProUGUI heatAmount;
     [SerializeField] private TextMeshProUGUI foodAmount;
-    [SerializeField] private TextMeshProUGUI specialAmount;
-    [SerializeField] private TextMeshProUGUI specialOccasionText;
     [SerializeField] private TextMeshProUGUI totalAmount;
     [SerializeField] private TextMeshProUGUI familyHappinessAmount;
 
     [Header("Checkboxen")]
     [SerializeField] Toggle heatToggle;
     [SerializeField] Toggle foodToggle;
-    [SerializeField] Toggle specialToggle;
+
+    [Header("Continue Parts")] 
+    [SerializeField] private string[] descriptionTexts;
+    [SerializeField] private TextMeshProUGUI descriptionTextUI;
+    [SerializeField] private Button goOutButton;
 
     [Header("Anderes")]
     [SerializeField] private GameObject specialGameObject;
@@ -51,12 +51,7 @@ public class HomeModeController : MonoBehaviour
         CalculateRent();
         CalculateHeat();
         CalculateFood();
-
-        if (hasSpecialExpenses)
-        {
-            specialGameObject.SetActive(true);
-            CalculateSpecial();
-        }
+        setUpActivityText();
 
         SetAmounts();
     }
@@ -109,17 +104,21 @@ public class HomeModeController : MonoBehaviour
         SetAmounts();
     }
 
-    public void CalculateSpecial() //TODO Rework this
+    public void setUpActivityText()
     {
-        if (specialToggle.isOn)
+        int currentDay = GameManager.instance.currentDay;
+        descriptionTextUI.text = descriptionTexts[currentDay];
+
+        if (currentDay == 3 && !GameManager.instance.metFriend)
         {
-            money = money - special;
+            descriptionTextUI.text = "Heute Abend gibt es nichts zu tun. Deine Familie freut sich mit dir Zeit zu verbringen.";
+            goOutButton.gameObject.SetActive(false);
         }
-        else
+
+        if (currentDay == 4)
         {
-            money = money + special;
+            goOutButton.gameObject.SetActive(true);
         }
-        SetAmounts();
     }
 
     public void SetAmounts()
@@ -133,40 +132,38 @@ public class HomeModeController : MonoBehaviour
         rentAmount.SetText("$"+rent);
         heatAmount.SetText("$"+heat);
         foodAmount.SetText("$"+food);
-        specialAmount.SetText("$"+special);
-        specialOccasionText.SetText(specialOccasion);
         totalAmount.SetText("$"+total);
         familyHappinessAmount.SetText(GameManager.instance.familyHappiness.ToString());
     }
 
-    public void EndHomeMode()
+    public void EndHomeMode(int key)
     {
         if (total >= 0)
         {
             GameManager.instance.savings = total;
             Debug.Log(GameManager.instance.savings);
-            if (!specialToggle.isOn)
-            {
-                NoActivity();
-            }
-            else
+            CalcualteFamilyHappy();
+            if (key == 0)
             {
                 SceneManager.LoadScene("Activity_Scene");
             }
+            else if (key == 1)
+            {
+                GameManager.instance.familyHappiness++;    //Increases Happiness because Player stayed with Family
+                //TODO Animation
+                SceneManager.LoadScene("Lobby_Scene");
+            }
+            else
+            {
+                Debug.LogWarning("EndHomeMode-Key out of range");
+            }
+            
         }
         else
         {
             GameManager.instance.GetComponent<EndingManager>().InitEnding(4);
             Debug.Log("GameOver - kein Geld mehr");
         }
-    }
-
-    public void NoActivity()
-    {
-        GameManager.instance.familyHappiness++;    //Increases Happiness because Player stayed with Family
-        //TODO Animation
-        CalcualteFamilyHappy();
-        SceneManager.LoadScene("Lobby_Scene");
     }
 
     public void CalcualteFamilyHappy()
@@ -176,15 +173,14 @@ public class HomeModeController : MonoBehaviour
             int increaseHappinessAmount = Random.Range(1, 3);
             GameManager.instance.familyHappiness += increaseHappinessAmount;
         }
-        else if (heatToggle.isOn || foodToggle.isOn)
-        {
-            GameManager.instance.familyHappiness -= 1;
-        }
         else if (!heatToggle.isOn && !foodToggle.isOn)
         {
             GameManager.instance.familyHappiness -= 2;
         }
-        
+        else if (heatToggle.isOn || foodToggle.isOn)
+        {
+            GameManager.instance.familyHappiness -= 1;
+        }
         //TODO Animation
         
         CheckIfFamilyLeaves();
