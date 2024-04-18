@@ -441,7 +441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5442221223298333034, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.07812762
+      value: -0.14
       objectReference: {fileID: 0}
     - target: {fileID: 5442221223298333034, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -495,6 +495,134 @@ PrefabInstance:
       propertyPath: speechLines.Array.data[3]
       value: Vergiss nicht bis zum Ende des Tages den dritten Stollen zu verlassen!
       objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay0.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay1.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay2.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay3.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay4.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay5.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay0.Array.data[0]
+      value: Willkommen bei deiner neuen Arbeit.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay0.Array.data[1]
+      value: Betritt den Schacht am Ende des Ganges um zu beginnen.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay0.Array.data[2]
+      value: "Du verdienst an jedem Klumpen Gold, nach dem Abzug f\xFCr die Minengesellschaft
+        nat\xFCrlich."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay0.Array.data[3]
+      value: Vergiss nicht vor Ende des Arbeitstages aus dem dritten Stollen zu sein.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay0.Array.data[4]
+      value: Die Minengesellschaft freut sich auf deine Ergebnisse!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay1.Array.data[0]
+      value: Guten Tag ehrenwerter Angestellter.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay1.Array.data[1]
+      value: "Viel Gl\xFCck bei deiner Schicht"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay1.Array.data[2]
+      value: Die Minengesellschaft freut sich auf deinen Beitrag!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay2.Array.data[0]
+      value: Die Mienengesellschaft hat die Stollen ausbauen lassen.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay2.Array.data[1]
+      value: Du kannst innerhalb deiner Stollen nun unser Lorensystem nutzen.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay2.Array.data[2]
+      value: In jedem Stollen sind zwei Stationen verbaut, du kannst von der einen
+        zu anderen.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay2.Array.data[3]
+      value: "Je mehr Gold du f\xFCr uns findest desto mehr bleibt auch f\xFCr dich!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay2.Array.data[4]
+      value: Ein neuer Tag, ein neuer Dollar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay2.Array.data[5]
+      value: Nur weiter so.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay3.Array.data[0]
+      value: Guten Tag, die Minengesellschaft hat etwas beschlossen.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay3.Array.data[1]
+      value: Ab heute steigen die Abgaben an die Mienengesellschaft auf 95%
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay3.Array.data[2]
+      value: Aber keine Sorge, du wirst das schon schaffen.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay3.Array.data[3]
+      value: Auf ans Werk!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay4.Array.data[0]
+      value: Tolle Neugikeiten! Die Mienengesellschaft hat den Einsatz von Sprengmittel
+        genemigt.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay4.Array.data[1]
+      value: In jedem deiner Stollen sollten nun Dynamitkisten sein.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay4.Array.data[2]
+      value: Achte aber gut darauf, dass du nicht zu dicht dran stehst!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay4.Array.data[3]
+      value: Ich hoffe ich muss keinen losschicken der dich aus dem Stollen kratzen
+        muss
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay5.Array.data[0]
+      value: Ein wundervoller Tag um Geld zu verdienen, nicht?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay5.Array.data[1]
+      value: Ab mit dir in deinen Stollen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay5.Array.data[2]
+      value: "Du wirst hier nicht f\xFCrs Rumstehen bezahlt."
+      objectReference: {fileID: 0}
     - target: {fileID: 8364846229157914703, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: m_Name
       value: Platzhalter-NPC
@@ -508,6 +636,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5782925810832783760, guid: 895388dabb9f76f4eb9748b6c8ccc236, type: 3}
+      propertyPath: currentDay
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5782925810832783761, guid: 895388dabb9f76f4eb9748b6c8ccc236, type: 3}
       propertyPath: m_RootOrder
       value: 4

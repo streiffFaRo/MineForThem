@@ -10,7 +10,8 @@ public class MainMenu : MonoBehaviour
     
     public void StartGame()
     {
-        SceneManager.LoadScene("Mine_Scene");
+        GameManager.instance.SetUpNewGame();
+        SceneManager.LoadScene("Lobby_Scene");
         //TODO Cameraswipe right to contract
     }
 

@@ -54,6 +54,7 @@ Du: "Es geht mir schrecklich. Ich kann nicht mehr. Wenn das Geld wenigstens genu
 ->Plan
 
 ===Plan===
+~Unity_Event("plan")
 "Der Vorarbeiter weiss bereits, dass ich etwas gegen ihn plane. Ich habe das Gefühl manchmal von Leuten der Minengesellschaft überwacht zu werden."
 "In zwei Tagen wird im Dorf ein Schiesswettbewerb abgehalten. Wenn du daran teilnimmst, steck dir einfach eine Kugel ein."
 "Gib mir diese dann am nächsten Morgen und ich erledige den Rest."

@@ -7,12 +7,15 @@ public class Schiessen : MonoBehaviour
     
     private GameState gamestate;
 
+    private ActivityController activityController;
+
     private int winProb = 50;
     private int category = 1;
     
     private void Awake()
     {
         gamestate = GetComponent<GameState>();
+        activityController = GetComponent<ActivityController>();
     }
 
     public void Wettkampf(string kategorie)
@@ -38,6 +41,7 @@ public class Schiessen : MonoBehaviour
             default:
                 break;
         }
+        activityController.moneyUI.text = GameManager.instance.savings.ToString();
         CheckWin();
     }
 
@@ -58,6 +62,7 @@ public class Schiessen : MonoBehaviour
             gamestate.Add("round", 1, true);
             gamestate.Add("price", category, true);
             GameManager.instance.savings += category;
+            activityController.moneyUI.text = GameManager.instance.savings.ToString();
         }
         
         
@@ -68,12 +73,7 @@ public class Schiessen : MonoBehaviour
     {
         if (GameManager.instance.knowsPlan)
         {
-            Debug.Log("KnowsPlan");
             gamestate.Add("knowsPlan", 1, true);
-        }
-        else
-        {
-            Debug.Log("Doesn't Know Plan!");
         }
     }
 

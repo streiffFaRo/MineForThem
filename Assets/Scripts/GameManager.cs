@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateCurrentDay()
     {
-        if (currentDay != 7)
+        if (currentDay != 6)
         {
             currentDay++;
         }

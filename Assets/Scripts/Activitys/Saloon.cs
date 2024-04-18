@@ -6,11 +6,14 @@ public class Saloon : MonoBehaviour
 {
     private GameState gamestate;
 
+    private ActivityController activityController;
+
     private float winprob;
     
     private void Awake()
     {
         gamestate = GetComponent<GameState>();
+        activityController = GetComponent<ActivityController>();
         winprob = 50f;
     }
 
@@ -60,6 +63,8 @@ public class Saloon : MonoBehaviour
             GameManager.instance.savings -= betAmount;
         }
 
+        activityController.moneyUI.text = GameManager.instance.savings.ToString();
+        
         Debug.Log(betAmount);
     }
     

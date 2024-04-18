@@ -6,6 +6,8 @@ public class Angeln : MonoBehaviour
 {
     private GameState gamestate;
 
+    private ActivityController activityController;
+
     private int priceCategory;
 
     private int catchRate;
@@ -13,6 +15,7 @@ public class Angeln : MonoBehaviour
     private void Awake()
     {
         gamestate = GetComponent<GameState>();
+        activityController = GetComponent<ActivityController>();
     }
 
 
@@ -81,6 +84,7 @@ public class Angeln : MonoBehaviour
             price = price / 100;
 
             GameManager.instance.savings += price;
+            activityController.moneyUI.text = GameManager.instance.savings.ToString();
 
         }
         else

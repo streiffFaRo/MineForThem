@@ -125,6 +125,7 @@ public class HomeModeController : MonoBehaviour
     public void SetAmounts()
     {
         total = money;
+        Math.Round(total, 2);
         
         savingAmount.SetText("$"+savings);
         earnedAmount.SetText("$"+goldEarned);

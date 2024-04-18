@@ -15,6 +15,9 @@ public class ActivityController : MonoBehaviour
     [Header("Text Positions")]
     [SerializeField] private TextMeshProUGUI textBox;
 
+    [Header("Money")]
+    public TextMeshProUGUI moneyUI;
+
     [Header("Ink Files")] 
     private Story currentStory;
     private bool dialogueIsPlaying;
@@ -57,6 +60,8 @@ public class ActivityController : MonoBehaviour
     {
         LoadCurrentDayInkFile();
 
+        moneyUI.text = GameManager.instance.savings.ToString();
+        
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
         foreach (GameObject choice in choices)
@@ -164,6 +169,7 @@ public class ActivityController : MonoBehaviour
                 break;
             
         }
+        
     }
 
     public void ContinueStory()
@@ -243,7 +249,12 @@ public class ActivityController : MonoBehaviour
     {
         GameManager.instance.metFriend = true;
     }
-    
+
+    public void Plan() //Aufgerufen über InkEvent
+    {
+        GameManager.instance.knowsPlan = true;
+    }
+
     public void EndDay() //Aufgrufen über InkEvent
     {
         StartCoroutine(EndDayCorutine());
