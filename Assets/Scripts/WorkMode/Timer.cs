@@ -9,19 +9,32 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private float remainingTime;
-    private bool stopTimer;
+    public bool stopTimer;
 
+
+    private void Start()
+    {
+        int minutes = Mathf.FloorToInt(remainingTime / 60);
+        int seconds = Mathf.FloorToInt(remainingTime % 60);
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        
+        if (GameManager.instance.currentDay == 0)
+        {
+            stopTimer = true;
+        }
+    }
 
     private void Update()
     {
-        Countdown();
+        if (!stopTimer)
+        {
+            Countdown();
+        }
     }
 
     public void Countdown()
     {
-        if (!stopTimer)
-        {
-            
+        
             //TODO Timer visuelles feedback wenn Timer unter 30 sec
             
             if (remainingTime > 0)
@@ -39,8 +52,7 @@ public class Timer : MonoBehaviour
             int minutes = Mathf.FloorToInt(remainingTime / 60);
             int seconds = Mathf.FloorToInt(remainingTime % 60);
             timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-        }
-        
+
     }
 
     public void InitEnding()

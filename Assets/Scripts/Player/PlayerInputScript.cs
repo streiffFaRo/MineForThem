@@ -104,10 +104,9 @@ public class PlayerInputScript : MonoBehaviour
     private void OnBackInput(InputAction.CallbackContext context)
     {
 
-        if (context.performed)
+        if (context.performed && canMove)
         {
             PauseMenu();
-            //TODO Firstselected
         } 
     }
     
