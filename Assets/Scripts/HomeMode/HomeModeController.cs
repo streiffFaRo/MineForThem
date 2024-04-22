@@ -45,6 +45,11 @@ public class HomeModeController : MonoBehaviour
 
     private void Start()
     {
+        if (GameManager.instance.currentDay >= 3)
+        {
+            companyCut = 95;
+        }
+        
         SetSavings();
         goldEarned = 20 * GameManager.instance.goldMined;
         CalculateCompanyCut();

@@ -587,7 +587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay3.Array.data[2]
-      value: Aber keine Sorge, du wirst das schon schaffen.
+      value: t das schon schaffen.wirst das schon schaffen.
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay3.Array.data[3]

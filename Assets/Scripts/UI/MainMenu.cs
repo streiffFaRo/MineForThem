@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         GameManager.instance.SetUpNewGame();
-        SceneManager.LoadScene("Lobby_Scene");
+        SceneManager.LoadScene("Intro_Scene");
         //TODO Cameraswipe right to contract
     }
 
