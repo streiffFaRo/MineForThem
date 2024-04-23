@@ -346,8 +346,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 15418309, guid: 06baa6cc70bfa3d4c81c5fcd72bdbeca, type: 3}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+      - m_Target: {fileID: 5673050251104116396}
+        m_TargetAssemblyTypeName: UISound, Assembly-CSharp
         m_MethodName: PlayUIClickSound
         m_Mode: 1
         m_Arguments:
@@ -1235,8 +1235,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 15418309, guid: 06baa6cc70bfa3d4c81c5fcd72bdbeca, type: 3}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+      - m_Target: {fileID: 5673050251104116396}
+        m_TargetAssemblyTypeName: UISound, Assembly-CSharp
         m_MethodName: PlayUIClickSound
         m_Mode: 1
         m_Arguments:
@@ -1370,8 +1370,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 15418309, guid: 06baa6cc70bfa3d4c81c5fcd72bdbeca, type: 3}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+      - m_Target: {fileID: 5673050251104116396}
+        m_TargetAssemblyTypeName: UISound, Assembly-CSharp
         m_MethodName: PlayUIClickSound
         m_Mode: 1
         m_Arguments:
@@ -1516,8 +1516,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 15418309, guid: 06baa6cc70bfa3d4c81c5fcd72bdbeca, type: 3}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+      - m_Target: {fileID: 5673050251104116396}
+        m_TargetAssemblyTypeName: UISound, Assembly-CSharp
         m_MethodName: PlayUIClickSound
         m_Mode: 1
         m_Arguments:
@@ -1697,6 +1697,7 @@ GameObject:
   - component: {fileID: 2155046259111634168}
   - component: {fileID: 4417055353246611246}
   - component: {fileID: 6001632577394279906}
+  - component: {fileID: 5673050251104116396}
   - component: {fileID: 6001632577394279907}
   - component: {fileID: 6001632577394279904}
   m_Layer: 5
@@ -1798,6 +1799,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 100
   m_TargetDisplay: 0
+--- !u!114 &5673050251104116396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6001632577394279918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 654f0a2639dc5aa4b98fc1c394ad2eed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6001632577394279907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2109,9 +2122,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4639547281957016912}
-        m_TargetAssemblyTypeName: PlayRandomSound, Assembly-CSharp
-        m_MethodName: PlaySound
+      - m_Target: {fileID: 5673050251104116396}
+        m_TargetAssemblyTypeName: UISound, Assembly-CSharp
+        m_MethodName: PlayUIClickSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

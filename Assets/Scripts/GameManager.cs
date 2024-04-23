@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
         goldMined = 0;
         blocksInInv = 0;
         familyHappiness = 4;
-        pickaxeStrength = 1;
+        pickaxeStrength = 10;
         currentDay = 0;
         
         //Reset Stats
