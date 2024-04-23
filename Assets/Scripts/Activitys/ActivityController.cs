@@ -264,5 +264,6 @@ public class ActivityController : MonoBehaviour
         fadingPanel.FadeIn(0.8f);
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("Lobby_Scene");
+        GameManager.instance.UpdateCurrentDay();
     }
 }

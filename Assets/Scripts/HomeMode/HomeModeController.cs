@@ -157,6 +157,7 @@ public class HomeModeController : MonoBehaviour
                 GameManager.instance.familyHappiness++;    //Increases Happiness because Player stayed with Family
                 //TODO Animation
                 SceneManager.LoadScene("Lobby_Scene");
+                GameManager.instance.UpdateCurrentDay(); //Updates Current Day
             }
             else
             {

@@ -42,8 +42,9 @@ public class GridGenerator : MonoBehaviour
     private void Start()
     {
         LoadGrid();
+        GameManager.instance.ClearBlocksInInv();
         GameManager.instance.ClearGoldMined();
-        GameManager.instance.UpdateCurrentDay();
+        uIController.UpdateBlocksInInv();
         uIController.UpdateGoldMined();
     }
 
@@ -63,8 +64,7 @@ public class GridGenerator : MonoBehaviour
         SetRandomTiles();
         FindObjectOfType<PlayerInputScript>().transform.position = currentStartPosition;
         ChanceGoldProbability();
-        GameManager.instance.ClearBlocksInInv();
-        uIController.UpdateBlocksInInv();
+        
         
     }
 

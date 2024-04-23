@@ -18,10 +18,9 @@ public class Timer : MonoBehaviour
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         
-        if (GameManager.instance.currentDay == 0)
-        {
-            stopTimer = true;
-        }
+        //Timer will be started in MineTutorial Script
+        stopTimer = true;
+        
     }
 
     private void Update()

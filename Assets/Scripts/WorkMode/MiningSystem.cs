@@ -17,11 +17,6 @@ public class MiningSystem : MonoBehaviour
     public float maxDistance = 2;
     public GameObject goldNugget;
     
-    [Header("Sounds")]
-    //TODO Sounds in AudioManager
-    public PlayRandomSound pickaxeSound;
-    public PlayRandomSound placeSound;
-
     //Private Varibalen
     private Vector3 middleBlockPos;
     
@@ -72,7 +67,7 @@ public class MiningSystem : MonoBehaviour
                     }
                 }
                 
-                pickaxeSound.PlaySound();
+                VolumeManager.instance.GetComponent<AudioManager>().PlayPickaxeSound();
                 
             }
         }
@@ -98,11 +93,10 @@ public class MiningSystem : MonoBehaviour
                     GameManager.instance.UpdateBlocksInInv(false);
                     GameManager.instance.blocksPlaced++;
                     uIController.UpdateBlocksInInv();
-                    placeSound.PlaySound();
+                    VolumeManager.instance.GetComponent<AudioManager>().PlayPlaceBlockSound();
                     
                     //TODO Was wenn Block auf Gold gesetzt?
                 }
-                
                 
             }
     }

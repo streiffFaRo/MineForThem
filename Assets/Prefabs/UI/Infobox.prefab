@@ -458,6 +458,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6673790913574771905, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673790913574771905, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673790913574771905, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 15418309, guid: 06baa6cc70bfa3d4c81c5fcd72bdbeca, type: 3}
+    - target: {fileID: 6673790913574771905, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673790913574771905, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayUIClickSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673790913574771905, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673790913574771905, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673790914313676456, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
+      propertyPath: m_text
+      value: Continue
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
 --- !u!114 &1946570018692854448 stripped

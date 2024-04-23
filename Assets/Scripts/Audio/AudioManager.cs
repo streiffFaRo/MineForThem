@@ -10,6 +10,11 @@ public class AudioManager : MonoBehaviour
 
     [Header("Sounds")]
     public PlayRandomSound collectSound;
+    public PlayRandomSound footstepsSound;
+    public PlayRandomSound pickaxeSound;
+    public AudioSource placeBlockSound;
+    public PlayRandomSound StoneCrackSound;
+    public PlayRandomSound uI_ClickSound;
 
     [Header("Atmos")]
     public AudioSource miningAtmo;
@@ -43,7 +48,34 @@ public class AudioManager : MonoBehaviour
         collectSound.PlaySound();
     }
 
+    public void PlayFootStepSound()
+    {
+        footstepsSound.PlaySound();
+    }
+
+    public void PlayPickaxeSound()
+    {
+        pickaxeSound.PlaySound();
+    }
+
+    public void PlayPlaceBlockSound()
+    {
+        placeBlockSound.Play();
+    }
+
+    public void PlayStoneCrackSound()
+    {
+        StoneCrackSound.PlaySound();
+    }
+
+    public void PlayUIClickSound()
+    {
+        uI_ClickSound.PlaySound();
+    }
     
+
+
+
     public void PlayCurrentAtmo()
     {
         
