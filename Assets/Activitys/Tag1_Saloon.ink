@@ -7,96 +7,95 @@ EXTERNAL saloon(betAmount)
 === main === 
 ~Unity_Event("checkVisit")
 ~Unity_Event("metFriend")
-Hallo, das ist Tag1 - Saloon
-Wie geht es dir?
-Lass uns erstmal etwas bestellen.
-Was trinkst du gerne? Ich gebe dir einen aus!
-+[Wasser]
+When you visit the saloon, you see Davy, your friend from the mine. He seems very pleased to see you.
+He waves you over to his table and greets you in a friendly manner.
+He says: "Let's order something first. What do you like to drink? I'll buy it!"
++[Water]
 -> Wasser
-+[Bier]
++[Beer]
 -> Bier
 +[Whiskey]
 -> Whiskey
 
 === Wasser ===
 ~ ordoredDrink("Wasser")
-Ihr sezt euch hin und dir wird ein kühles Wasser gebracht.
+You sit down and a cool drink of water is brought to you. Your friend took a beer.
 {Get_State("visited") ==1: ->visitedPoker} -> Spiel
 
 === Bier ===
 ~ ordoredDrink("Bier")
-Ihr sezt euch hin und dir wird ein kühles Bier gebracht.
+You sit down and a cold beer is brought to you and your friend.
 {Get_State("visited") ==1: ->visitedPoker} -> Spiel
 
 === Whiskey ===
 ~ ordoredDrink("Whiskey")
-Ihr sezt euch hin und dir wird ein Glas Whiskey gebracht.
+You sit down and a glass of whiskey is brought to you. Your friend took a beer.
 {Get_State("visited") ==1: ->visitedPoker} -> Spiel
 
 
 ===visitedPoker===
-Dein Freund: "Ich habe dich gestern beim Poker Spielen gesehen. Ich muss dich warnen, das kann ein dunkler Weg sein."
-Dein Freund: "Ich versuche dir nur zu helfen. Ich habe schon viele Leute gesehen die ihr elendes Ende fanden in dieser Stadt."
-Dein Freund: "Ich hoffe du wirst keiner von ihnen werden."
+Davy: "I saw you playing poker yesterday. I have to warn you, it can be a dark road."
+Davy: "I'm just trying to help you. I've seen a lot of people meet their miserable end in this town."
+Davy: "I hope you won't become one of them."
 ->Spiel
 
 ===Spiel
-Lust auf ein kleines Trinkspielchen?
-+[Annehmen ($1)]
+Davy: "Fancy a little drinking game?"
++[Accept ($1)]
 -> Eins
-+[Annehmen ($3)]
++[Accept ($3)]
 -> Drei
-+[Ablehnen]
++[Refuse]
 -> Ablehnen
 
 === Eins ===
 ~ saloon("1")
-Gut, lass uns um $1 spielen.
+You: "All right, let's play for $1."
 {Get_State("round") ==1: ->Gewonnen} -> Verloren
 
 === Drei ===
 ~ saloon("3")
-Gut, lass uns um $3 spielen.
+You: "All right, let's play for $3."
 {Get_State("round") ==1: ->Gewonnen} -> Verloren
 
 === Ablehnen ===
-Das ist nichts für mich, ich lehne ab.
+You: "That's not for me, I refuse."
 ->WieGehts
 
 === Gewonnen ===
-Du trinkst und trinkst bis dein Freund nicht mehr kann. Du hast gewonnen!
+You drink and drink until your friend can't take any more. You've won!
 ~Unity_Event("clearRound")
 ->WieGehts
 
 === Verloren ===
-Du trinkst und trinkst bis du nicht mehr kannst. Du hast verloren!
-
+You drink and drink until you can't drink any more. You have lost!
 ->WieGehts
 
 === WieGehts
-Wie auch immer. Wie geht es dir jetzt?
-+[Gut]
+Davy: "Whatever. How are you doing now?"
++[Good]
 -> Gut
-+[Passabel]
++[Decent]
 -> Passabel
-+[Schlecht]
++[Bad]
 -> Schlecht
 
 === Gut ===
-Mir geht es gut. Ich schlage mich so durch und Arbeit ist nicht leicht zu finden.
+You: "I'm doing well. I'm getting by and it's not easy to find work."
 ->end
 
 === Passabel ===
-Naja, es geht gerade so. Die Arbeit ist hart aber ich komme noch klar.
+You: "Well, I'm just about managing. The work is hard but it's not easy to find work"
 ->end
 
 === Schlecht ===
-Es war das beste was ich gefunden habe. Ich brauche Geld für meine Familie.
+You: "It was the best thing I found. I need money for my family and it's not easy to find work."
 ->end
 
 === end ===
-Also ich kann dir offen sagen, dass ich nun nach drei Monaten völlig fertig bin. Die Minengesellschaft verdient durch unsere Arbeit ein Vermögen und wir haben nicht genug um ein Vernünftiges Leben zu führen.
-Ich versuche einen Weg zu finden dem zu entgehen.
+Davy: "Well, I can tell you frankly that after three months I'm completely exhausted. The mining company earns a fortune from our work and we don't have enough to live a decent life."
+Davy "I'm trying to find a way to avoid this. But enough of that, it's getting late. Have a nice evening."
+You leave the saloon, still thinking about Davy's words.
 ~Unity_Event("endDay")
 -->END
 
