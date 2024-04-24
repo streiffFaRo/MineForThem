@@ -117,6 +117,7 @@ public class PlayerInputScript : MonoBehaviour
         {
             pauseMenuCanvas.gameObject.SetActive(true);
             gameIsPaused = true;
+            FindObjectOfType<Timer>()?.ToggleTimer();
             VolumeManager.instance.GetComponent<AudioManager>().currentAtmo.Pause();
             VolumeManager.instance.GetComponent<AudioManager>().MenuMusic.Play();
             //TODO PauseSound
@@ -125,6 +126,7 @@ public class PlayerInputScript : MonoBehaviour
         {
             pauseMenuCanvas.gameObject.SetActive(false);
             gameIsPaused = false;
+            FindObjectOfType<Timer>()?.ToggleTimer();
             VolumeManager.instance.GetComponent<AudioManager>().MenuMusic.Stop();
             VolumeManager.instance.GetComponent<AudioManager>().currentAtmo.UnPause();
             //TODO UnpauseGameSound

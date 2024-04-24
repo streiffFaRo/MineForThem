@@ -128,7 +128,7 @@ public class HomeModeController : MonoBehaviour
             descriptionTextUI.text = "Der Sheriff erwartet mich auf dem Hauptplatz...";
             stayHomeButton.gameObject.SetActive(false);
         }
-        else
+        else if (currentDay >= 6)
         {
             descriptionTextUI.text = "Heute Abend gibt es nichts zu tun. Deine Familie freut sich mit dir Zeit zu verbringen.";
             goOutButton.gameObject.SetActive(false);

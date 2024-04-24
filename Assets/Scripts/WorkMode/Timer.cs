@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private float remainingTime;
     public bool stopTimer;
-
+    
 
     private void Start()
     {
@@ -18,9 +18,14 @@ public class Timer : MonoBehaviour
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         
-        //Timer will be started in MineTutorial Script
-        stopTimer = true;
-        
+        if (GameManager.instance.currentDay == 0)
+        {
+            stopTimer = true;
+        }
+        else
+        {
+            stopTimer = false;
+        }
     }
 
     private void Update()
@@ -28,6 +33,18 @@ public class Timer : MonoBehaviour
         if (!stopTimer)
         {
             Countdown();
+        }
+    }
+
+    public void ToggleTimer()
+    {
+        if (stopTimer)
+        {
+            stopTimer = false;
+        }
+        else
+        {
+            stopTimer = true;
         }
     }
 
