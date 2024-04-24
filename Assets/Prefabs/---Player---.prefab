@@ -91,8 +91,6 @@ MonoBehaviour:
   gridGenerator: {fileID: 0}
   maxDistance: 1
   goldNugget: {fileID: 3024164110287596503, guid: 8e57eebd20e1c2644a05716bdb0f4d10, type: 3}
-  pickaxeSound: {fileID: 0}
-  placeSound: {fileID: 0}
 --- !u!114 &1390790650942822999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,6 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 2
   showGizmos: 1
+  shootoutDone: 0
 --- !u!50 &1307560654357108209
 Rigidbody2D:
   serializedVersion: 4
@@ -195,7 +194,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 645599afde297d144874ec79d9dc3ae9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c7030ff2e2811794887028228d93d4c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
