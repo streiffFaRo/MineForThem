@@ -3,138 +3,134 @@ EXTERNAL spenden(amount)
 
 -> main
 === main === 
-Tag 2 - Kirche
-Du bereitest dich vor zur Messe zu gehen.
-Du weisst, dass Dolores gerne mit dir gehen möchste, vielleicht wäre es auch besser etwas mit deinem Freund aus der Mine zu unternehmen, oder soll ich doch alleine gehen?
-Mit wem möchstest du gehen?
-+[Familie]
+You get ready to go to mass.
+You know that Dolores would like to go with you, maybe it would be better to go with your friend from the mine, Davy, or do you want to go alone?
+Who would you like to go to church with?
++[Family]
 -> MitFam
-+[Freund]
++[Davy]
 -> MitFreu
-+[Alleine]
++[Alone]
 -> Alleine
 
 ===MitFam===
 ~Unity_Event("happyFamily")
-Du bittest deine Familie dich zu begleiten
-Dolores findet das eine ganz wundervolle Idee.
+You ask your family to accompany you. Dolores thinks it's a wonderful idea.
 ->Messe
 
 ===MitFreu===
 ~Unity_Event("metFriend")
-Du bittest deinen Freund dich zu begleiten
-Er freut sich über deine Anfrage und sagt zu.
+You ask your friend Davy to accompany you. He is pleased about your request and agrees.
 ->Messe
 
 ===Alleine===
 ~Unity_Event("unhappyFamily")
-Du entscheidest dich dazu alleine zur Messe zu gehen.
-Dolores ist enttäuscht, dass du alleine gehst.
+You decide to go to the service alone. Dolores is disappointed that you are going alone.
 ->Messe
 
 ===Messe===
-In der Kirche predigt der Priester vom Geiz, dem man entsagen muss.
-Er legt jedem nahe seine Arbeit fromm zu verrichten und andere, die mehr haben nicht zu beneiden.
-Du denkst an deine Arbeit und an die Minengesellschaft, welche doch so viel mehr hat und dir nur einen Hungerlohn überlässt.
-Wie kann das gerecht sein?
-Nun stimmt der Priester zu einem gemeinsamen Gebet an. Was tust du?
-+[Beten]
+In church, the priest preaches about greed, which must be renounced.
+He urges everyone to do their work piously and not to envy others who have more.
+You think of your work and of the mining company, which has so much more and only gives you a pittance.
+How can that be fair?
+Now the priest starts a common prayer. What are you doing?
++[Pray]
 -> Beten
-+[Schweigen]
++[Remain silent]
 -> Schweigen
-+[An Familie denken]
++[Think of family]
 -> Denken
 
 ===Beten===
 ~Add_State("segen",1)
-Du entschliesst dich dem Gebet zu folgen mit der Hoffnung, dass Gott deine Bitte erhört.
+You decide to follow the prayer with the hope that God will hear your request.
 {MitFam:->BetenFam}
 {MitFreu:->BetenFreu}
 ->Spenden
 
 ===BetenFam===
-Auch Dolores spricht das Gebet und schaut mit einem Lächeln zu dir rüber.
+Dolores also says the prayer and looks over at you with a smile.
 ->Spenden
 
 ===BetenFreu===
-Dein Freund sitzt nur da und starrt den Priester wortlos an. An was er wohl denkt?
+Davy just sits there and stares wordlessly at the priest. I wonder what he's thinking about?
 ->Spenden
 
 ===Schweigen===
-Du entschliesst dich zu schweigen. Was bringt das schon? Nur du kannst dir helfen.
+You decide to remain silent. What's the point? Only you can help yourself.
 {MitFam:->SchweigenFam}
 {MitFreu:->SchweigenFreu}
 ->Spenden
 ===SchweigenFam===
-Dolores spricht das Gebet und als sie bemerkt, dass du schweigst wirft sie dir einen Vorwurfsvollen Blick zu.
+Dolores says the prayer and when she realises that you are silent, she gives you a reproachful look.
 ->Spenden
 ===SchweigenFreu===
-Dein Freund sitzt wie du nur da und starrt den Priester wortlos an. An was er wohl denkt?
+Your friend just sits there like you and stares at the priest without a word. I wonder what he's thinking about?
 ->Spenden
 
 ===Denken===
-Du entschliesst dich dan deine Familie zu denken. An das was dir etwas bedeutet. Denn sie sind der Grund warum du diese Arbeit auf dich nimmst.
+You decide to think about your family. Of what means something to you. Because they are the reason why you are taking on this work.
 {MitFreu:->DenkenFreu}
 ->Spenden
 
 ===DenkenFreu===
-Dein Freund sitzt nur da und starrt den Priester wortlos an. An was er wohl denkt?
+Your friend just sits there and stares wordlessly at the priest. I wonder what he's thinking about?
 ->Spenden
 
 ===Spenden===
-Am Ende der Messe informiert der Hohe Geistliche über die Termine der nächsten Messen und ruft zu Spenden zu Gunsten der Kirche auf.
-Du begibst dich zum Ausgang und siehst die Kollekte in die, die Leute vor dir Geld werfen.
-Nun stehst du vor der Kollekte, was tust du?
-+[10c Spenden]
+At the end of the mass, the high priest informs about the dates of the next masses and asks for donations in favour of the church.
+You go to the exit and see the collection into which the people in front of you are putting money.
+Now you are standing in front of the collection, what do you do?
++[Donate 10c]
 -> 10c
-+[50c Spenden]
++[Donate 50c]
 -> 50c
-+[Nicht Spenden]
++[Refuse]
 -> NichtSpenden
 
 ===10c===
 ~ spenden("10")
-Du entschliesst dich 10c in die Kollekte zu werfen.
+You decide to throw 10c into the collection.
 {MitFam:->EpilogFam}
 {MitFreu:->EpilogFreu}
 ->EpilogAllein
 
 ===50c===
 ~ spenden("50")
-Du entschliesst dich 50c in die Kollekte zu werfen.
+You decide to throw 50c into the collection.
 {MitFam:->EpilogFam}
 {MitFreu:->EpilogFreu}
 ->EpilogAllein
 
 ===NichtSpenden===
-Du entschliesst dich an der Kollekte vorbei zu gehen ohne etwas zu spenden.
+You decide to walk past the collection without donating anything.
 {MitFam:->EpilogFam}
 {MitFreu:->EpilogFreu}
 ->EpilogAllein
 
 ===EpilogFam===
-Dolores bedankt sich nochmals bei dir, dass du mit ihr zur Messe gegangen bist.
+Dolores thanks you again for going to mass with her.
 {Get_State("segen") ==2: ->Segen}->end
 
 ===EpilogFreu===
-Dein Freund bedankt sich nochmals, dass du mit ihm etwas unternommen hast.
+Your friend thanks you again for doing something with him.
 {Get_State("segen") ==2: ->Segen}->end
 
 ===EpilogAllein===
-Du verlässt die Kirche.
+You leave the church.
 {Get_State("segen") ==2: ->Segen}->end
 
 ===Segen===
-Du fühlst dich nach der Messe bereits schon viel besser.
-Es scheint so als ob deine Gebete erhört wurden.
-Du kannst morgen mit mehr Energie denn je an die Arbeit gehen.
+You already feel much better after the mass.
+It seems that your prayers have been answered.
+You can go to work tomorrow with more energy than ever.
 ~Unity_Event("segnung")
 ~Unity_Event("endDay")
 -->END
 
 === end ===
-Du denkst noch den ganzen Abnend an die Messe.
-Morgen wird bestimmt alles besser.
+You're still thinking about the mass the whole evening.
+Everything will certainly be better tomorrow.
 ~Unity_Event("endDay")
 -->END
 

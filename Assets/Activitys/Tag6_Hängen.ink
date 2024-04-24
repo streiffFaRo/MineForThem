@@ -3,48 +3,47 @@ INCLUDE Utility.ink
 -> main
 
 ===main===
-Als ich auf den Marktplatz ging sah ich es schon - ein Galgen.
-Ist er für mich gedacht oder mache ich mir nur zu viel Stress? Ich habe nur meine Pflicht als gesetzestreuer Bürger erfüllt.
-Sollte ich vielleicht meine Familie nehmen und fliehen?
-Was tust du?
-+[Fliehen]
+When you walked onto the market square, you could already see it - a gallows.
+Is it meant for you? You were just fulfilling your duty as a law-abiding citizen.
+Should you perhaps take your family and flee? Or will you be paranuid? What are you doing?
++[Escape]
 -> Flucht
-+[Zum Sheriff]
++[Go to Sheriff]
 -> Sheriff
 
 ===Flucht===
-Du gehst du deiner Familie und fliehst in die nächste Stadt. 
+You go to your family and flee to the next town. 
 ~Unity_Event("escaped")
 ->END
 
 ===Sheriff===
-Du gehst mit einem mulmigen Gefühl im Magen zum Sheriff.
-Er begrüsst dich mit:"Ach, Ihr seid es. Gut Euch zu sehen, es wird Euch freuen zu hören, dass wir den Verräter den Ihr uns gemeldet habt festnehmen konnten."
-Weiter sagt er:"Meine Männer werden ihn gleich fertig machen für seine gerechte Strafe."
-Er bemerkt:"Sag, geht es Euch nicht gut? Ihr seht etwas mitgenommen aus."
-+[Schlecht gegessen]
+You go to the sheriff with a queasy feeling in your stomach.
+He greets you with: "Oh, it's you. Good to see you, you'll be pleased to hear that we were able to arrest the traitor you reported to us."
+Sheriff: "My men are about to finish him off for his just punishment."
+Sheriff: "Tell me, aren't you feeling well? You look a bit worn out."
++[Badly eaten]
 ->schlecht
-+[Alles gut]
++[Everything fine]
 ->gut
 
 ===schlecht===
-"Ich glaube ich habe etwas schlechtes gegessen"
+You: "I think I've eaten something bad"
 ->kommen
 
 ===gut===
-"Nein bei mir ist alles gut."
+You: "No, everything's fine with me."
 ->kommen
 
 ===kommen
-Der Sheriff:"Ach wie auch immer, hier kommt er."
-Du blickst in die leeren Augen deines Freundes als er zum Galgen geführt wird.
-Als er dich sieht runzelt er die Stirn, bringt aber kein Wort heraus.
-Die Leute des Sheriffs legen ihm den Strick um den Nacken und einer begibt sich zum Hebel, der das Urteil vollstrecken wird.
-Mittlerweile hat sich eine kleine Menge vor dem Galgen versammelt.
-Der Sheriff:"Gute Leute, dieser Schuft hat versucht die Minengesellschaft, welche die Stadt und so uns alle unterstütz zu hintergehen."
-Weiter spricht er:"Aufgrund des versuchen Verrats und dem geplanten Mord eines Vorarbeiters verurteile ich ihn hiermit zum Tode! Ausführen!"
-Der Hebel wird gezogen und die Platform, welche deinen Freund noch gehalten hat fällt weg.
-Du verlässt den Platz und auf dem Heimweg fragst du dich ob es das Richtige war, dass du getan hast.
+The sheriff: "Whatever, here he comes."
+You look into the empty eyes of your friend as he is led to the gallows.
+When he sees you, he frowns but doesn't say a word.
+The sheriff's men put the rope around his neck and one of them goes to the lever that will carry out the sentence.
+In the meantime, a small crowd has gathered in front of the gallows.
+Sheriff: "Good people, this scoundrel tried to defraud the mining company that supports the town and thus all of us."
+Sheriff: "Because of the attempted betrayal and the planned murder of a foreman, I hereby sentence him to death! Execute!"
+The lever is pulled and the platform that was still holding your friend falls away.
+You leave the square and on the way home you ask yourself whether you did the right thing.
 ~Unity_Event("snitched")
 -->END
 

@@ -5,106 +5,105 @@ EXTERNAL category(number)
 -> main
 === main === 
 ~Unity_Event("clearRound")
-Tag 5 - Schiessen
-Du besuchst den heutigen Schiesswettbewerb im Dorf.
-Es gibt drei Preiskategorie, in der ersten ist der Einsatz bei 50c, der Gewinn beträgt $2.
-Die Zweite Kategorie kostet $2 und der beste Schütze erhält $5
-Bei der Kategorie mit den besten Schützen, kostet die Teilnahme $5 und der Hauptgewinn beträgt $10.
-In welcher Preiskategorie möchtest du teilnehmen?
-+[1. Kategorie]
+You are attending today's shooting competition in the city.
+There are three prize categories, in the first the stake is 50c, the prize is $2.
+The second category costs $2 and the best shooter receives $5
+In the best shooter category, the entry fee is $5 and the grand prize is $10.
+In which price category would you like to participate?
++[1. category]
 -> Eins
-+[2. Kategorie]
++[2. category]
 -> Zwei
-+[3. Kategorie]
++[3. category]
 -> Drei
 
 ===Eins===
 ~ category("1")
-Du lässt dich für die erste Kategorie einschreiben.
+You register for the first category.
 ->Wettbewerb
 
 ===Zwei===
 ~ category("2")
-Du lässt dich für die zweite Kategorie einschreiben.
+You register for the second category.
 ->Wettbewerb
 
 ===Drei==
 ~ category("3")
-Du lässt dich für die dritte Kategorie einschreiben.
+You register for the third category.
 ->Wettbewerb
 
 
 ===Wettbewerb===
 ~Unity_Event("checkPlan")
-Jeder Schütze begibt sich zu seinem Stand.
-Vor dir liegt ein Revolver, noch ungeladen.
-Zu Treffen sind 6 Dosen, welche gut 25m von den Schützen entfernt sind.
-Der Schiessmeister beginnt nun mit dem Austeilen der Munition und gibt das Wettschiessen frei.
+Each shooter goes to his stand.
+In front of you is a revolver, still unloaded.
+There are 6 cans to hit, which are a good 25 metres away from the shooters.
+The shooting master now begins to hand out the ammunition and starts the shooting competition.
 {Get_State("knowsPlan") ==1: ->knowsPlan} -> NotKnowsPlan
 
 ===knowsPlan===
-Du denkst an den Plan deines Freundes.
-Wenn dann wäre jetzt die Möglichkeit die Munition zu stehlen.
-Nur eine Patrone wäre nötig für den Plan.
-Wie entscheidest du dich?
-+[Patrone stehlen]
+You think about your friend's plan.
+If so, now would be the opportunity to steal the ammunition.
+Only one bullet would be needed for the plan.
+What will you do?
++[Steal bullet]
 -> Stehlen
-+[Nicht stehlen]
++[Don't steal]
 -> NichtStehlen
 
 ===Stehlen===
 ~Unity_Event("stealRound")
-Du steckst eine Patrone unauffällig in deine Hosentsche.
-Keiner vermutet etwas.
-Du beginnst auf die Dosen zu schiessen als ob nichts wäre.
+You slip a cartridge inconspicuously into your trouser pocket.
+You look around you. Nobody suspects anything.
+You start shooting at the cans as if nothing is wrong.
 {Get_State("round") ==1: ->Win} -> Lose
 
 ===NichtStehlen===
-Du denkst kurz darüber nach sie zu nehmen, doch dann besinnst du dich wieder.
-Du beginnst du die Dosen zu schiessen und fokusierst dich aufs Gewinnen.
+You briefly think about taking them, but then you decide against it.
+You start shooting the cans and focus on winning.
 {Get_State("round") ==1: ->Win} -> Lose
 
 ===NotKnowsPlan===
 {Get_State("round") ==1: ->Win} -> Lose
 
 ===Win===
-Du hast die meisten Dosen getroffen und damit in deiner Kategorie gewonnen!
-Damit hast du den Preis von ${Get_State("price")} erhalten!
+You hit the most cans and won your category!
+You have now received the price from ${Get_State("price")}!
 ->WayHome
 
 ===Lose===
-Du hast nicht genug Dosen getroffen. Du hast in deiner Kategorie verloren.
+You didn't hit enough cans. You lost in your category.
 ->WayHome
 
 ===WayHome===
-Du gehst nach dem Schiessen wieder nach Hause.
-Auf dem Wege zu deiner Familie beginnst du über deine Familie, deine Arbeit und deine Entscheidungen nachzudenken.
+You go home again after shooting.
+On the way to your family, you start to think about your family, your work and your decisions.
 {NichtStehlen: ->Snitch} ->end
 
 ===Snitch===
 ~Unity_Event("snitched")
-Du denkst an deinen Freund.
-Du denkst daran wie er dich in diesen Plan reinreden wollte.
-Vielleicht ist er gefährlich...
-Vielleicht muss man ihn stoppen...
-Vielleicht musst DU ihn stoppen...
-Vielleicht musst du ihm beim Sheriff melden.
-Wirst du deinen Freund verraten?
-+[Verraten]
+You think of your friend.
+You think about how he tried to talk you into this plan.
+Maybe he's dangerous...
+Maybe he needs to be stopped...
+Maybe YOU have to stop him...
+Maybe you need to report him to the sheriff.
+Will you betray your friend?
++[Betray]
 -> Verraten
-+[Schweigen]
++[Do Nothing]
 -> Schweigen
 
 ===Verraten===
-Du entschliesst dich auf dem Weg nach hause noch zum Sheriff zu gehen.
-Du schilderst ihm die Geschehnisse und den verbrecherischen Plan deines Freundes.
-Der Sheriff glaubt dir sofort und beruhig dich: "Keine Sorge guter Mann, ich werde mich darum kümmern."
-Du verlässt dann das Sheriffsbüro und fragst dich, ob das wohl das Richtige war...
+You decide to go to the sheriff on your way home.
+You describe the events and your friend's criminal plan to him.
+The sheriff immediately believes you and reassures you: "Don't worry, good man, I'll take care of it."
+You leave the sheriff's office and wonder if that was the right thing to do...
 ->end
 
 ===Schweigen===
-Du entschliesst dich nichts zu sagen. Dein Freund mag diesen Plan haben, doch du siehst dich nicht als Verräter.
-Ob das wohl das Richtige war...
+You decide not to say anything. Your friend may have this plan, but you don't see yourself as a traitor.
+You wonder if that was the right thing to do...
 ->end
 
 === end ===
