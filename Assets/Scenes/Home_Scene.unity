@@ -3598,8 +3598,7 @@ MonoBehaviour:
   - Heute wird ein Schiesswettbewerb in der Stadt abgehalten.
   descriptionTextUI: {fileID: 906313976}
   goOutButton: {fileID: 603154280}
-  specialGameObject: {fileID: 0}
-  hasSpecialExpenses: 1
+  stayHomeButton: {fileID: 1059589621}
 --- !u!114 &1663386754
 MonoBehaviour:
   m_ObjectHideFlags: 0

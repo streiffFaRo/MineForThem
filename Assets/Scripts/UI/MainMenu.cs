@@ -1,12 +1,42 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    
-    
+
+    public TextMeshProUGUI fpsText;
+
+    private int currentFPSCap = 0;
+    private void Awake()
+    {
+        if (Application.targetFrameRate >= 400)
+        {
+            currentFPSCap = 0;
+        }
+        else if (Application.targetFrameRate >= 200)
+        {
+            currentFPSCap = 240;
+        }
+        else if (Application.targetFrameRate >= 100)
+        {
+            currentFPSCap = 120;
+        }
+        else if (Application.targetFrameRate >=50)
+        {
+            currentFPSCap = 60;
+        }
+        else
+        {
+            currentFPSCap = 30;
+        }
+        
+        fpsText.text = currentFPSCap.ToString();
+        
+    }
     
     public void StartGame()
     {
@@ -14,6 +44,40 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Intro_Scene");
         //TODO Cameraswipe right to contract
     }
+
+    public void ChangeFPSCap()
+    {
+        switch (currentFPSCap)
+        {
+            case 0:
+                Application.targetFrameRate = 30;
+                currentFPSCap = 30;
+                fpsText.text = "30";
+                break;
+            case 30:
+                Application.targetFrameRate = 60;
+                currentFPSCap = 60;
+                fpsText.text = "60";
+                break;
+            case 60:
+                Application.targetFrameRate = 120;
+                currentFPSCap = 120;
+                fpsText.text = "120";
+                break;
+            case 120:
+                Application.targetFrameRate = 240;
+                currentFPSCap = 240;
+                fpsText.text = "240";
+                break;
+            case 240:
+                Application.targetFrameRate = 0;
+                currentFPSCap = 0;
+                fpsText.text = "unlimited";
+                break;
+        }
+    }
+
+
 
     public void Credits()
     {

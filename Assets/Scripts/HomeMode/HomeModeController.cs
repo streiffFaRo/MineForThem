@@ -37,10 +37,8 @@ public class HomeModeController : MonoBehaviour
     [SerializeField] private string[] descriptionTexts;
     [SerializeField] private TextMeshProUGUI descriptionTextUI;
     [SerializeField] private Button goOutButton;
-
-    [Header("Anderes")]
-    [SerializeField] private GameObject specialGameObject;
-    public bool hasSpecialExpenses;
+    [SerializeField] private Button stayHomeButton;
+    
     
 
     private void Start()
@@ -124,6 +122,17 @@ public class HomeModeController : MonoBehaviour
         {
             goOutButton.gameObject.SetActive(true);
         }
+
+        if (currentDay >= 6 && GameManager.instance.snitched)
+        {
+            descriptionTextUI.text = "Der Sheriff erwartet mich auf dem Hauptplatz...";
+            stayHomeButton.gameObject.SetActive(false);
+        }
+        else
+        {
+            descriptionTextUI.text = "Heute Abend gibt es nichts zu tun. Deine Familie freut sich mit dir Zeit zu verbringen.";
+            goOutButton.gameObject.SetActive(false);
+        }
     }
 
     public void SetAmounts()
@@ -154,6 +163,10 @@ public class HomeModeController : MonoBehaviour
             }
             else if (key == 1)
             {
+                if (GameManager.instance.currentDay >=6)
+                {
+                    GameManager.instance.GetComponent<EndingManager>().InitEnding(2);
+                }
                 GameManager.instance.familyHappiness++;    //Increases Happiness because Player stayed with Family
                 //TODO Animation
                 SceneManager.LoadScene("Lobby_Scene");

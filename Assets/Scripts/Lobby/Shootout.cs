@@ -13,6 +13,11 @@ public class Shootout : MonoBehaviour
     private void Awake()
     {
         playerInputScript = FindObjectOfType<PlayerInputScript>();
+
+        if (GameManager.instance.currentDay >= 6 && GameManager.instance.snitched)
+        {
+            GetComponentInParent<SpriteRenderer>().gameObject.SetActive(false);
+        }
     }
 
     public void ShootoutInteraction()

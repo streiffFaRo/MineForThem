@@ -31,7 +31,7 @@ public class EndingManager : MonoBehaviour
                 DiedInMine();
                 break;
             case 6:
-                GotShot();
+                Escaped();
                 break;
             case 7:
                 break;
@@ -71,8 +71,8 @@ public class EndingManager : MonoBehaviour
         GameManager.instance.scoreFromEnding = -300;
     }
 
-    private void GotShot()
+    private void Escaped()
     {
-        GameManager.instance.scoreFromEnding = -500;
+        GameManager.instance.scoreFromEnding = 0;
     }
 }

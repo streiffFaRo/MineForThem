@@ -50,7 +50,7 @@ Du: "Es geht mir schrecklich. Ich kann nicht mehr. Wenn das Geld wenigstens genu
 ===Schweigen===
 "..."
 "Hör mir doch erstmal zu, es wird für dich nicht so gefährlich sein, wie für mich."
-"Ich habe mitbekommen, dass der Vorarbeiter in seinem Büro immer die Tageseinnahmen verwahrt."
+"Ich habe mitbekommen, dass der Vorarbeiter in seinem Büro immer die Wocheneinnahmen verwahrt."
 ->Plan
 
 ===Plan===

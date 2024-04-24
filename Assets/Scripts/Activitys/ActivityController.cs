@@ -27,6 +27,7 @@ public class ActivityController : MonoBehaviour
     [SerializeField] private TextAsset inkDay3;
     [SerializeField] private TextAsset inkDay4;
     [SerializeField] private TextAsset inkDay5;
+    [SerializeField] private TextAsset inkDay5S;
 
     [Header("Choices UI")] 
     [SerializeField] private GameObject[] choices;
@@ -164,6 +165,16 @@ public class ActivityController : MonoBehaviour
             case 5:
                 currentStory = new Story(inkDay5.text);
                 break;
+            case 6:
+                if (GameManager.instance.snitched)
+                {
+                    currentStory = new Story(inkDay5S.text);
+                }
+                else
+                {
+                    Debug.Log("Error: Playing Day 6 without snitched!");
+                }
+                break;
             default:
                 Debug.Log("Error:Current Day");
                 break;
@@ -259,11 +270,36 @@ public class ActivityController : MonoBehaviour
     {
         StartCoroutine(EndDayCorutine());
     }
+
     public IEnumerator EndDayCorutine()
     {
         fadingPanel.FadeIn(0.8f);
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("Lobby_Scene");
         GameManager.instance.UpdateCurrentDay();
+    }
+    
+    public void InitSnitchedEnding() //Aufgrufen über InkEvent
+    {
+        StartCoroutine(SnitchedEnding());
+    }
+
+    public IEnumerator SnitchedEnding()
+    {
+        fadingPanel.FadeIn(0.8f);
+        yield return new WaitForSeconds(1f);
+        GameManager.instance.GetComponent<EndingManager>().InitEnding(1);
+    }
+    
+    public void InitEscapedEnding() //Aufgrufen über InkEvent
+    {
+        StartCoroutine(EscapedEnding());
+    }
+
+    public IEnumerator EscapedEnding()
+    {
+        fadingPanel.FadeIn(0.8f);
+        yield return new WaitForSeconds(1f);
+        GameManager.instance.GetComponent<EndingManager>().InitEnding(6);
     }
 }

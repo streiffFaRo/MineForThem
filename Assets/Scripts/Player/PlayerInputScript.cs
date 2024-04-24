@@ -33,7 +33,8 @@ public class PlayerInputScript : MonoBehaviour
     //Event
     public static event Action onMoveEvent;
     public static event Action onJumpEvent;
-    public static event Action onBackEvent;
+    
+    //public static event Action onBackEvent;
 
     private void Awake()
     {
