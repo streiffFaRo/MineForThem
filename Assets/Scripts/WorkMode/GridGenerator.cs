@@ -20,8 +20,7 @@ public class GridGenerator : MonoBehaviour
     public List<Blocks> blocks = new List<Blocks>();
     public int goldChangeRate = 40;
     public Dictionary<Vector3Int, int> blockGridDurabilityDictionary = new Dictionary<Vector3Int, int>();
-
-
+    
     [Header("Walker")] 
     public int walkerAmount = 5;
     public int walkerRange = 8;
@@ -33,11 +32,20 @@ public class GridGenerator : MonoBehaviour
     public Vector2Int startToEndDistance = new Vector2Int(14,16);
     public GameObject exitDoor;
 
+    [Header("MinecartStation")]
+    public GameObject minecartStation;
+    public Tile tntTile;
+    public Tile minecartStationTile;
+    
+    
+    
     [Header("UI")]
     public UIController uIController;
     
+    //Private Variablen
     private Vector2 currentStartPosition;
-    
+    private Vector2Int station1Pos;
+    private Vector2Int station2Pos;
 
     private void Start()
     {
@@ -61,13 +69,15 @@ public class GridGenerator : MonoBehaviour
         SetUpGrid();
         PlaceCorridor();
         SetStartAndEnd();
+        if (GameManager.instance.currentDay >= 2)
+            SetMineCartTiles();
         SetRandomTiles();
+        if (GameManager.instance.currentDay >= 4)
+            SetTNTTiles();
         FindObjectOfType<PlayerInputScript>().transform.position = currentStartPosition;
         ChanceGoldProbability();
-        
-        
     }
-
+    
     public void SetUpGrid()
     {
         for (int x = -1; x <= gridSizeX; x++)
@@ -198,6 +208,65 @@ public class GridGenerator : MonoBehaviour
         Instantiate(exitDoor, new Vector3(endPos.x+0.5f, endPos.y+0.5f), Quaternion.identity);
 
     }
+
+    public void SetMineCartTiles()
+    {
+        bool station1PosFound = false;
+        int maxStation1Tries = gridSizeX * gridSizeY * 10;
+
+        while (!station1PosFound && maxStation1Tries > 0)
+        {
+            station1Pos = new Vector2Int(Random.Range(0, gridSizeX), Random.Range(0,gridSizeY));
+            if (tilemap.GetTile(new Vector3Int(station1Pos.x,station1Pos.y,0)) != barrierTile &&
+                noCollisionTileMap.GetTile(new Vector3Int(station1Pos.x,station1Pos.y,0)) != start &&
+                noCollisionTileMap.GetTile(new Vector3Int(station1Pos.x,station1Pos.y,0)) != end)
+            {
+                tilemap.SetTile(new Vector3Int(station1Pos.x, station1Pos.y, 0), null);
+                noCollisionTileMap.SetTile(new Vector3Int(station1Pos.x, station1Pos.y, 0), minecartStationTile);
+                tilemap.SetTile(new Vector3Int(station1Pos.x, station1Pos.y-1, 0), barrierTile);
+                Instantiate(minecartStation, new Vector3(station1Pos.x+0.5f, station1Pos.y+0.5f), Quaternion.identity);
+                station1PosFound = true;
+            }
+        }
+        
+        
+        bool goodTile = false;
+        int maxDistanceTries = gridSizeX * gridSizeY * 10;
+        station2Pos = new Vector2Int(0,0);
+        
+        while (!goodTile && maxDistanceTries > 0)
+        {
+            station2Pos = new Vector2Int(Random.Range(0, gridSizeX), Random.Range(0,gridSizeY));
+
+            float distance = Vector2Int.Distance(station2Pos, station1Pos);
+            
+            if (distance >= startToEndDistance.x && 
+                distance <= startToEndDistance.y)
+            {
+                goodTile = true;
+            }
+
+            maxDistanceTries--;
+        }
+        
+        bool station2PosFound = false;
+        int maxStation2Tries = gridSizeX * gridSizeY * 10;
+
+        while (!station2PosFound && maxStation2Tries > 0)
+        {
+            if (tilemap.GetTile(new Vector3Int(station1Pos.x,station1Pos.y,0)) != barrierTile &&
+                noCollisionTileMap.GetTile(new Vector3Int(station1Pos.x,station1Pos.y,0)) != start &&
+                noCollisionTileMap.GetTile(new Vector3Int(station1Pos.x,station1Pos.y,0)) != end)
+            {
+                tilemap.SetTile(new Vector3Int(station2Pos.x, station2Pos.y, 0), null);
+                noCollisionTileMap.SetTile(new Vector3Int(station2Pos.x, station2Pos.y, 0), minecartStationTile);
+                tilemap.SetTile(new Vector3Int(station2Pos.x, station2Pos.y-1, 0), barrierTile);
+                Instantiate(minecartStation, new Vector3(station2Pos.x+0.5f, station2Pos.y+0.5f), Quaternion.identity);
+                station2PosFound = true;
+            }
+        }
+        
+    }
     
     public void SetRandomTiles()
     {
@@ -241,6 +310,28 @@ public class GridGenerator : MonoBehaviour
         }
     }
     
+    public void SetTNTTiles()
+    {
+        for (int i = 0; i < Random.Range(1,4); i++)
+        {
+            bool tntPosFound = false;
+            int maxStation1Tries = gridSizeX * gridSizeY * 10;
+
+            while (!tntPosFound && maxStation1Tries > 0)
+            {
+                Vector2Int tntPos = new Vector2Int(Random.Range(0, gridSizeX), Random.Range(0,gridSizeY));
+                if (tilemap.GetTile(new Vector3Int(tntPos.x,tntPos.y,0)) != barrierTile &&
+                    noCollisionTileMap.GetTile(new Vector3Int(tntPos.x,tntPos.y,0)) != start &&
+                    noCollisionTileMap.GetTile(new Vector3Int(tntPos.x,tntPos.y,0)) != end &&
+                    noCollisionTileMap.GetTile(new Vector3Int(tntPos.x,tntPos.y,0)) != minecartStationTile)
+                {
+                    tilemap.SetTile(new Vector3Int(tntPos.x, tntPos.y, 0), null);
+                    tilemap.SetTile(new Vector3Int(tntPos.x, tntPos.y, 0), tntTile);
+                    tntPosFound = true;
+                }
+            }
+        }
+    }
 
     public void ChanceGoldProbability()
     {

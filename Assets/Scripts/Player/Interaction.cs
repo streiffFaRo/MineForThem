@@ -62,12 +62,13 @@ public class Interaction : MonoBehaviour
                 Debug.Log("Interacted with EndDoor");
                 GameManager.instance.GetComponent<EndingManager>().InitEnding(0);
             }
-            
-            /*
-         *  ->Minecarttrack
-         *  ->Enter/leave Area
-         *  ->
-         */
+
+            if (collider.CompareTag("MineCartStation") && 
+                Vector2.Distance(transform.position, collider.transform.position) <= collider.GetComponent<BoxCollider2D>().size.x/2)
+            {
+                Debug.Log("Interacted with LorenStation");
+                //TODO Funktonalität
+            }
         }
 
         

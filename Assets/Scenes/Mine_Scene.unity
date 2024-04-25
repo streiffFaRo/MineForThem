@@ -1594,6 +1594,9 @@ MonoBehaviour:
   end: {fileID: 11400000, guid: a8c3a375d42a1c8478110d6aad65f282, type: 2}
   startToEndDistance: {x: 8, y: 10}
   exitDoor: {fileID: 3453196815279115232, guid: 250ece73e1b366b42a518243b63c7669, type: 3}
+  minecartStation: {fileID: 3453196815279115232, guid: 9eb512722dc02c046808cd840203db67, type: 3}
+  tntTile: {fileID: 11400000, guid: 76aa8b143846fa74dbc1ff038feb0df0, type: 2}
+  minecartStationTile: {fileID: 11400000, guid: 0ca622e4276003b44a30f6f86f867d0d, type: 2}
   uIController: {fileID: 8735696481911796459}
 --- !u!4 &1689238147
 Transform:
@@ -11403,6 +11406,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5782925810832783760, guid: 895388dabb9f76f4eb9748b6c8ccc236, type: 3}
+      propertyPath: currentDay
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5782925810832783760, guid: 895388dabb9f76f4eb9748b6c8ccc236, type: 3}
       propertyPath: goldMinedUI
       value: 
