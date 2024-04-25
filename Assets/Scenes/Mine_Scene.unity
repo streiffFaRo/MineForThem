@@ -1597,6 +1597,7 @@ MonoBehaviour:
   minecartStation: {fileID: 3453196815279115232, guid: 9eb512722dc02c046808cd840203db67, type: 3}
   tntTile: {fileID: 11400000, guid: 76aa8b143846fa74dbc1ff038feb0df0, type: 2}
   minecartStationTile: {fileID: 11400000, guid: 0ca622e4276003b44a30f6f86f867d0d, type: 2}
+  tntDeathCollider: {fileID: 3453196815279115232, guid: a3c60aa2978762e4bb87fcb1bb0a6fc2, type: 3}
   uIController: {fileID: 8735696481911796459}
 --- !u!4 &1689238147
 Transform:

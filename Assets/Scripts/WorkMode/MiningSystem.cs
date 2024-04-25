@@ -19,7 +19,6 @@ public class MiningSystem : MonoBehaviour
     
     //Private Varibalen
     private Vector3 middleBlockPos;
-    
 
     private void Awake()
     {
@@ -35,8 +34,12 @@ public class MiningSystem : MonoBehaviour
 
             if (foundTile != null && foundTile != gridGenerator.barrierTile && IsInRange(mousePos2D))
             {
-                
-                if (gridGenerator.blockGridDurabilityDictionary.ContainsKey(mousePos2D))
+
+                if (foundTile == gridGenerator.tntTile)
+                {
+                    StartCoroutine(gridGenerator.IgniteTNT(mousePos2D));
+                }
+                else if (gridGenerator.blockGridDurabilityDictionary.ContainsKey(mousePos2D))
                 {
                     gridGenerator.blockGridDurabilityDictionary[mousePos2D] -= GameManager.instance.pickaxeStrength;
 

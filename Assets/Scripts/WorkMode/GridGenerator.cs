@@ -37,7 +37,8 @@ public class GridGenerator : MonoBehaviour
     public Tile tntTile;
     public Tile minecartStationTile;
     
-    
+    [Header("Tnt")]
+    public GameObject tntDeathCollider;
     
     [Header("UI")]
     public UIController uIController;
@@ -46,6 +47,7 @@ public class GridGenerator : MonoBehaviour
     private Vector2 currentStartPosition;
     private Vector2Int station1Pos;
     private Vector2Int station2Pos;
+    private Vector3 middleBlockPos;
 
     private void Start()
     {
@@ -212,7 +214,7 @@ public class GridGenerator : MonoBehaviour
     public void SetMineCartTiles()
     {
         bool station1PosFound = false;
-        int maxStation1Tries = gridSizeX * gridSizeY * 10;
+        int maxStation1Tries = gridSizeX * gridSizeY * 20;
 
         while (!station1PosFound && maxStation1Tries > 0)
         {
@@ -250,7 +252,7 @@ public class GridGenerator : MonoBehaviour
         }
         
         bool station2PosFound = false;
-        int maxStation2Tries = gridSizeX * gridSizeY * 10;
+        int maxStation2Tries = gridSizeX * gridSizeY * 20;
 
         while (!station2PosFound && maxStation2Tries > 0)
         {
@@ -342,7 +344,70 @@ public class GridGenerator : MonoBehaviour
         //TODO 100% Modular machen
     }
 
+    public IEnumerator IgniteTNT(Vector3Int mousePos2d)
+    {
+        tilemap.SetTile(new Vector3Int(mousePos2d.x, mousePos2d.y, 0), null);
+        noCollisionTileMap.SetTile(new Vector3Int(mousePos2d.x, mousePos2d.y, 0), tntTile);
+        
+        yield return new WaitForSeconds(3);
+        
+        Instantiate(tntDeathCollider, new Vector3(mousePos2d.x+0.5f, mousePos2d.y+0.5f), Quaternion.identity);
+        
+        noCollisionTileMap.SetTile(new Vector3Int(mousePos2d.x, mousePos2d.y, 0), null);
+        
+        CheckTileToDestroy(new Vector3Int(mousePos2d.x + 1, mousePos2d.y + 1, 0));
+        
+        CheckTileToDestroy(new Vector3Int(mousePos2d.x, mousePos2d.y+1, 0));
+        
+        CheckTileToDestroy(new Vector3Int(mousePos2d.x-1, mousePos2d.y+1, 0));
+        
+        CheckTileToDestroy(new Vector3Int(mousePos2d.x+1, mousePos2d.y, 0));
+        
+        CheckTileToDestroy(new Vector3Int(mousePos2d.x-1, mousePos2d.y, 0));
+        
+        CheckTileToDestroy(new Vector3Int(mousePos2d.x+1, mousePos2d.y-1, 0));
+        
+        CheckTileToDestroy(new Vector3Int(mousePos2d.x, mousePos2d.y-1, 0));
+        
+        CheckTileToDestroy(new Vector3Int(mousePos2d.x - 1, mousePos2d.y - 1, 0));
+        
+        //TODO Knallsound
+        //TODO Animation
+        //TODO Corutine machen
+    }
 
+    public void CheckTileToDestroy(Vector3Int tileToCheck)
+    {
+        
+        if (tilemap.GetTile(tileToCheck) !=  barrierTile)
+        {
+            if (tilemap.GetTile(tileToCheck) !=  tntTile)
+            {
+                if (tilemap.GetTile(tileToCheck) != blocks[3].tile)
+                {
+                    tilemap.SetTile(tileToCheck, null);
+                }
+                else
+                {
+                    int rdmNuggetCount = Random.Range(1, 5);
+
+                    for (int i = 0; i < rdmNuggetCount; i++)
+                    {
+                        middleBlockPos = new Vector3(tileToCheck.x + Random.Range(0.3f, 0.7f), tileToCheck.y + Random.Range(0.3f, 0.7f), 0);
+                        
+                        tilemap.SetTile(tileToCheck,null);
+                        Instantiate(FindObjectOfType<MiningSystem>().goldNugget, middleBlockPos, Quaternion.identity);
+                        i++;
+                        //TODO Modular machen -> In Miningsystem evtl eine Funktion erstellen
+                    }
+                }
+            }
+            else
+            {
+                StartCoroutine(IgniteTNT(tileToCheck));
+            }
+        }
+    }
 
 }
 

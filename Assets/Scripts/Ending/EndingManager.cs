@@ -34,6 +34,7 @@ public class EndingManager : MonoBehaviour
                 Escaped();
                 break;
             case 7:
+                BlowUp();
                 break;
             default:
                 Debug.LogWarning("Ending ID out of bounds");
@@ -74,5 +75,10 @@ public class EndingManager : MonoBehaviour
     private void Escaped()
     {
         GameManager.instance.scoreFromEnding = 0;
+    }
+    
+    private void BlowUp()
+    {
+        GameManager.instance.scoreFromEnding = -400;
     }
 }
