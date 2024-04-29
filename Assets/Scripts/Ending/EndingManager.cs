@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class EndingManager : MonoBehaviour
 {
 
+    public int endingNR;
+    
     public void InitEnding(int ending)
     {
         SceneManager.LoadScene("End_Scene");
@@ -40,6 +42,8 @@ public class EndingManager : MonoBehaviour
                 Debug.LogWarning("Ending ID out of bounds");
                 break;
         }
+
+        endingNR = ending;
     }
 
     private void KilledForeMan()

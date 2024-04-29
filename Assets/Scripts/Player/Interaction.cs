@@ -66,9 +66,7 @@ public class Interaction : MonoBehaviour
             if (collider.CompareTag("MineCartStation") && 
                 Vector2.Distance(transform.position, collider.transform.position) <= collider.GetComponent<BoxCollider2D>().size.x/2)
             {
-                
-                Debug.Log("Interacted with LorenStation");
-                //TODO Funktonalität
+                collider.GetComponent<Minecart>().Test();
             }
         }
 

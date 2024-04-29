@@ -24,6 +24,7 @@ public class Deathzone : MonoBehaviour
     public IEnumerator Kill()
     {
         yield return new WaitForSeconds(0.1f);
+        Destroy(this.GameObject());
         colliderOnDetection = false;
     }
 }

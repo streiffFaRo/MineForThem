@@ -221,7 +221,9 @@ public class GridGenerator : MonoBehaviour
             station1Pos = new Vector2Int(Random.Range(0, gridSizeX), Random.Range(0,gridSizeY));
             if (tilemap.GetTile(new Vector3Int(station1Pos.x,station1Pos.y,0)) != barrierTile &&
                 noCollisionTileMap.GetTile(new Vector3Int(station1Pos.x,station1Pos.y,0)) != start &&
-                noCollisionTileMap.GetTile(new Vector3Int(station1Pos.x,station1Pos.y,0)) != end)
+                noCollisionTileMap.GetTile(new Vector3Int(station1Pos.x,station1Pos.y-1,0)) != start &&
+                noCollisionTileMap.GetTile(new Vector3Int(station1Pos.x,station1Pos.y,0)) != end &&
+                noCollisionTileMap.GetTile(new Vector3Int(station1Pos.x,station1Pos.y-1,0)) != end)
             {
                 tilemap.SetTile(new Vector3Int(station1Pos.x, station1Pos.y, 0), null);
                 noCollisionTileMap.SetTile(new Vector3Int(station1Pos.x, station1Pos.y, 0), minecartStationTile);
@@ -258,7 +260,9 @@ public class GridGenerator : MonoBehaviour
         {
             if (tilemap.GetTile(new Vector3Int(station1Pos.x,station1Pos.y,0)) != barrierTile &&
                 noCollisionTileMap.GetTile(new Vector3Int(station1Pos.x,station1Pos.y,0)) != start &&
-                noCollisionTileMap.GetTile(new Vector3Int(station1Pos.x,station1Pos.y,0)) != end)
+                noCollisionTileMap.GetTile(new Vector3Int(station1Pos.x,station1Pos.y-1,0)) != start &&
+                noCollisionTileMap.GetTile(new Vector3Int(station1Pos.x,station1Pos.y,0)) != end &&
+                noCollisionTileMap.GetTile(new Vector3Int(station1Pos.x,station1Pos.y-1,0)) != end)
             {
                 tilemap.SetTile(new Vector3Int(station2Pos.x, station2Pos.y, 0), null);
                 noCollisionTileMap.SetTile(new Vector3Int(station2Pos.x, station2Pos.y, 0), minecartStationTile);
