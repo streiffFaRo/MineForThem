@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 public class PlayerMovement : MonoBehaviour
 {
     //Componenten & Scripts
-    private Rigidbody2D rigidbody;
+    private Rigidbody2D newRigidbody;
     private SpriteRenderer spriteRenderer;
     private PlayerInputScript playerInputScript;
     
@@ -26,8 +26,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        newRigidbody = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         playerInputScript = GetComponent<PlayerInputScript>();
     }
 
@@ -45,9 +45,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (rigidbody != null)
+        if (newRigidbody != null)
         {
-            rigidbody.velocity = new Vector2(playerInputScript.lastInput.x * currentMoveSpeed * Time.deltaTime, rigidbody.velocity.y);
+            newRigidbody.velocity = new Vector2(playerInputScript.lastInput.x * currentMoveSpeed * Time.deltaTime, newRigidbody.velocity.y);
         }
         
     }
@@ -98,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (IsGrounded())
         {
-            rigidbody.AddForce(new Vector2(rigidbody.velocity.x,jumpForce));
+            newRigidbody.AddForce(new Vector2(newRigidbody.velocity.x,jumpForce));
         }
     }
     
