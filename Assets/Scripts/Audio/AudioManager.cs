@@ -15,6 +15,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource placeBlockSound;
     public PlayRandomSound StoneCrackSound;
     public PlayRandomSound uI_ClickSound;
+    public AudioSource shotSound;
 
     [Header("Atmos")]
     public AudioSource miningAtmo;

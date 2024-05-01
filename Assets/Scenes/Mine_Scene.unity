@@ -11408,10 +11408,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5782925810832783760, guid: 895388dabb9f76f4eb9748b6c8ccc236, type: 3}
-      propertyPath: currentDay
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5782925810832783760, guid: 895388dabb9f76f4eb9748b6c8ccc236, type: 3}
       propertyPath: goldMinedUI
       value: 
       objectReference: {fileID: 359617095}

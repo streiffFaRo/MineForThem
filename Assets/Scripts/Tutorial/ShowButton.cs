@@ -20,7 +20,7 @@ public class ShowButton : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Player") && GameManager.instance.currentDay == 0)
+        if (col.gameObject.CompareTag("Player"))
         {
             sprite.gameObject.SetActive(true);
         }
