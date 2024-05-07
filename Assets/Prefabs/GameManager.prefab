@@ -51,7 +51,7 @@ MonoBehaviour:
   familyHappiness: 5
   pickaxeStrength: 10
   currentDay: 0
-  savings: 4
+  savings: 3
   visitedPoker: 0
   metFriend: 0
   knowsPlan: 0
@@ -89,3 +89,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6beec0a18d8f84a8385f539cdf525c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endingNR: 0

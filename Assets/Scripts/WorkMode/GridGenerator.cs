@@ -214,7 +214,7 @@ public class GridGenerator : MonoBehaviour
     public void SetMineCartTiles()
     {
         bool station1PosFound = false;
-        int maxStation1Tries = gridSizeX * gridSizeY * 20;
+        int maxStation1Tries = gridSizeX * gridSizeY * 100;
 
         while (!station1PosFound && maxStation1Tries > 0)
         {

@@ -10,9 +10,9 @@ using Random = UnityEngine.Random;
 public class HomeModeController : MonoBehaviour
 {
     [Header("ManagePay")]
-    public float savings = 4f;
+    public float savings = 5f;
     public float goldEarned = 1111f;
-    public float companyCut = 90f;
+    public float companyCut = 95f;
     public float rent = 4f;
     public float heat = 0.5f;
     public float food = 1.5f;
@@ -43,10 +43,23 @@ public class HomeModeController : MonoBehaviour
 
     private void Start()
     {
+        if (GameManager.instance.currentDay >= 1)
+        {
+            heat = 1f;
+        }
+        if (GameManager.instance.currentDay >= 2)
+        {
+            rent = 5f;
+        }
         if (GameManager.instance.currentDay >= 3)
         {
-            companyCut = 95;
+            companyCut = 99f;
         }
+        if (GameManager.instance.currentDay >= 4)
+        {
+            food = 2.5f;
+        }
+        
         
         SetSavings();
         goldEarned = 20 * GameManager.instance.goldMined;
@@ -190,7 +203,10 @@ public class HomeModeController : MonoBehaviour
         if (heatToggle.isOn && foodToggle.isOn)
         {
             int increaseHappinessAmount = Random.Range(1, 3);
-            GameManager.instance.familyHappiness += increaseHappinessAmount;
+            if (GameManager.instance.familyHappiness <= 9)
+            {
+                GameManager.instance.familyHappiness += increaseHappinessAmount;
+            }
         }
         else if (!heatToggle.isOn && !foodToggle.isOn)
         {

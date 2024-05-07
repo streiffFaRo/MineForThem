@@ -189,6 +189,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Freund-NPC
       objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay6.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay6.Array.data[0]
+      value: Tag6 Text
+      objectReference: {fileID: 0}
     - target: {fileID: 3975578928867599771, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
       propertyPath: showButtonExit
       value: 
@@ -718,6 +726,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay6.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay0.Array.data[0]
       value: Willkommen bei deiner neuen Arbeit.
       objectReference: {fileID: 0}
@@ -781,7 +793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay3.Array.data[1]
-      value: Ab heute steigen die Abgaben an die Mienengesellschaft auf 95%
+      value: Ab heute steigen die Abgaben an die Mienengesellschaft auf 99%
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay3.Array.data[2]
@@ -819,6 +831,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay5.Array.data[2]
+      value: "Du wirst hier nicht f\xFCrs Rumstehen bezahlt."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay6.Array.data[0]
+      value: Ein wundervoller Tag um Geld zu verdienen, nicht?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay6.Array.data[1]
+      value: Ab mit dir in deinen Stollen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLinesDay6.Array.data[2]
       value: "Du wirst hier nicht f\xFCrs Rumstehen bezahlt."
       objectReference: {fileID: 0}
     - target: {fileID: 8364846229157914703, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}

@@ -17,6 +17,7 @@ public class NPCDialog : MonoBehaviour
     [SerializeField] string[] speechLinesDay3;
     [SerializeField] string[] speechLinesDay4;
     [SerializeField] string[] speechLinesDay5;
+    [SerializeField] string[] speechLinesDay6;
     private bool isTalking;
     private int currentLine = 0;
     private string[] currentSpeechLineDay;
@@ -54,6 +55,9 @@ public class NPCDialog : MonoBehaviour
                 break;
             case 5:
                 currentSpeechLineDay = speechLinesDay5;
+                break;
+            case 6:
+                currentSpeechLineDay = speechLinesDay6;
                 break;
             default:
                 break;
