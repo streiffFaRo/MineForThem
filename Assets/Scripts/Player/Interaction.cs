@@ -32,13 +32,16 @@ public class Interaction : MonoBehaviour
 
             if (npcdialog != null)
             {
-                if (GameManager.instance.currentDay == 5 && GameManager.instance.hasBullet &&
+                Debug.Log("Test if npc Dialogue is null passed");
+                if (GameManager.instance.currentDay >= 5 && GameManager.instance.hasBullet &&
                     npcdialog.GetComponentInChildren<Shootout>()!= null)
                 {
+                    Debug.Log("Fire Shootout passed");
                     npcdialog.GetComponentInChildren<Shootout>()?.ShootoutInteraction();
                 }
                 else
                 {
+                    Debug.Log("Play Dialogue Line passed");
                     npcdialog.Speech();
                 }
                 
@@ -47,7 +50,6 @@ public class Interaction : MonoBehaviour
             if (collider.CompareTag("Interaction") && 
                 Vector2.Distance(transform.position, collider.transform.position) <= collider.GetComponent<BoxCollider2D>().size.x/2)
             {
-                Debug.Log("Interacted with Door");
                 FindObjectOfType<GridGenerator>()?.LoadGrid();
                 
                 if (FindObjectOfType<LobbyManager>()!= null && !shootoutDone)
@@ -59,14 +61,13 @@ public class Interaction : MonoBehaviour
             else if (collider.CompareTag("EndDoor") && shootoutDone &&
                      Vector2.Distance(transform.position, collider.transform.position) <= collider.GetComponent<BoxCollider2D>().size.x/2)
             {
-                Debug.Log("Interacted with EndDoor");
                 GameManager.instance.GetComponent<EndingManager>().InitEnding(0);
             }
 
             if (collider.CompareTag("MineCartStation") && 
                 Vector2.Distance(transform.position, collider.transform.position) <= collider.GetComponent<BoxCollider2D>().size.x/2)
             {
-                collider.GetComponent<Minecart>().Test();
+                collider.GetComponent<Minecart>().SetupTransition();
             }
         }
 

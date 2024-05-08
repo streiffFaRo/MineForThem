@@ -47,7 +47,7 @@ public class Shootout : MonoBehaviour
         Vector3 friendStartPos = new Vector3(friendTransform.position.x, friendTransform.position.y, friendTransform.position.z);
         Vector3 friendLeftPos = new Vector3(friendTransform.position.x-15, friendTransform.position.y, friendTransform.position.z);
         friendTransform.DOMove(friendLeftPos, 5f);
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(5);
         VolumeManager.instance.GetComponent<AudioManager>().shotSound.Play();
         vorarbeiterSprite.gameObject.SetActive(false);
         //TODO Change Vorarbeiter Sprite

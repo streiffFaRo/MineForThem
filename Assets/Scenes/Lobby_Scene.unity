@@ -190,12 +190,124 @@ PrefabInstance:
       value: Freund-NPC
       objectReference: {fileID: 0}
     - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay0.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay1.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay2.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay3.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay4.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay5.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
       propertyPath: speechLinesDay6.Array.size
-      value: 1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay0.Array.data[0]
+      value: Hello, you must be Jack, my name is Davy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay0.Array.data[1]
+      value: I've been working in this hole for what feels like an eternity
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay0.Array.data[2]
+      value: Make sure you are safely out of the third tunnel before the end of your
+        view
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay0.Array.data[3]
+      value: I wish you all the best for your first day
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay1.Array.data[0]
+      value: Good to see you again
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay1.Array.data[1]
+      value: The first tunnel always has the most gold, try to take advantage of
+        this
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay1.Array.data[2]
+      value: Good luck with your shift
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay2.Array.data[0]
+      value: The minecart stations are a good opportunity to get from one end of
+        the mine to the other
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay2.Array.data[1]
+      value: Don't lose your courage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay2.Array.data[2]
+      value: Tonight the priest is holding a service
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay3.Array.data[0]
+      value: The tax increase is an outrage!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay3.Array.data[1]
+      value: We can't put up with this for much longer!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay3.Array.data[2]
+      value: Stay strong
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay4.Array.data[0]
+      value: Just make sure you're not too close to the blasts
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay4.Array.data[1]
+      value: We mine a fortune for the mining company every day and get practically
+        nothing
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay4.Array.data[2]
+      value: This mine will be the end of us
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay5.Array.data[0]
+      value: I don't think I can do this for much longer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay5.Array.data[1]
+      value: Good luck with your shift...
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay5.Array.data[2]
+      value: How can these working conditions be acceptable
       objectReference: {fileID: 0}
     - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
       propertyPath: speechLinesDay6.Array.data[0]
-      value: Tag6 Text
+      value: In the meantime, you also look marked by work
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay6.Array.data[1]
+      value: How long do you want to keep doing this?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLinesDay6.Array.data[2]
+      value: This mine will be the end of us
       objectReference: {fileID: 0}
     - target: {fileID: 3975578928867599771, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
       propertyPath: showButtonExit
@@ -214,8 +326,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 225859911}
     - target: {fileID: 6803465551717504010, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
-      propertyPath: m_SortingOrder
+      propertyPath: m_Color.b
+      value: 0.041511774
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803465551717504010, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: m_Color.g
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803465551717504010, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803465551717504010, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
@@ -682,6 +806,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: usesMarker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLines.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -711,7 +839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay2.Array.size
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay3.Array.size
@@ -719,7 +847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay4.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay5.Array.size
@@ -731,57 +859,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay0.Array.data[0]
-      value: Willkommen bei deiner neuen Arbeit.
+      value: So you're the new huh? Jack's on my list, I'm the foreman.
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay0.Array.data[1]
-      value: Betritt den Schacht am Ende des Ganges um zu beginnen.
+      value: Enter the shaft at the end of the corridor to begin.
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay0.Array.data[2]
-      value: "Du verdienst an jedem Klumpen Gold, nach dem Abzug f\xFCr die Minengesellschaft
-        nat\xFCrlich."
+      value: You earn money from every lump of gold, after the deduction for the
+        mining company of course.
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay0.Array.data[3]
-      value: Vergiss nicht vor Ende des Arbeitstages aus dem dritten Stollen zu sein.
+      value: Don't forget to be out of the third tunnel before the end of the working
+        day.
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay0.Array.data[4]
-      value: Die Minengesellschaft freut sich auf deine Ergebnisse!
+      value: Don't do anything stupid, I've got my eye on you
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay1.Array.data[0]
-      value: Guten Tag ehrenwerter Angestellter.
+      value: So you made it through your first day huh? Don't get any cocky, go to
+        work!
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay1.Array.data[1]
-      value: "Viel Gl\xFCck bei deiner Schicht"
+      value: Stop standing around here and go into the tunnel
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay1.Array.data[2]
-      value: Die Minengesellschaft freut sich auf deinen Beitrag!
+      value: If you keep bumming around like this, it'll be deducted from your pay
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay2.Array.data[0]
-      value: Die Mienengesellschaft hat die Stollen ausbauen lassen.
+      value: The mining company had the tunnels upgraded.
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay2.Array.data[1]
-      value: Du kannst innerhalb deiner Stollen nun unser Lorensystem nutzen.
+      value: You can now use our minecart stations within your tunnels.
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay2.Array.data[2]
-      value: In jedem Stollen sind zwei Stationen verbaut, du kannst von der einen
-        zu anderen.
+      value: There are two stations in each tunnel, you can go from one to the other.
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay2.Array.data[3]
-      value: "Je mehr Gold du f\xFCr uns findest desto mehr bleibt auch f\xFCr dich!"
+      value: And now off to the tunnel
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay2.Array.data[4]
-      value: Ein neuer Tag, ein neuer Dollar
+      value: Nur weiter so.
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay2.Array.data[5]
@@ -789,61 +918,61 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay3.Array.data[0]
-      value: Guten Tag, die Minengesellschaft hat etwas beschlossen.
+      value: Hello, the mining company has decided something.
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay3.Array.data[1]
-      value: Ab heute steigen die Abgaben an die Mienengesellschaft auf 99%
+      value: From today, the contributions to the mining company will rise to 99%
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay3.Array.data[2]
-      value: t das schon schaffen.wirst das schon schaffen.
+      value: If you ask me, you still get too much
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay3.Array.data[3]
-      value: Auf ans Werk!
+      value: You don't get paid for taking a break
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay4.Array.data[0]
-      value: Tolle Neugikeiten! Die Mienengesellschaft hat den Einsatz von Sprengmittel
-        genemigt.
+      value: Great news! The mining company has authorised the use of explosives.
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay4.Array.data[1]
-      value: In jedem deiner Stollen sollten nun Dynamitkisten sein.
+      value: There should now be boxes of dynamite in each of your tunnels.
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay4.Array.data[2]
-      value: Achte aber gut darauf, dass du nicht zu dicht dran stehst!
+      value: But make sure you don't stand too close! Otherwise I'll have to send
+        someone to clean it up.
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay4.Array.data[3]
-      value: Ich hoffe ich muss keinen losschicken der dich aus dem Stollen kratzen
-        muss
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay5.Array.data[0]
-      value: Ein wundervoller Tag um Geld zu verdienen, nicht?
+      value: There's nothing new today, so get straight to work
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay5.Array.data[1]
-      value: Ab mit dir in deinen Stollen
+      value: Off you go into your tunnel
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay5.Array.data[2]
-      value: "Du wirst hier nicht f\xFCrs Rumstehen bezahlt."
+      value: You don't get paid to stand around here.
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay6.Array.data[0]
-      value: Ein wundervoller Tag um Geld zu verdienen, nicht?
+      value: Heard there was a bit of a riot in another mine yesterday, luckily it
+        was put down
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay6.Array.data[1]
-      value: Ab mit dir in deinen Stollen
+      value: Just make sure you don't get any ideas like that
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay6.Array.data[2]
-      value: "Du wirst hier nicht f\xFCrs Rumstehen bezahlt."
+      value: I'll keep an eye on you
       objectReference: {fileID: 0}
     - target: {fileID: 8364846229157914703, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: m_Name
@@ -941,6 +1070,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5782925810832783760, guid: 895388dabb9f76f4eb9748b6c8ccc236, type: 3}
+      propertyPath: currentDay
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5782925810832783761, guid: 895388dabb9f76f4eb9748b6c8ccc236, type: 3}
       propertyPath: m_RootOrder
       value: 5

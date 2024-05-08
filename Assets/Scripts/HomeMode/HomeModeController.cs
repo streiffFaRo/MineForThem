@@ -62,7 +62,7 @@ public class HomeModeController : MonoBehaviour
         
         
         SetSavings();
-        goldEarned = 20 * GameManager.instance.goldMined;
+        goldEarned = 5 * GameManager.instance.goldMined;
         CalculateCompanyCut();
         CalculateRent();
         CalculateHeat();
@@ -75,6 +75,7 @@ public class HomeModeController : MonoBehaviour
     public void SetSavings()
     {
         savings = GameManager.instance.savings;
+        Math.Round(savings, 2);
         money = savings;
         SetAmounts();
     }
@@ -135,7 +136,7 @@ public class HomeModeController : MonoBehaviour
         {
             goOutButton.gameObject.SetActive(true);
         }
-
+        
         if (currentDay >= 6 && GameManager.instance.snitched)
         {
             descriptionTextUI.text = "Der Sheriff erwartet mich auf dem Hauptplatz...";
@@ -202,11 +203,18 @@ public class HomeModeController : MonoBehaviour
     {
         if (heatToggle.isOn && foodToggle.isOn)
         {
-            int increaseHappinessAmount = Random.Range(1, 3);
-            if (GameManager.instance.familyHappiness <= 9)
+            
+            if (GameManager.instance.familyHappiness <= 6)
             {
+                int increaseHappinessAmount = Random.Range(1, 3);
                 GameManager.instance.familyHappiness += increaseHappinessAmount;
             }
+
+            if (GameManager.instance.familyHappiness >= 7)
+            {
+                GameManager.instance.familyHappiness = 7;
+            }
+            
         }
         else if (!heatToggle.isOn && !foodToggle.isOn)
         {

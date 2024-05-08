@@ -60,8 +60,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Game End: Survived");
-            //TODO Init GameEnding
+            GetComponent<EndingManager>().InitEnding(2);
         }
     }
 
@@ -97,9 +96,15 @@ public class GameManager : MonoBehaviour
         //ResetCore
         goldMined = 0;
         blocksInInv = 0;
-        familyHappiness = 4;
+        familyHappiness = 5;
         pickaxeStrength = 10;
         currentDay = 0;
+        savings = 3;
+        visitedPoker = false;
+        metFriend = false;
+        knowsPlan = false;
+        hasBullet = false;
+        snitched = false;
         
         //Reset Stats
         blocksMined = 0;
@@ -107,6 +112,8 @@ public class GameManager : MonoBehaviour
         timeInMine = 0;
         earnedMoneyForCompany = 0;
         deathsUnlocked = 0;
+        earnedMoneyForSelf = 0;
+        scoreFromEnding = 0;
     }
 
 }

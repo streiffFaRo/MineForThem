@@ -32,7 +32,7 @@ public class Poker : MonoBehaviour
         switch (betAmount)
         {
             case "25":
-                float moneyLow = Random.Range(0, 25);
+                float moneyLow = Random.Range(2, 25);
                 gamestate.Add("roundChange", Mathf.RoundToInt(moneyLow), true);
                 moneyLow = moneyLow / 100;
                 if (winorlose >= 1)
@@ -45,7 +45,7 @@ public class Poker : MonoBehaviour
                 }
                 break;
             case "50":
-                float moneyMid = Random.Range(0, 50);
+                float moneyMid = Random.Range(5, 50);
                 gamestate.Add("roundChange", Mathf.RoundToInt(moneyMid), true);
                 moneyMid = moneyMid / 100;
                 if (winorlose >= 1)
@@ -58,7 +58,7 @@ public class Poker : MonoBehaviour
                 }
                 break;
             case "100":
-                float moneyHigh = Random.Range(0, 100);
+                float moneyHigh = Random.Range(10, 100);
                 gamestate.Add("roundChange", Mathf.RoundToInt(moneyHigh), true);
                 moneyHigh = moneyHigh / 100;
                 if (winorlose >= 1)

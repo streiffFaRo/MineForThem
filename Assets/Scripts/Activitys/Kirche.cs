@@ -35,7 +35,10 @@ public class Kirche : MonoBehaviour
 
     public void HappyFam() //Aufgerufen über InkEvent
     {
-        GameManager.instance.familyHappiness++;
+        if (GameManager.instance.familyHappiness <= 6)
+        {
+            GameManager.instance.familyHappiness++;
+        }
     }
 
     public void UnHappyFam() //Aufgerufen über InkEvent

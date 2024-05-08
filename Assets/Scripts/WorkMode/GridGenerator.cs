@@ -214,7 +214,7 @@ public class GridGenerator : MonoBehaviour
     public void SetMineCartTiles()
     {
         bool station1PosFound = false;
-        int maxStation1Tries = gridSizeX * gridSizeY * 100;
+        int maxStation1Tries = gridSizeX * gridSizeY * 10;
 
         while (!station1PosFound && maxStation1Tries > 0)
         {
@@ -231,6 +231,7 @@ public class GridGenerator : MonoBehaviour
                 Instantiate(minecartStation, new Vector3(station1Pos.x+0.5f, station1Pos.y+0.5f), Quaternion.identity);
                 station1PosFound = true;
             }
+            maxStation1Tries--;
         }
         
         
@@ -254,7 +255,7 @@ public class GridGenerator : MonoBehaviour
         }
         
         bool station2PosFound = false;
-        int maxStation2Tries = gridSizeX * gridSizeY * 20;
+        int maxStation2Tries = gridSizeX * gridSizeY * 10;
 
         while (!station2PosFound && maxStation2Tries > 0)
         {
@@ -270,6 +271,8 @@ public class GridGenerator : MonoBehaviour
                 Instantiate(minecartStation, new Vector3(station2Pos.x+0.5f, station2Pos.y+0.5f), Quaternion.identity);
                 station2PosFound = true;
             }
+
+            maxStation2Tries--;
         }
         
     }

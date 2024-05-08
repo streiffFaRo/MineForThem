@@ -11,7 +11,9 @@ public class NPCDialog : MonoBehaviour
     [SerializeField] GameObject speechbubble;
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private GameObject newsMarker;
+    [SerializeField] bool usesMarker;
     [SerializeField] string[] speechLinesDay0;
+    [SerializeField] private SpeechLineDeluxe speechLineDeluxeTest;
     [SerializeField] string[] speechLinesDay1;
     [SerializeField] string[] speechLinesDay2;
     [SerializeField] string[] speechLinesDay3;
@@ -22,11 +24,16 @@ public class NPCDialog : MonoBehaviour
     private int currentLine = 0;
     private string[] currentSpeechLineDay;
     
+    
     private void Awake()
     {
         boxcollider = GetComponentInChildren<BoxCollider2D>();
         speechbubble.SetActive(false);
         newsMarker.SetActive(false);
+        if (usesMarker)
+        {
+            newsMarker.SetActive(true);
+        }
     }
 
     public void Start()
@@ -73,8 +80,12 @@ public class NPCDialog : MonoBehaviour
             if (currentSpeechLineDay.Length <= currentLine)
             {
                 currentLine = 0;
+                
+                if (usesMarker)
+                {
+                    newsMarker.SetActive(false);
+                }
             }
-            Debug.Log("Speech");
             StartCoroutine(Bubble());
         }
     }
@@ -90,4 +101,11 @@ public class NPCDialog : MonoBehaviour
         speechbubble.SetActive(false);
         isTalking = false;
     }
+}
+
+[System.Serializable]
+public class SpeechLineDeluxe
+{
+    [SerializeField] string[] speechLine;
+    public int importantLineNumber;
 }

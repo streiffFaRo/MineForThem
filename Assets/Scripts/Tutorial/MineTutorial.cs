@@ -24,13 +24,11 @@ public class MineTutorial : MonoBehaviour
         if (GameManager.instance.currentDay != 0)
         {
             canvas.gameObject.SetActive(false);
-            Debug.Log("After Day 0");
             timer.stopTimer = false;
         }
         else
         {
             playerInputScript.canMove = false;
-            Debug.Log("Day0");
         }
     }
 
