@@ -44,6 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e312ce9d2793a454daf549eb1cd55f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInputScript: {fileID: 0}
+  showButtonMine: {fileID: 0}
+  showButtonExit: {fileID: 0}
+  vorarbeiterSprite: {fileID: 0}
+  friendTransform: {fileID: 0}
+  davySprite: {fileID: 584240731212095469}
+  davyAnimator: {fileID: 7609624320597903219}
 --- !u!1001 &6221547928162176301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51,6 +58,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 290269747014455494, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 593810220494756135, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: m_Color.b
       value: 0.20545568
@@ -63,6 +74,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.5377358
       objectReference: {fileID: 0}
+    - target: {fileID: 4597526370854488670, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4acb783edee841d43acad705e41423c1, type: 2}
     - target: {fileID: 5442221223298333034, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -106,6 +121,10 @@ PrefabInstance:
     - target: {fileID: 5442221223298333034, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8168159471392056085, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay0.Array.size
@@ -161,8 +180,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+--- !u!212 &584240731212095469 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6795020591068517056, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+  m_PrefabInstance: {fileID: 6221547928162176301}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2148718120131720263 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5442221223298333034, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+  m_PrefabInstance: {fileID: 6221547928162176301}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7609624320597903219 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4597526370854488670, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
   m_PrefabInstance: {fileID: 6221547928162176301}
   m_PrefabAsset: {fileID: 0}

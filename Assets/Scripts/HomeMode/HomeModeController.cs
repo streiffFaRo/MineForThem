@@ -62,7 +62,7 @@ public class HomeModeController : MonoBehaviour
         
         
         SetSavings();
-        goldEarned = 5 * GameManager.instance.goldMined;
+        goldEarned = 11 * GameManager.instance.goldMined;
         CalculateCompanyCut();
         CalculateRent();
         CalculateHeat();

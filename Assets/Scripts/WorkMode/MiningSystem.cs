@@ -70,6 +70,15 @@ public class MiningSystem : MonoBehaviour
                     }
                 }
                 
+                if (mousePos2D.x > playerMovement.spriteRenderer.gameObject.transform.position.x)
+                {
+                    playerMovement.spriteRenderer.flipX = false;
+                }
+                else
+                {
+                    playerMovement.spriteRenderer.flipX = true;
+                }
+                playerMovement.animator.SetTrigger("Break");
                 VolumeManager.instance.GetComponent<AudioManager>().PlayPickaxeSound();
                 
             }
@@ -96,6 +105,16 @@ public class MiningSystem : MonoBehaviour
                     GameManager.instance.UpdateBlocksInInv(false);
                     GameManager.instance.blocksPlaced++;
                     uIController.UpdateBlocksInInv();
+                    
+                    if (mousePos2D.x > playerMovement.spriteRenderer.gameObject.transform.position.x)
+                    {
+                        playerMovement.spriteRenderer.flipX = false;
+                    }
+                    else
+                    {
+                        playerMovement.spriteRenderer.flipX = true;
+                    }
+                    playerMovement.animator.SetTrigger("Place");
                     VolumeManager.instance.GetComponent<AudioManager>().PlayPlaceBlockSound();
                     
                     //TODO Was wenn Block auf Gold gesetzt?

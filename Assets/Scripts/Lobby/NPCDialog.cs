@@ -97,7 +97,7 @@ public class NPCDialog : MonoBehaviour
         currentLine++;
         //TODO Play Sound
         //TODO Animation Bubble Pop up
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         speechbubble.SetActive(false);
         isTalking = false;
     }

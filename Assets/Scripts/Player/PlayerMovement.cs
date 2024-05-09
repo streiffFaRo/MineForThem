@@ -8,8 +8,9 @@ public class PlayerMovement : MonoBehaviour
 {
     //Componenten & Scripts
     private Rigidbody2D newRigidbody;
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
     private PlayerInputScript playerInputScript;
+    public Animator animator;
     
     //Variablen
     private float currentMoveSpeed;
@@ -22,10 +23,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-
-
+    
     private void Awake()
     {
+        animator = GetComponentInChildren<Animator>();
         newRigidbody = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         playerInputScript = GetComponent<PlayerInputScript>();
@@ -49,19 +50,25 @@ public class PlayerMovement : MonoBehaviour
         {
             newRigidbody.velocity = new Vector2(playerInputScript.lastInput.x * currentMoveSpeed * Time.deltaTime, newRigidbody.velocity.y);
         }
-        
     }
     
     private void Update()
     {
         HandlePlayerMovement();
+        
+        animator.SetFloat("FallSpeed", newRigidbody.velocity.y);
+        
     }
     
     private void HandlePlayerMovement()
     {
+        animator.SetFloat("Speed", currentMoveSpeed);
+        
         if (playerInputScript.moveInput != Vector2.zero)
         {
+            
             playerInputScript.lastInput = playerInputScript.moveInput;
+            
             if (currentMoveSpeed < maxSpeed)
             {
                 currentMoveSpeed += Time.deltaTime * accelerationSpeed;
@@ -99,9 +106,11 @@ public class PlayerMovement : MonoBehaviour
         if (IsGrounded())
         {
             newRigidbody.AddForce(new Vector2(newRigidbody.velocity.x,jumpForce));
+            animator.SetTrigger("IsJumping");
         }
     }
     
+
     public bool IsGrounded()
     {
         if (groundCheck != null)

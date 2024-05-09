@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Serialization;
 
 public class Shootout : MonoBehaviour
 {
@@ -10,8 +11,10 @@ public class Shootout : MonoBehaviour
     public PlayerInputScript playerInputScript;
     public GameObject showButtonMine;
     public GameObject showButtonExit;
-    public SpriteRenderer vorarbeiterSprite;
+    public GameObject vorarbeiter;
     public Transform friendTransform;
+    public SpriteRenderer davySprite;
+    public Animator davyAnimator;
     //TODO VorarbeiterAnimator
     //TODO PlayerAnimator
 
@@ -34,7 +37,6 @@ public class Shootout : MonoBehaviour
 
     public void ShootoutInteraction()
     {
-        //TODO Übergabeanimation
         playerInputScript.canMove = false;
         playerInputScript.GetComponent<Interaction>().shootoutDone = true;
         StartCoroutine(CutScene());
@@ -47,14 +49,22 @@ public class Shootout : MonoBehaviour
         Vector3 friendStartPos = new Vector3(friendTransform.position.x, friendTransform.position.y, friendTransform.position.z);
         Vector3 friendLeftPos = new Vector3(friendTransform.position.x-15, friendTransform.position.y, friendTransform.position.z);
         friendTransform.DOMove(friendLeftPos, 5f);
-        yield return new WaitForSeconds(5);
+        davySprite.flipX = true;
+        davyAnimator.SetBool("DavyWalking", true);
+        
+        yield return new WaitForSeconds(3);
         VolumeManager.instance.GetComponent<AudioManager>().shotSound.Play();
-        vorarbeiterSprite.gameObject.SetActive(false);
-        //TODO Change Vorarbeiter Sprite
-        yield return new WaitForSeconds(2);
+        vorarbeiter.gameObject.SetActive(false);
+        
+        
+        yield return new WaitForSeconds(1);
+        davySprite.flipX = false;
         friendTransform.DOMove(friendStartPos, 5f);
-        playerInputScript.canMove = true;
         showButtonExit.SetActive(true);
+        
+        yield return new WaitForSeconds(5);
+        playerInputScript.canMove = true;
+        davyAnimator.SetBool("DavyWalking", false);
         
     }
 
