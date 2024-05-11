@@ -74,7 +74,6 @@ public class Poker : MonoBehaviour
                 Debug.LogWarning("Default Case in Poker skript");
                 break;
         }
-        activityController.moneyUI.text = GameManager.instance.savings.ToString();
     }
 
     public void ClearRound() //Aufgerufen über InkEvent, Möglicherweise unnötig -> Testen bevor löschen!

@@ -11,29 +11,22 @@ public class NPCDialog : MonoBehaviour
     [SerializeField] GameObject speechbubble;
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private GameObject newsMarker;
-    [SerializeField] bool usesMarker;
-    [SerializeField] string[] speechLinesDay0;
-    [SerializeField] private SpeechLineDeluxe speechLineDeluxeTest;
-    [SerializeField] string[] speechLinesDay1;
-    [SerializeField] string[] speechLinesDay2;
-    [SerializeField] string[] speechLinesDay3;
-    [SerializeField] string[] speechLinesDay4;
-    [SerializeField] string[] speechLinesDay5;
-    [SerializeField] string[] speechLinesDay6;
+    [SerializeField] private SpeechLineDeluxe speechLineDeluxeDay0;
+    [SerializeField] private SpeechLineDeluxe speechLineDeluxeDay1;
+    [SerializeField] private SpeechLineDeluxe speechLineDeluxeDay2;
+    [SerializeField] private SpeechLineDeluxe speechLineDeluxeDay3;
+    [SerializeField] private SpeechLineDeluxe speechLineDeluxeDay4;
+    [SerializeField] private SpeechLineDeluxe speechLineDeluxeDay5;
+    [SerializeField] private SpeechLineDeluxe speechLineDeluxeDay6;
     private bool isTalking;
     private int currentLine = 0;
-    private string[] currentSpeechLineDay;
+    private SpeechLineDeluxe currentSpeechLineDay;
     
     
     private void Awake()
     {
         boxcollider = GetComponentInChildren<BoxCollider2D>();
         speechbubble.SetActive(false);
-        newsMarker.SetActive(false);
-        if (usesMarker)
-        {
-            newsMarker.SetActive(true);
-        }
     }
 
     public void Start()
@@ -46,25 +39,25 @@ public class NPCDialog : MonoBehaviour
         switch (GameManager.instance.currentDay)
         {
             case 0:
-                currentSpeechLineDay = speechLinesDay0;
+                currentSpeechLineDay = speechLineDeluxeDay0;
                 break;
             case 1:
-                currentSpeechLineDay = speechLinesDay1;
+                currentSpeechLineDay = speechLineDeluxeDay1;
                 break;
             case 2:
-                currentSpeechLineDay = speechLinesDay2;
+                currentSpeechLineDay = speechLineDeluxeDay2;
                 break;
             case 3:
-                currentSpeechLineDay = speechLinesDay3;
+                currentSpeechLineDay = speechLineDeluxeDay3;
                 break;
             case 4:
-                currentSpeechLineDay = speechLinesDay4;
+                currentSpeechLineDay = speechLineDeluxeDay4;
                 break;
             case 5:
-                currentSpeechLineDay = speechLinesDay5;
+                currentSpeechLineDay = speechLineDeluxeDay5;
                 break;
             case 6:
-                currentSpeechLineDay = speechLinesDay6;
+                currentSpeechLineDay = speechLineDeluxeDay6;
                 break;
             default:
                 break;
@@ -77,14 +70,19 @@ public class NPCDialog : MonoBehaviour
         if (!isTalking)
         {
             isTalking = true;
-            if (currentSpeechLineDay.Length <= currentLine)
+            if (currentSpeechLineDay.importantLineNumber == 9)
+            {
+                newsMarker.SetActive(false);
+            }
+            else if (currentLine == currentSpeechLineDay.importantLineNumber)
+            {
+                newsMarker.SetActive(false);
+            }
+            
+            if (currentSpeechLineDay.speechLines.Length <= currentLine)
             {
                 currentLine = 0;
                 
-                if (usesMarker)
-                {
-                    newsMarker.SetActive(false);
-                }
             }
             StartCoroutine(Bubble());
         }
@@ -93,7 +91,7 @@ public class NPCDialog : MonoBehaviour
     public IEnumerator Bubble()
     {
         speechbubble.SetActive(true);
-        text.SetText(currentSpeechLineDay[currentLine]);
+        text.SetText(currentSpeechLineDay.speechLines[currentLine]);
         currentLine++;
         //TODO Play Sound
         //TODO Animation Bubble Pop up
@@ -106,6 +104,6 @@ public class NPCDialog : MonoBehaviour
 [System.Serializable]
 public class SpeechLineDeluxe
 {
-    [SerializeField] string[] speechLine;
+    public string[] speechLines;
     public int importantLineNumber;
 }

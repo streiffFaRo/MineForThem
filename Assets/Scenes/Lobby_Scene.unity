@@ -313,6 +313,154 @@ PrefabInstance:
       propertyPath: speechLinesDay6.Array.data[2]
       value: This mine will be the end of us
       objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay0.importantLineNumber
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay1.importantLineNumber
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay2.importantLineNumber
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay3.importantLineNumber
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay4.importantLineNumber
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay5.importantLineNumber
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay6.importantLineNumber
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay0.speechLines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay1.speechLines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay2.speechLines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay3.speechLines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay4.speechLines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay5.speechLines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay6.speechLines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay0.speechLines.Array.data[0]
+      value: Hello, you must be Jack, my name is Davy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay0.speechLines.Array.data[1]
+      value: I've been working in this hole for what feels like an eternity
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay0.speechLines.Array.data[2]
+      value: Make sure you are safely out of the third tunnel before the end of your
+        shift
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay0.speechLines.Array.data[3]
+      value: I wish you all the best for your first day
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay1.speechLines.Array.data[0]
+      value: Good to see you again
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay1.speechLines.Array.data[1]
+      value: The first tunnel always has the most gold, try to take advantage of
+        this
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay1.speechLines.Array.data[2]
+      value: Good luck with your shift
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay2.speechLines.Array.data[0]
+      value: The minecart stations are a good opportunity to get from one end of
+        the mine to the other
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay2.speechLines.Array.data[1]
+      value: Don't lose your courage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay2.speechLines.Array.data[2]
+      value: Tonight the priest is holding a service
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay3.speechLines.Array.data[0]
+      value: The tax increase is an outrage!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay3.speechLines.Array.data[1]
+      value: We can't put up with this for much longer!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay3.speechLines.Array.data[2]
+      value: Stay strong
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay4.speechLines.Array.data[0]
+      value: Just make sure you're not too close to the blasts
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay4.speechLines.Array.data[1]
+      value: We mine a fortune for the mining company every day and get practically
+        nothing
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay4.speechLines.Array.data[2]
+      value: This mine will be the end of us
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay5.speechLines.Array.data[0]
+      value: I don't think I can do this for much longer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay5.speechLines.Array.data[1]
+      value: Good luck with your shift...
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay5.speechLines.Array.data[2]
+      value: How can these working conditions be acceptable
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay6.speechLines.Array.data[0]
+      value: In the meantime, you also look marked by work
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay6.speechLines.Array.data[1]
+      value: How long do you want to keep doing this?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714580338755539310, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
+      propertyPath: speechLineDeluxeDay6.speechLines.Array.data[2]
+      value: This mine will be the end of us
+      objectReference: {fileID: 0}
     - target: {fileID: 3975578928867599771, guid: 7b90dc498b49d934491dbf04b4122857, type: 3}
       propertyPath: vorarbeiter
       value: 
@@ -993,12 +1141,284 @@ PrefabInstance:
       propertyPath: speechLinesDay6.Array.data[2]
       value: I'll keep an eye on you
       objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay0.importantLineNumber
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay1.importantLineNumber
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay2.importantLineNumber
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay3.importantLineNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay4.importantLineNumber
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay5.importantLineNumber
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay6.importantLineNumber
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay0.speechLines.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay1.speechLines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay2.speechLines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay3.speechLines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay4.speechLines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay5.speechLines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay6.speechLines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay0.speechLines.Array.data[0]
+      value: So you're the new huh? Jack's on my list, I'm the foreman.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay0.speechLines.Array.data[1]
+      value: Enter the shaft at the end of the corridor to begin.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay0.speechLines.Array.data[2]
+      value: You earn money from every lump of gold, after the deduction for the
+        mining company of course.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay0.speechLines.Array.data[3]
+      value: Don't forget to be out of the third tunnel before the end of the working
+        day.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay0.speechLines.Array.data[4]
+      value: Don't do anything stupid, I've got my eye on you
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay1.speechLines.Array.data[0]
+      value: So you made it through your first day huh? Don't get any cocky, go to
+        work!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay1.speechLines.Array.data[1]
+      value: Stop standing around here and go into the tunnel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay1.speechLines.Array.data[2]
+      value: If you keep bumming around like this, it'll be deducted from your pay
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay2.speechLines.Array.data[0]
+      value: The mining company had the tunnels upgraded.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay2.speechLines.Array.data[1]
+      value: You can now use our minecart stations within your tunnels.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay2.speechLines.Array.data[2]
+      value: There are two stations in each tunnel, you can go from one to the other.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay2.speechLines.Array.data[3]
+      value: And now off to the tunnel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay3.speechLines.Array.data[0]
+      value: Hello, the mining company has decided something.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay3.speechLines.Array.data[1]
+      value: From today, the contributions to the mining company will rise to 99%
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay3.speechLines.Array.data[2]
+      value: If you ask me, you still get too much
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay3.speechLines.Array.data[3]
+      value: You don't get paid for taking a break
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay4.speechLines.Array.data[0]
+      value: Great news! The mining company has authorised the use of explosives.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay4.speechLines.Array.data[1]
+      value: There should now be boxes of dynamite in each of your tunnels.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay4.speechLines.Array.data[2]
+      value: But make sure you don't stand too close! Otherwise I'll have to send
+        someone to clean it up.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay5.speechLines.Array.data[0]
+      value: There's nothing new today, so get straight to work
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay5.speechLines.Array.data[1]
+      value: Off you go into your tunnel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay5.speechLines.Array.data[2]
+      value: You don't get paid to stand around here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay6.speechLines.Array.data[0]
+      value: Heard there was a bit of a riot in another mine yesterday, luckily it
+        was put down
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay6.speechLines.Array.data[1]
+      value: Just make sure you don't get any ideas like that
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+      propertyPath: speechLineDeluxeDay6.speechLines.Array.data[2]
+      value: I'll keep an eye on you
+      objectReference: {fileID: 0}
     - target: {fileID: 8364846229157914703, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: m_Name
       value: Platzhalter-NPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+--- !u!1 &799583386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 799583388}
+  - component: {fileID: 799583387}
+  m_Layer: 0
+  m_Name: Light 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &799583387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799583386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_LightType: 4
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.75
+  m_LightVolumeIntensity: 1
+  m_LightVolumeIntensityEnabled: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensity: 0.75
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_Vertices:
+  - position: {x: 0.9985302, y: 0.9985302, z: 0}
+    color: {r: 0.70710677, g: 0.70710677, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: 0.9985302, y: 0.9985302, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  - position: {x: -0.9985302, y: 0.9985302, z: 0}
+    color: {r: -0.70710677, g: 0.70710677, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: -0.9985302, y: 0.9985302, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  - position: {x: -0.99853003, y: -0.9985304, z: 0}
+    color: {r: -0.70710665, g: -0.7071069, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: -0.99853003, y: -0.9985304, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  - position: {x: 0.99853003, y: -0.9985304, z: 0}
+    color: {r: 0.70710665, g: -0.7071069, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: 0.99853003, y: -0.9985304, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  - position: {x: 0, y: 0, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  m_Triangles: 030001000800020000000100030002000100050003000800040002000300050004000300070005000800060004000500070006000500010007000800000006000700010000000700
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+--- !u!4 &799583388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799583386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.863616, y: 16.192589, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!223 &924766444 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 6001632577394279906, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
@@ -1014,6 +1434,55 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8364846229157914703, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
   m_PrefabInstance: {fileID: 677322183}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1175290730
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1175290731}
+  - component: {fileID: 1175290732}
+  m_Layer: 0
+  m_Name: Lense
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1175290731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175290730}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.4999998, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4768372023184637103}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1175290732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175290730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 1
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 029ca9eba1cf40647b91dcd1e51e12bc, type: 2}
 --- !u!1 &1326400243
 GameObject:
   m_ObjectHideFlags: 0
@@ -11409,8 +11878,16 @@ PrefabInstance:
       value: ShowButton Mine
       objectReference: {fileID: 0}
     - target: {fileID: 3342884255019005157, guid: f870666817d79ff4699364a5a21fd3f0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 12179b291f21d5f48ad8da6dcd85046c, type: 3}
+    - target: {fileID: 3342884255019005157, guid: f870666817d79ff4699364a5a21fd3f0, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3342884255019005157, guid: f870666817d79ff4699364a5a21fd3f0, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f870666817d79ff4699364a5a21fd3f0, type: 3}
@@ -11440,6 +11917,10 @@ PrefabInstance:
     - target: {fileID: 2912503443256455937, guid: 1560cbd5d7979184db8447f9b9fccdb5, type: 3}
       propertyPath: m_ScreenY
       value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768372022503190540, guid: 1560cbd5d7979184db8447f9b9fccdb5, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4768372022503190543, guid: 1560cbd5d7979184db8447f9b9fccdb5, type: 3}
       propertyPath: m_RootOrder
@@ -11491,3 +11972,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1560cbd5d7979184db8447f9b9fccdb5, type: 3}
+--- !u!4 &4768372023184637103 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4768372022503190543, guid: 1560cbd5d7979184db8447f9b9fccdb5, type: 3}
+  m_PrefabInstance: {fileID: 4768372023184637102}
+  m_PrefabAsset: {fileID: 0}

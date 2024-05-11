@@ -64,11 +64,13 @@ You: "That's not for me, I refuse."
 
 === Gewonnen ===
 You drink and drink until your friend can't take any more. You've won!
+~Unity_Event("UpdateMoneyUI")
 ~Unity_Event("clearRound")
 ->WieGehts
 
 === Verloren ===
 You drink and drink until you can't drink any more. You have lost!
+~Unity_Event("UpdateMoneyUI")
 ->WieGehts
 
 === WieGehts

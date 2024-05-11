@@ -43,11 +43,13 @@ You have chosen a high insert!
 
 === r1g ===
 You won {Get_State("roundChange")}c with two jacks in your hand!
+~Unity_Event("UpdateMoneyUI")
 ~Unity_Event("clearRound")
 ->r2
 
 === r1v ===
 With a 6 and a 7 in your hand, it wasn't enough to win this round. You lost {Get_State("roundChange")}c!
+~Unity_Event("UpdateMoneyUI")
 ->r2
 
 === r2 ===
@@ -85,11 +87,13 @@ You have chosen a high stake!
 
 === r2g ===
 You won this round with a full house and took {Get_State("roundChange")}c!
+~Unity_Event("UpdateMoneyUI")
 ~Unity_Event("clearRound")
 ->r3
 
 === r2v ===
 Because you only had a 2 and a 9, you lost this round {Get_State("roundChange")}c!
+~Unity_Event("UpdateMoneyUI")
 ->r3
 
 === r3 ===
@@ -127,11 +131,13 @@ You have chosen a high stake!
 
 === r3g ===
 Two pairs have brought you victory. You have taken {Get_State("roundChange")}c this round!
+~Unity_Event("UpdateMoneyUI")
 ~Unity_Event("clearRound")
 ->Epilog
 
 === r3v ===
 You have lost with your straight against a flush and have left {Get_State("roundChange")}c behind!
+~Unity_Event("UpdateMoneyUI")
 ->Epilog
 
 === Epilog ===

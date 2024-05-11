@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -42,6 +43,7 @@ public class GridGenerator : MonoBehaviour
     
     [Header("UI")]
     public UIController uIController;
+    public TextMeshProUGUI uIGridNumber;
     
     //Private Variablen
     private Vector2 currentStartPosition;
@@ -66,6 +68,8 @@ public class GridGenerator : MonoBehaviour
             SceneManager.LoadScene("Home_Scene");
             return;
         }
+
+        uIGridNumber.text = (currentGridNumber+"/3");
         tilemap.ClearAllTiles();
         noCollisionTileMap.ClearAllTiles();
         SetUpGrid();
@@ -78,6 +82,7 @@ public class GridGenerator : MonoBehaviour
             SetTNTTiles();
         FindObjectOfType<PlayerInputScript>().transform.position = currentStartPosition;
         ChanceGoldProbability();
+        KillGoldNuggets();
     }
     
     public void SetUpGrid()
@@ -350,6 +355,18 @@ public class GridGenerator : MonoBehaviour
         blocks[3].probability = 100;
         //TODO 100% Modular machen
     }
+
+    public void KillGoldNuggets()
+    {
+        GoldNugget[] goldNuggetsLeftInMine = FindObjectsOfType<GoldNugget>();
+
+        foreach (GoldNugget goldNugget in goldNuggetsLeftInMine)
+        {
+            Destroy(goldNugget.GetComponentInParent<SpriteRenderer>().gameObject);
+            Debug.Log("NuggetDestroyed");
+        }
+    }
+
 
     public IEnumerator IgniteTNT(Vector3Int mousePos2d)
     {

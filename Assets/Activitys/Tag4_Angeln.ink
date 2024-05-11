@@ -75,6 +75,7 @@ You quickly try to reel in the fish. You crank the fishing line...
 ===Win1===
 And that's him! You managed to bring him ashore.
 You estimate its price at {Get_State("price")}c.
+~Unity_Event("UpdateMoneyUI")
 ->Durchgang2
 
 ===Lose1===
@@ -96,6 +97,7 @@ You start to reel in the fishing line.
 ===Win2===
 You've made it! A good catch.
 You estimate its price at {Get_State("price")}c.
+~Unity_Event("UpdateMoneyUI")
 ->Durchgang3
 
 
@@ -118,6 +120,7 @@ You start turning the crank.
 ===Win3===
 You manage to land the fish successfully!
 You estimate its price at {Get_State("price")}c.
+~Unity_Event("UpdateMoneyUI")
 -> end
 
 ===Lose3===

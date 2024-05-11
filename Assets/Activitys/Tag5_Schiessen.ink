@@ -69,6 +69,7 @@ You start shooting the cans and focus on winning.
 ===Win===
 You hit the most cans and won your category!
 You have now received the price from ${Get_State("price")}!
+~Unity_Event("UpdateMoneyUI")
 ->WayHome
 
 ===Lose===

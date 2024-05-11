@@ -5,6 +5,7 @@ using Ink.Runtime;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class ActivityController : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class ActivityController : MonoBehaviour
     [SerializeField] private TextAsset inkDay3;
     [SerializeField] private TextAsset inkDay4;
     [SerializeField] private TextAsset inkDay5;
-    [SerializeField] private TextAsset inkDay5S;
+    [SerializeField] private TextAsset inkDay5Snitched;
 
     [Header("Choices UI")] 
     [SerializeField] private GameObject[] choices;
@@ -168,7 +169,7 @@ public class ActivityController : MonoBehaviour
             case 6:
                 if (GameManager.instance.snitched)
                 {
-                    currentStory = new Story(inkDay5S.text);
+                    currentStory = new Story(inkDay5Snitched.text);
                 }
                 else
                 {
@@ -266,17 +267,31 @@ public class ActivityController : MonoBehaviour
         GameManager.instance.knowsPlan = true;
     }
 
+    public void UpdateMoneyUI() //Aufgerufen über InkEvent
+    {
+        moneyUI.text = GameManager.instance.savings.ToString();
+    }
+
     public void EndDay() //Aufgrufen über InkEvent
     {
         StartCoroutine(EndDayCorutine());
     }
+    
 
     public IEnumerator EndDayCorutine()
     {
         fadingPanel.FadeIn(0.8f);
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("Lobby_Scene");
-        GameManager.instance.UpdateCurrentDay();
+        if (GameManager.instance.savings >= 0)
+        {
+            SceneManager.LoadScene("Lobby_Scene");
+            GameManager.instance.UpdateCurrentDay();
+        }
+        else
+        {
+            GameManager.instance.GetComponent<EndingManager>().InitEnding(4);
+        }
+        
     }
     
     public void InitSnitchedEnding() //Aufgrufen über InkEvent

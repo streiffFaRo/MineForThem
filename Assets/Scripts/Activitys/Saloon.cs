@@ -62,8 +62,6 @@ public class Saloon : MonoBehaviour
             Debug.Log("Verloren - WinNumb: "+winNumb+" WinProb "+winprob);
             GameManager.instance.savings -= betAmount;
         }
-
-        activityController.moneyUI.text = GameManager.instance.savings.ToString();
         
         Debug.Log(betAmount);
     }

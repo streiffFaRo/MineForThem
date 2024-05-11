@@ -1259,7 +1259,6 @@ GameObject:
   - component: {fileID: 1043148082}
   - component: {fileID: 1043148083}
   - component: {fileID: 1043148084}
-  - component: {fileID: 1043148085}
   - component: {fileID: 1043148076}
   m_Layer: 5
   m_Name: Choices (Activity Controller)
@@ -1338,7 +1337,7 @@ MonoBehaviour:
   inkDay3: {fileID: 4900000, guid: 0c9f62ff5fbcd9e42b2232ed39bfcccb, type: 3}
   inkDay4: {fileID: 4900000, guid: 2a10f5e04454e2849a39f717d15cefc4, type: 3}
   inkDay5: {fileID: 4900000, guid: 4ef0e76652d41e049a930b950afbb580, type: 3}
-  inkDay5S: {fileID: 4900000, guid: 0b4af96515ae6a74badf755b1d38cf38, type: 3}
+  inkDay5Snitched: {fileID: 0}
   choices:
   - {fileID: 1211475967}
   - {fileID: 435349083}
@@ -1608,6 +1607,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - name: UpdateMoneyUI
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1043148077}
+          m_TargetAssemblyTypeName: ActivityController, Assembly-CSharp
+          m_MethodName: UpdateMoneyUI
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1043148080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1669,18 +1684,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f0a6189f271d7a4d9cc833ff664df02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1043148085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1043148074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050b04c01b441ec4384afe132cdcb0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1211475967 stripped

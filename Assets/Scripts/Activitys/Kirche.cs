@@ -23,12 +23,10 @@ public class Kirche : MonoBehaviour
         if (amount.Equals("10"))
         {
             GameManager.instance.savings -= 0.1f;
-            activityController.moneyUI.text = GameManager.instance.savings.ToString();
         }
         else if (amount.Equals("50"))
         {
             GameManager.instance.savings -= 0.5f;
-            activityController.moneyUI.text = GameManager.instance.savings.ToString();
         }
         gamestate.Add("segen", 1, true);
     }

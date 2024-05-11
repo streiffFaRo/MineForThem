@@ -91,6 +91,7 @@ Now you are standing in front of the collection, what do you do?
 ===10c===
 ~ spenden("10")
 You decide to throw 10c into the collection.
+~Unity_Event("UpdateMoneyUI")
 {MitFam:->EpilogFam}
 {MitFreu:->EpilogFreu}
 ->EpilogAllein
@@ -98,6 +99,7 @@ You decide to throw 10c into the collection.
 ===50c===
 ~ spenden("50")
 You decide to throw 50c into the collection.
+~Unity_Event("UpdateMoneyUI")
 {MitFam:->EpilogFam}
 {MitFreu:->EpilogFreu}
 ->EpilogAllein
