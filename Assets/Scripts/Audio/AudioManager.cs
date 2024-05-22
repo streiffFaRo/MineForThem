@@ -16,6 +16,7 @@ public class AudioManager : MonoBehaviour
     public PlayRandomSound StoneCrackSound;
     public PlayRandomSound uI_ClickSound;
     public AudioSource shotSound;
+    public AudioSource photoSound;
 
     [Header("Atmos")]
     public AudioSource miningAtmo;
@@ -63,7 +64,12 @@ public class AudioManager : MonoBehaviour
     {
         placeBlockSound.Play();
     }
-
+    
+    public void PlayPhotoSound()
+    {
+        photoSound.Play();
+    }
+    
     public void PlayStoneCrackSound()
     {
         StoneCrackSound.PlaySound();

@@ -12,6 +12,7 @@ public class Intro : MonoBehaviour
     [SerializeField] private Image image2;
     [SerializeField] private Image image3;
     [SerializeField] private Button button;
+    private AudioManager audio;
 
     private void Start()
     {
@@ -20,16 +21,25 @@ public class Intro : MonoBehaviour
         image3.gameObject.SetActive(false);
         button.gameObject.SetActive(false);
         StartCoroutine(PlayIntro());
+        
+        audio = VolumeManager.instance.GetComponent<AudioManager>();
     }
-
+    
+    
     public IEnumerator PlayIntro()
     {
         //TODO Let them fade in
         yield return new WaitForSeconds(3f);
+        audio.PlayPhotoSound();
+        yield return new WaitForSeconds(0.5f);
         image1.gameObject.SetActive(true);
         yield return new WaitForSeconds(3f);
+        audio.PlayPhotoSound();
+        yield return new WaitForSeconds(0.5f);
         image2.gameObject.SetActive(true);
         yield return new WaitForSeconds(3f);
+        audio.PlayPhotoSound();
+        yield return new WaitForSeconds(0.5f);
         image3.gameObject.SetActive(true);
         yield return new WaitForSeconds(3f);
         button.gameObject.SetActive(true);
