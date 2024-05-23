@@ -244,10 +244,10 @@ RectTransform:
   m_Father: {fileID: 5624215971894304073}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -100, y: 200}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
+  m_SizeDelta: {x: 1400, y: 200}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &7848430442095040104
 CanvasRenderer:
@@ -270,14 +270,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
+  m_Color: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 331823b06b381b94b9ed657c3d901dba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -322,8 +322,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -40, y: -40}
+  m_AnchoredPosition: {x: 0, y: -11}
+  m_SizeDelta: {x: -235.2542, y: -79.1029}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4211720346575847094
 CanvasRenderer:
@@ -355,8 +355,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Dialog text hier
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
+  m_sharedMaterial: {fileID: -1766910192009662871, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -380,8 +380,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -473,17 +473,27 @@ MonoBehaviour:
   speechbubble: {fileID: 9155331402258841887}
   text: {fileID: 7441611113011332376}
   newsMarker: {fileID: 3204778482926129256}
-  usesMarker: 0
-  speechLinesDay0: []
-  speechLineDeluxeTest:
-    speechLine: []
+  speechLineDeluxeDay0:
+    speechLines: []
     importantLineNumber: 0
-  speechLinesDay1: []
-  speechLinesDay2: []
-  speechLinesDay3: []
-  speechLinesDay4: []
-  speechLinesDay5: []
-  speechLinesDay6: []
+  speechLineDeluxeDay1:
+    speechLines: []
+    importantLineNumber: 0
+  speechLineDeluxeDay2:
+    speechLines: []
+    importantLineNumber: 0
+  speechLineDeluxeDay3:
+    speechLines: []
+    importantLineNumber: 0
+  speechLineDeluxeDay4:
+    speechLines: []
+    importantLineNumber: 0
+  speechLineDeluxeDay5:
+    speechLines: []
+    importantLineNumber: 0
+  speechLineDeluxeDay6:
+    speechLines: []
+    importantLineNumber: 0
 --- !u!61 &6091284482486947663
 BoxCollider2D:
   m_ObjectHideFlags: 0

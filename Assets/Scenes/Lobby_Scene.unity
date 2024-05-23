@@ -1199,7 +1199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLineDeluxeDay0.speechLines.Array.data[0]
-      value: So you're the new huh? Jack's on my list, I'm the foreman.
+      value: So you're the new huh? Jack stands here on my list, I'm the foreman.
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLineDeluxeDay0.speechLines.Array.data[1]
