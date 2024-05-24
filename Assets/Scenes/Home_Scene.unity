@@ -2450,6 +2450,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1121818284}
+  - component: {fileID: 1121818286}
   - component: {fileID: 1121818285}
   m_Layer: 5
   m_Name: FamilyHappiness
@@ -2470,8 +2471,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1467739335}
   - {fileID: 1680330691}
+  - {fileID: 1467739335}
   m_Father: {fileID: 1349457477}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2489,23 +2490,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1121818283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 4
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 15a27c84ffbebaa4dba1d34e156dc7df, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1121818286
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121818283}
+  m_CullTransparentMesh: 1
 --- !u!1 &1139839756
 GameObject:
   m_ObjectHideFlags: 0
@@ -3600,12 +3613,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1121818284}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 50}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -76.864}
+  m_SizeDelta: {x: 300, y: 31.7836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1467739336
 MonoBehaviour:
@@ -3629,15 +3642,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Family Happiness
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
+  m_sharedMaterial: {fileID: -1766910192009662871, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4279637526
+  m_fontColor: {r: 0.08627451, g: 0.08627451, b: 0.08627451, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3654,8 +3667,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3914,17 +3927,18 @@ MonoBehaviour:
   heatToggle: {fileID: 10520134}
   foodToggle: {fileID: 2087978530}
   descriptionTexts:
-  - "In der Stadt treffen sich die Leute zu einem Pokerabend, du weisst, dass Dolores
-    das nicht gut heisst aber es k\xF6nnte eine M\xF6glichkeit f\xFCr mehr Geld sein."
-  - Dein Freund hat dich zu einem netten Abend im Saloon eingeladen
-  - "Heute Abend wird in der Kirche eine Messe gelesen, das k\xF6nnte eine gute Abwechslung
-    sein, vielleicht spendet der Besuch dir etwas Trost"
-  - "Dein Freund hat dir eine Einladung hinterlassen und m\xF6chte dich zu ihm nach
-    hause einladen. Er schreibt es sei wichtig."
-  - "Heute k\xF6nnte ein sch\xF6nder Angelausflug genau das richtige sein. Gefangene
-    Fische k\xF6nntest du auch verkaufen um etwas mehr Geld zu verdienen."
-  - Heute wird ein Schiesswettbewerb in der Stadt abgehalten.
-  - Heute Abend gibt es nichts zu tun. Deine Familie freut sich mit dir Zeit zu verbringen.
+  - In town, people get together for a poker night, you know Dolores doesn't approve,
+    but it could be a way to make more money.
+  - Davy, your friend from the mine, has invited you to a nice evening in the saloon
+  - Tonight there will be a mass read in church, that could be a good change, maybe
+    the visit will give you some peace of mind
+  - Your friend Davy has left you an invitation and wants to invite you to his home.
+    He says it's important.
+  - A nice fishing trip could be just the thing today. You could also sell the fish
+    you catch to earn some extra money.
+  - A shooting competition is being held in the town today.
+  - There's nothing to do tonight. Your family is looking forward to spending time
+    with you.
   descriptionTextUI: {fileID: 906313976}
   goOutButton: {fileID: 603154280}
   stayHomeButton: {fileID: 1059589621}
@@ -3967,7 +3981,7 @@ GameObject:
   - component: {fileID: 1680330693}
   - component: {fileID: 1680330692}
   m_Layer: 5
-  m_Name: FamilyHappiness
+  m_Name: Amount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3986,12 +4000,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1121818284}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 50}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -26.8249}
+  m_SizeDelta: {x: 101.0376, y: 53.6497}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1680330692
 MonoBehaviour:
@@ -4013,10 +4027,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 999
+  m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
+  m_sharedMaterial: {fileID: -1766910192009662871, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4040,15 +4054,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
