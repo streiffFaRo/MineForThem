@@ -40,6 +40,7 @@ public class GridGenerator : MonoBehaviour
     
     [Header("Tnt")]
     public GameObject tntDeathCollider;
+    public GameObject tntAnimation;
     
     [Header("UI")]
     public UIController uIController;
@@ -371,7 +372,8 @@ public class GridGenerator : MonoBehaviour
     public IEnumerator IgniteTNT(Vector3Int mousePos2d)
     {
         tilemap.SetTile(new Vector3Int(mousePos2d.x, mousePos2d.y, 0), null);
-        noCollisionTileMap.SetTile(new Vector3Int(mousePos2d.x, mousePos2d.y, 0), tntTile);
+        
+        Instantiate(tntAnimation, new Vector3(mousePos2d.x + 0.5f, mousePos2d.y + 0.5f, 0), Quaternion.identity);
         
         yield return new WaitForSeconds(3);
         
@@ -394,10 +396,6 @@ public class GridGenerator : MonoBehaviour
         CheckTileToDestroy(new Vector3Int(mousePos2d.x, mousePos2d.y-1, 0));
         
         CheckTileToDestroy(new Vector3Int(mousePos2d.x - 1, mousePos2d.y - 1, 0));
-        
-        //TODO Knallsound
-        //TODO Animation
-        //TODO Corutine machen
     }
 
     public void CheckTileToDestroy(Vector3Int tileToCheck)

@@ -33,8 +33,12 @@ public class MainMenu : MonoBehaviour
         {
             currentFPSCap = 30;
         }
+
+        if (fpsText != null)
+        {
+            fpsText.text = currentFPSCap.ToString();
+        }
         
-        fpsText.text = currentFPSCap.ToString();
         
     }
     

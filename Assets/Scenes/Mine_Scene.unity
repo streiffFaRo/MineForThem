@@ -1804,6 +1804,7 @@ MonoBehaviour:
   tntTile: {fileID: 11400000, guid: 76aa8b143846fa74dbc1ff038feb0df0, type: 2}
   minecartStationTile: {fileID: 11400000, guid: 0ca622e4276003b44a30f6f86f867d0d, type: 2}
   tntDeathCollider: {fileID: 3453196815279115232, guid: a3c60aa2978762e4bb87fcb1bb0a6fc2, type: 3}
+  tntAnimation: {fileID: 2254189242748833634, guid: 017fddfff42708649bd690d5809c6f99, type: 3}
   uIController: {fileID: 8735696481911796459}
   uIGridNumber: {fileID: 1843261083}
 --- !u!4 &1689238147
@@ -11913,6 +11914,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5782925810832783760, guid: 895388dabb9f76f4eb9748b6c8ccc236, type: 3}
+      propertyPath: currentDay
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5782925810832783760, guid: 895388dabb9f76f4eb9748b6c8ccc236, type: 3}
       propertyPath: goldMinedUI
       value: 
