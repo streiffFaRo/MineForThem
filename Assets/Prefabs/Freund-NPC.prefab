@@ -47,7 +47,7 @@ MonoBehaviour:
   playerInputScript: {fileID: 0}
   showButtonMine: {fileID: 0}
   showButtonExit: {fileID: 0}
-  vorarbeiterSprite: {fileID: 0}
+  vorarbeiter: {fileID: 0}
   friendTransform: {fileID: 0}
   davySprite: {fileID: 584240731212095469}
   davyAnimator: {fileID: 7609624320597903219}

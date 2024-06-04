@@ -6,6 +6,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
+using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
 
 public class ActivityController : MonoBehaviour
 {
@@ -31,6 +33,8 @@ public class ActivityController : MonoBehaviour
     [SerializeField] private TextAsset inkDay5Snitched;
 
     [Header("Choices UI")] 
+    [SerializeField] private GameObject continueButton;
+    [SerializeField] private FirstSelected firstSelected;
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
 
@@ -74,6 +78,8 @@ public class ActivityController : MonoBehaviour
         BindExternalFunctions();
         
         ContinueStory();
+
+        continueButton.GetComponent<Button>().Select();
     }
 
     #region ExternalInkFunctions
@@ -211,6 +217,7 @@ public class ActivityController : MonoBehaviour
             Debug.LogError("More choices were given than the UI can support");
         }
         
+        
         int index = 0;
         foreach (Choice choice in currenChoices)
         {
@@ -219,21 +226,34 @@ public class ActivityController : MonoBehaviour
             index++;
         }
 
+        
         for (int i = index; i < choices.Length; i++)
         {
             choices[i].gameObject.SetActive(false);
+        }
+        
+        if (index >= 2)
+        {
+            continueButton.SetActive(false);
+            choices[0].GetComponent<Button>().Select();
+        }
+        else
+        {
+            continueButton.SetActive(true);
         }
 
     }
 
     public void MakeChoice(int choiceIndex)
     {
-        //TODO Fix -> (Selektiere Chioces werden automatisch ausgeführt)
+        
+        currentStory.ChooseChoiceIndex(choiceIndex);
+        ContinueStory();
+        canMakeChoice = false;
+        
         if (canMakeChoice)
         {
-            currentStory.ChooseChoiceIndex(choiceIndex);
-            ContinueStory();
-            canMakeChoice = false;
+            
         }
     }
 

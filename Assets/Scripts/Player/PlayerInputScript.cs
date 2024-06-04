@@ -98,7 +98,7 @@ public class PlayerInputScript : MonoBehaviour
     {
         if (context.performed)
         {
-            interactionScript.Interact();
+            interactionScript?.Interact();
         }
     }
     
@@ -162,7 +162,7 @@ public class PlayerInputScript : MonoBehaviour
     {
         if (context.performed)
         {
-            activityController?.ContinueStory();
+            
         }
     }
     
