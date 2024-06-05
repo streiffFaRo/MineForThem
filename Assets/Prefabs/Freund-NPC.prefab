@@ -124,7 +124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8168159471392056085, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8357344517093071939, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
       propertyPath: speechLinesDay0.Array.size
@@ -190,6 +190,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5442221223298333034, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
   m_PrefabInstance: {fileID: 6221547928162176301}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6297556674368970641 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 86142944981783228, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}
+  m_PrefabInstance: {fileID: 6221547928162176301}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7036377473814727840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6297556674368970641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a924bfd1f1aa74881d0610adb45625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &7609624320597903219 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4597526370854488670, guid: e0471ef215393e94ca4177e4168c0bfa, type: 3}

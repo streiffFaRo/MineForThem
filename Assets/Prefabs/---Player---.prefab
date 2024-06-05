@@ -93,6 +93,8 @@ MonoBehaviour:
   gridGenerator: {fileID: 0}
   maxDistance: 1
   goldNugget: {fileID: 3024164110287596503, guid: 8e57eebd20e1c2644a05716bdb0f4d10, type: 3}
+  gameManager: {fileID: 0}
+  audioManager: {fileID: 0}
 --- !u!114 &1390790650942822999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +279,7 @@ GameObject:
   - component: {fileID: 3593371231297682667}
   - component: {fileID: 8464077005458338423}
   - component: {fileID: 7440227776616053876}
+  - component: {fileID: 689782755171119556}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -372,6 +375,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &689782755171119556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2859786060969067088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a924bfd1f1aa74881d0610adb45625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6531186261818014289
 GameObject:
   m_ObjectHideFlags: 0

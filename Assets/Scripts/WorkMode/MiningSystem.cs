@@ -16,6 +16,10 @@ public class MiningSystem : MonoBehaviour
     public GridGenerator gridGenerator;
     public float maxDistance = 2;
     public GameObject goldNugget;
+
+    [Header("Instances")] 
+    public GameManager gameManager;
+    public AudioManager audioManager;
     
     //Private Varibalen
     private Vector3 middleBlockPos;
@@ -23,6 +27,8 @@ public class MiningSystem : MonoBehaviour
     private void Awake()
     {
         playerMovement = GetComponent<PlayerMovement>();
+        gameManager = GameManager.instance;
+        audioManager = VolumeManager.instance.GetComponent<AudioManager>();
     }
 
     public void DestroyBlock(Vector3Int mousePos2D)
@@ -43,6 +49,30 @@ public class MiningSystem : MonoBehaviour
                 {
                     gridGenerator.blockGridDurabilityDictionary[mousePos2D] -= GameManager.instance.pickaxeStrength;
 
+                    
+                    // Play sound for each Block
+                    if (foundTile == gridGenerator.blocks[0].tile)
+                    {
+                        audioManager.PlayPickaxeSound();
+                    }
+                    else if (foundTile == gridGenerator.blocks[1].tile)
+                    {
+                        audioManager.PlayStoneSound();
+                    }
+                    else if (foundTile == gridGenerator.blocks[2].tile)
+                    {
+                        audioManager.PlayDirtSound();
+                    }
+                    else if (foundTile == gridGenerator.blocks[3].tile)
+                    {
+                        audioManager.PlayGoldSound();
+                    }
+                    else
+                    {
+                        audioManager.PlayStoneSound();
+                    }
+                    
+                    
                     if (gridGenerator.blockGridDurabilityDictionary[mousePos2D] <= 0)
                     {
                         if (foundTile == gridGenerator.blocks[3].tile)
@@ -63,10 +93,10 @@ public class MiningSystem : MonoBehaviour
                         else
                         {
                             gridGenerator.tilemap.SetTile(mousePos2D,null);
-                            GameManager.instance.UpdateBlocksInInv(true);
+                            gameManager.UpdateBlocksInInv(true);
                             uIController.UpdateBlocksInInv();
                         }    
-                        GameManager.instance.blocksMined++;
+                        gameManager.blocksMined++;
                     }
                 }
                 
@@ -79,7 +109,7 @@ public class MiningSystem : MonoBehaviour
                     playerMovement.spriteRenderer.flipX = true;
                 }
                 playerMovement.animator.SetTrigger("Break");
-                VolumeManager.instance.GetComponent<AudioManager>().PlayPickaxeSound();
+                
                 
             }
         }
@@ -102,8 +132,8 @@ public class MiningSystem : MonoBehaviour
                 {
                     gridGenerator.tilemap.SetTile(mousePos2D, gridGenerator.blocks[0].tile);
                     gridGenerator.blockGridDurabilityDictionary[mousePos2D] = gridGenerator.blocks[0].maxDurability;
-                    GameManager.instance.UpdateBlocksInInv(false);
-                    GameManager.instance.blocksPlaced++;
+                    gameManager.UpdateBlocksInInv(false);
+                    gameManager.blocksPlaced++;
                     uIController.UpdateBlocksInInv();
                     
                     if (mousePos2D.x > playerMovement.spriteRenderer.gameObject.transform.position.x)
@@ -115,7 +145,7 @@ public class MiningSystem : MonoBehaviour
                         playerMovement.spriteRenderer.flipX = true;
                     }
                     playerMovement.animator.SetTrigger("Place");
-                    VolumeManager.instance.GetComponent<AudioManager>().PlayPlaceBlockSound();
+                    audioManager.PlayPlaceBlockSound();
                     
                     //TODO Was wenn Block auf Gold gesetzt?
                 }

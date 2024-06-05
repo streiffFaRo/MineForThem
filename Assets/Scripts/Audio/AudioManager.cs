@@ -11,13 +11,18 @@ public class AudioManager : MonoBehaviour
     [Header("Sounds")]
     public PlayRandomSound collectSound;
     public PlayRandomSound footstepsSound;
-    public PlayRandomSound pickaxeSound;
     public AudioSource placeBlockSound;
-    public PlayRandomSound StoneCrackSound;
     public PlayRandomSound uI_ClickSound;
     public AudioSource shotSound;
     public AudioSource photoSound;
 
+    [Header("Blocks")]
+    public PlayRandomSound pickaxeSound;
+    public PlayRandomSound StoneCrackSound;
+    public PlayRandomSound dirtSound;
+    public PlayRandomSound stoneSound;
+    public AudioSource goldSound;
+    
     [Header("Atmos")]
     public AudioSource miningAtmo;
     public AudioSource homeAtmo;
@@ -44,7 +49,15 @@ public class AudioManager : MonoBehaviour
         PlayCurrentAtmo();
     }
 
+    // --- UI Sounds
+    
+    public void PlayUIClickSound()
+    {
+        uI_ClickSound.PlaySound();
+    }
 
+    // --- Gameplay Sounds ---
+    
     public void PlayCollectSound()
     {
         collectSound.PlaySound();
@@ -53,11 +66,6 @@ public class AudioManager : MonoBehaviour
     public void PlayFootStepSound()
     {
         footstepsSound.PlaySound();
-    }
-
-    public void PlayPickaxeSound()
-    {
-        pickaxeSound.PlaySound();
     }
 
     public void PlayPlaceBlockSound()
@@ -70,22 +78,41 @@ public class AudioManager : MonoBehaviour
         photoSound.Play();
     }
     
+
+    // --- Block Sounds ---
+    
+    public void PlayPickaxeSound()
+    {
+        pickaxeSound.PlaySound();
+    }
+    
+    
     public void PlayStoneCrackSound()
     {
         StoneCrackSound.PlaySound();
     }
-
-    public void PlayUIClickSound()
+    
+    public void PlayDirtSound()
     {
-        uI_ClickSound.PlaySound();
+        dirtSound.PlaySound();
     }
     
+    public void PlayStoneSound()
+    {
+        stoneSound.PlaySound();
+    }
+    
+    public void PlayGoldSound()
+    {
+        goldSound.Play();
+    }
+    
+    
 
-
-
+    // --- Atmo Sounds ---
+    
     public void PlayCurrentAtmo()
     {
-        
         
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Mine_Scene") || 
             SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Lobby_Scene"))
