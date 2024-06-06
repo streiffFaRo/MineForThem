@@ -12,10 +12,15 @@ public class AudioManager : MonoBehaviour
     public PlayRandomSound collectSound;
     public PlayRandomSound footstepsSound;
     public AudioSource placeBlockSound;
-    public PlayRandomSound uI_ClickSound;
+    
     public AudioSource shotSound;
     public AudioSource photoSound;
-
+    
+    [Header("UI")]
+    public PlayRandomSound uI_FlipPageSound;
+    public AudioSource uI_ClickSound;
+    public AudioSource uI_HoverSound;
+    
     [Header("Blocks")]
     public PlayRandomSound pickaxeSound;
     public PlayRandomSound StoneCrackSound;
@@ -53,7 +58,17 @@ public class AudioManager : MonoBehaviour
     
     public void PlayUIClickSound()
     {
-        uI_ClickSound.PlaySound();
+        uI_FlipPageSound.PlaySound();
+    }
+
+    public void PlayClickSound()
+    {
+        uI_ClickSound.Play();
+    }
+
+    public void PlayHoverSound()
+    {
+        uI_HoverSound.Play();
     }
 
     // --- Gameplay Sounds ---
