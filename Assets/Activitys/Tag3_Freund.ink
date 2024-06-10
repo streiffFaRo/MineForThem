@@ -7,11 +7,11 @@ You accept your friend's invitation.
 On the way to his house, you wonder what he's all about.
 Your friend is very happy to see you. He greets you warmly and offers you a glass of water to drink.
 Davy: "What about you now that you know what the work is like?"
-+[Passabel]
++[Decent]
 -> Passabel
-+[Schlecht]
++[Bad]
 -> Schlecht
-+[Schrecklich]
++[Horrible]
 -> Schrecklich
 
 ===Passabel===

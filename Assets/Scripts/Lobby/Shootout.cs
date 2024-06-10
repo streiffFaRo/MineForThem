@@ -15,8 +15,10 @@ public class Shootout : MonoBehaviour
     public Transform friendTransform;
     public SpriteRenderer davySprite;
     public Animator davyAnimator;
+    public GameObject newsMarker;
+    public GameObject säcke;
+    private bool shootoutDone = false;
     //TODO VorarbeiterAnimator
-    //TODO PlayerAnimator
 
     private void Awake()
     {
@@ -37,9 +39,16 @@ public class Shootout : MonoBehaviour
 
     public void ShootoutInteraction()
     {
-        playerInputScript.canMove = false;
-        playerInputScript.GetComponent<Interaction>().shootoutDone = true;
-        StartCoroutine(CutScene());
+        
+        if (!shootoutDone)
+        {
+            playerInputScript.canMove = false;
+            playerInputScript.GetComponent<Interaction>().shootoutDone = true;
+            newsMarker.SetActive(false);
+            shootoutDone = true;
+            säcke.SetActive(false);
+            StartCoroutine(CutScene());
+        }
     }
 
     public IEnumerator CutScene()

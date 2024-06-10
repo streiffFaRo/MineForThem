@@ -15,6 +15,10 @@ public class AudioManager : MonoBehaviour
     
     public AudioSource shotSound;
     public AudioSource photoSound;
+
+    [Header("Talk Sounds")]
+    public PlayRandomSound vorarbeiterTalk;
+    public PlayRandomSound davyTalk;
     
     [Header("UI")]
     public PlayRandomSound uI_FlipPageSound;
@@ -27,6 +31,9 @@ public class AudioManager : MonoBehaviour
     public PlayRandomSound dirtSound;
     public PlayRandomSound stoneSound;
     public AudioSource goldSound;
+    public AudioSource fuzeSound;
+    public AudioSource explosionSound;
+    public AudioSource minecartSound;
     
     [Header("Atmos")]
     public AudioSource miningAtmo;
@@ -54,6 +61,19 @@ public class AudioManager : MonoBehaviour
         PlayCurrentAtmo();
     }
 
+    // --- Talks Sounds ---
+
+    public void PlayVorarbeiterTalk()
+    {
+        vorarbeiterTalk.PlaySound();
+    }
+
+    public void PlayDavyTalk()
+    {
+        davyTalk.PlaySound();
+    }
+
+    
     // --- UI Sounds
     
     public void PlayUIClickSound()
@@ -121,8 +141,21 @@ public class AudioManager : MonoBehaviour
     {
         goldSound.Play();
     }
-    
-    
+
+    public void PlayFuzeSound()
+    {
+        fuzeSound.Play();
+    }
+
+    public void PlayExplosionSound()
+    {
+        explosionSound.Play();
+    }
+
+    public void PlayMinecartSound()
+    {
+        minecartSound.Play();
+    }
 
     // --- Atmo Sounds ---
     

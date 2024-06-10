@@ -21,6 +21,8 @@ public class NPCDialog : MonoBehaviour
     private bool isTalking;
     private int currentLine = 0;
     private SpeechLineDeluxe currentSpeechLineDay;
+
+    public bool isDavy = false;
     
     
     private void Awake()
@@ -90,6 +92,15 @@ public class NPCDialog : MonoBehaviour
 
     public IEnumerator Bubble()
     {
+
+        if (isDavy)
+        {
+            VolumeManager.instance.GetComponent<AudioManager>().PlayDavyTalk();
+        }
+        else
+        {
+            VolumeManager.instance.GetComponent<AudioManager>().PlayVorarbeiterTalk();
+        }
         speechbubble.SetActive(true);
         text.SetText(currentSpeechLineDay.speechLines[currentLine]);
         currentLine++;

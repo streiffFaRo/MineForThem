@@ -373,6 +373,8 @@ public class GridGenerator : MonoBehaviour
     {
         tilemap.SetTile(new Vector3Int(mousePos2d.x, mousePos2d.y, 0), null);
         
+        VolumeManager.instance.GetComponent<AudioManager>().PlayFuzeSound();
+        
         Instantiate(tntAnimation, new Vector3(mousePos2d.x + 0.5f, mousePos2d.y + 0.5f, 0), Quaternion.identity);
         
         yield return new WaitForSeconds(3);

@@ -27,7 +27,7 @@ public class Minecart : MonoBehaviour
             Vector3 stationtoExitCords = new Vector3(stationToExit.gameObject.transform.position.x,
                 stationToExit.gameObject.transform.position.y, stationToExit.gameObject.transform.position.z);
 
-        
+            VolumeManager.instance.GetComponent<AudioManager>().PlayMinecartSound();
             StartCoroutine(TransitionPlayer());
             player.transform.DOMove(stationtoExitCords, 2f);
         }

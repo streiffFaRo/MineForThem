@@ -7,6 +7,7 @@ public class TNT : MonoBehaviour
 
     public AudioManager audioManager;
     public GameObject TNTBlock;
+    public GameObject explosionLight;
     
     private void Awake()
     {
@@ -15,11 +16,13 @@ public class TNT : MonoBehaviour
     
     public void Bang()
     {
-        audioManager.PlayPhotoSound();
+        explosionLight.SetActive(true);
+        audioManager.PlayExplosionSound();
     }
 
     public void Destroy()
     {
+        explosionLight.SetActive(false);
         Destroy(TNTBlock);
     }
 }
