@@ -17,6 +17,7 @@ public class Shootout : MonoBehaviour
     public Animator davyAnimator;
     public GameObject newsMarker;
     public GameObject säcke;
+    public GameObject vorarbeiterDead;
     private bool shootoutDone = false;
     //TODO VorarbeiterAnimator
 
@@ -64,6 +65,7 @@ public class Shootout : MonoBehaviour
         yield return new WaitForSeconds(3);
         VolumeManager.instance.GetComponent<AudioManager>().shotSound.Play();
         vorarbeiter.gameObject.SetActive(false);
+        vorarbeiterDead.SetActive(true);
         
         
         yield return new WaitForSeconds(1);

@@ -180,17 +180,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06baa6cc70bfa3d4c81c5fcd72bdbeca, type: 3}
---- !u!114 &36680064 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 15418309, guid: 06baa6cc70bfa3d4c81c5fcd72bdbeca, type: 3}
-  m_PrefabInstance: {fileID: 36680063}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 892d9854944ec30438409448ffb76e08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &41777504
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,7 +663,7 @@ PrefabInstance:
       objectReference: {fileID: 679789338}
     - target: {fileID: 6001632575490636322, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayUIClickSound
+      value: PlayScribbleSound
       objectReference: {fileID: 0}
     - target: {fileID: 6001632575490636322, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -730,7 +719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6001632576798290880, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayUIClickSound
+      value: PlayScribbleSound
       objectReference: {fileID: 0}
     - target: {fileID: 6001632576798290880, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -778,7 +767,7 @@ PrefabInstance:
       objectReference: {fileID: 679789338}
     - target: {fileID: 6001632577123082974, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayUIClickSound
+      value: PlayScribbleSound
       objectReference: {fileID: 0}
     - target: {fileID: 6001632577123082974, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -1202,7 +1191,7 @@ PrefabInstance:
     - target: {fileID: 6673790913574771905, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1346427132}
+      objectReference: {fileID: 1217260957}
     - target: {fileID: 6673790913574771905, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -1217,7 +1206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6673790913574771905, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayUIClickSound
+      value: PlayClickSound
       objectReference: {fileID: 0}
     - target: {fileID: 6673790913574771905, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1258,7 +1247,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6673790913574771905, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
   m_PrefabInstance: {fileID: 1217260952}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1217260957}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -1277,56 +1266,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstSelected: {fileID: 1217260955}
---- !u!1 &1217260957 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6673790913574769471, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
+--- !u!114 &1217260957 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6228984446215630534, guid: 56f7e3f1e5604604d9b89369a8011355, type: 3}
   m_PrefabInstance: {fileID: 1217260952}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1217260958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1217260957}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 654f0a2639dc5aa4b98fc1c394ad2eed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 36680064}
-          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-          m_MethodName: PlayHoverSound
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 9
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 36680064}
-          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-          m_MethodName: PlayHoverSound
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1346427126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,7 +1289,6 @@ GameObject:
   - component: {fileID: 1346427129}
   - component: {fileID: 1346427128}
   - component: {fileID: 1346427131}
-  - component: {fileID: 1346427132}
   - component: {fileID: 1346427127}
   m_Layer: 5
   m_Name: Can_Intro
@@ -1446,18 +1395,6 @@ MonoBehaviour:
   image2: {fileID: 430216135}
   image3: {fileID: 1055021230}
   button: {fileID: 1217260955}
---- !u!114 &1346427132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346427126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 654f0a2639dc5aa4b98fc1c394ad2eed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1895518184
 GameObject:
   m_ObjectHideFlags: 0

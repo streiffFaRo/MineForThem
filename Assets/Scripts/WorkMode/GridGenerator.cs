@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -75,6 +76,7 @@ public class GridGenerator : MonoBehaviour
         noCollisionTileMap.ClearAllTiles();
         SetUpGrid();
         PlaceCorridor();
+        ClearExitDoor();
         SetStartAndEnd();
         if (GameManager.instance.currentDay >= 2)
             SetMineCartTiles();
@@ -364,7 +366,17 @@ public class GridGenerator : MonoBehaviour
         foreach (GoldNugget goldNugget in goldNuggetsLeftInMine)
         {
             Destroy(goldNugget.GetComponentInParent<SpriteRenderer>().gameObject);
-            Debug.Log("NuggetDestroyed");
+        }
+    }
+
+    public void ClearExitDoor()
+    {
+        
+        GameObject exitdoorfound = FindObjectOfType<ExitDoor>().GameObject();
+
+        if (exitdoorfound != null)
+        {
+            Destroy(exitdoorfound);
         }
     }
 
