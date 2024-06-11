@@ -15,7 +15,12 @@ public class UISound : MonoBehaviour
 
     public void PlayScribbleSound()
     {
-        audioManager.PlayUIClickSound();
+        audioManager.PlayScribbleSound();
+    }
+
+    public void PlayPaperSound()
+    {
+        audioManager.PlayPaperSound();
     }
 
     public void PlayHoverSound()

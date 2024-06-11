@@ -27,7 +27,7 @@ public class NPCDialog : MonoBehaviour
     
     private void Awake()
     {
-        boxcollider = GetComponentInChildren<BoxCollider2D>();
+        boxcollider = GetComponent<BoxCollider2D>();
         speechbubble.SetActive(false);
     }
 
@@ -61,8 +61,6 @@ public class NPCDialog : MonoBehaviour
             case 6:
                 currentSpeechLineDay = speechLineDeluxeDay6;
                 break;
-            default:
-                break;
         }
     }
 
@@ -72,27 +70,48 @@ public class NPCDialog : MonoBehaviour
         if (!isTalking)
         {
             isTalking = true;
-            if (currentSpeechLineDay.importantLineNumber == 9)
-            {
-                newsMarker.SetActive(false);
-            }
-            else if (currentLine == currentSpeechLineDay.importantLineNumber)
-            {
-                newsMarker.SetActive(false);
-            }
-            
-            if (currentSpeechLineDay.speechLines.Length <= currentLine)
-            {
-                currentLine = 0;
-                
-            }
-            StartCoroutine(Bubble());
+            CurrentLineCheck();
+        }
+        else
+        {
+            CurrentLineCheck();
+            VolumeManager.instance.GetComponent<AudioManager>().PlayPaperSound();
         }
     }
 
-    public IEnumerator Bubble()
+    public void CurrentLineCheck()
     {
+        if (currentSpeechLineDay.speechLines.Length <= currentLine)
+        {
+            EndDilogue();
+            currentLine = 0;
+        }
+        else
+        {
+            StartDialogue();
+        }
+        
+        if (currentSpeechLineDay.importantLineNumber == 9)
+        {
+            newsMarker.SetActive(false);
+        }
+        else if (currentLine == currentSpeechLineDay.importantLineNumber)
+        {
+            newsMarker.SetActive(false);
+        }
+        
+    }
 
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player") && isTalking)
+        {
+            EndDilogue();
+        }
+    }
+
+    public void StartDialogue()
+    {
         if (isDavy)
         {
             VolumeManager.instance.GetComponent<AudioManager>().PlayDavyTalk();
@@ -104,9 +123,10 @@ public class NPCDialog : MonoBehaviour
         speechbubble.SetActive(true);
         text.SetText(currentSpeechLineDay.speechLines[currentLine]);
         currentLine++;
-        //TODO Play Sound
-        //TODO Animation Bubble Pop up
-        yield return new WaitForSeconds(5f);
+    }
+
+    public void EndDilogue()
+    {
         speechbubble.SetActive(false);
         isTalking = false;
     }

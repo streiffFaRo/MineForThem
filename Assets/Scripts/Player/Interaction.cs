@@ -32,16 +32,13 @@ public class Interaction : MonoBehaviour
 
             if (npcdialog != null)
             {
-                Debug.Log("Test if npc Dialogue is null passed");
                 if (GameManager.instance.currentDay >= 5 && GameManager.instance.hasBullet &&
                     npcdialog.GetComponentInChildren<Shootout>()!= null)
                 {
-                    Debug.Log("Fire Shootout passed");
                     npcdialog.GetComponentInChildren<Shootout>()?.ShootoutInteraction();
                 }
                 else
                 {
-                    Debug.Log("Play Dialogue Line passed");
                     npcdialog.Speech();
                 }
                 

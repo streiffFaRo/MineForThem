@@ -76,9 +76,15 @@ public class AudioManager : MonoBehaviour
     
     // --- UI Sounds
     
-    public void PlayUIClickSound()
+    public void PlayPaperSound()
     {
         uI_FlipPageSound.PlaySound();
+    }
+    
+    public void PlayScribbleSound()
+    {
+        uI_FlipPageSound.PlaySound();
+        //TODO Insert scribble sound
     }
 
     public void PlayClickSound()

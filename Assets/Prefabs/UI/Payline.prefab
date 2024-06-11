@@ -613,7 +613,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 15418309, guid: 06baa6cc70bfa3d4c81c5fcd72bdbeca, type: 3}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayUIClickSound
+        m_MethodName: PlayPaperSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
