@@ -22,6 +22,7 @@ public class AudioManager : MonoBehaviour
     
     [Header("UI")]
     public PlayRandomSound uI_FlipPageSound;
+    public PlayRandomSound uI_ScribbleSound;
     public AudioSource uI_ClickSound;
     public AudioSource uI_HoverSound;
     
@@ -83,8 +84,7 @@ public class AudioManager : MonoBehaviour
     
     public void PlayScribbleSound()
     {
-        uI_FlipPageSound.PlaySound();
-        //TODO Insert scribble sound
+        uI_ScribbleSound.PlaySound();
     }
 
     public void PlayClickSound()

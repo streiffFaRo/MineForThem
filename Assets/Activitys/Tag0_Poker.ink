@@ -5,7 +5,7 @@ EXTERNAL poker(betAmount)
 === main ===
 ~Unity_Event("visitedPoker")
 You meet up with a few friends from the mining company for a poker night.
-You are on the upper floor of the saloon. The atmosphere is very cheerful.
+You meet with some people in the local saloon. The atmosphere is very cheerful.
 Dolores is not in favour of your game nights, but it is a way to earn a little more money for the family.
 You sit down at the table and think about how much you want to bet.
 ~Add_State("round",0)

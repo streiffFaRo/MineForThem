@@ -6,7 +6,7 @@ EXTERNAL spenden(amount)
 You get ready to go to mass.
 You know that Dolores would like to go with you, maybe it would be better to go with your friend from the mine, Davy, or do you want to go alone?
 Who would you like to go to church with?
-+[Family]
++[Dolores]
 -> MitFam
 +[Davy]
 -> MitFreu
@@ -15,7 +15,7 @@ Who would you like to go to church with?
 
 ===MitFam===
 ~Unity_Event("happyFamily")
-You ask your family to accompany you. Dolores thinks it's a wonderful idea.
+You ask your wife Dolores to accompany you. She thinks it's a wonderful idea.
 ->Messe
 
 ===MitFreu===

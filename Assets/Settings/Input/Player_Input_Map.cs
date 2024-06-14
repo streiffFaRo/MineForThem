@@ -89,6 +89,15 @@ public partial class @Player_Input_Map : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Cheat"",
+                    ""type"": ""Button"",
+                    ""id"": ""83dc9f33-409d-40cf-b4db-243f4091f887"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -300,6 +309,17 @@ public partial class @Player_Input_Map : IInputActionCollection2, IDisposable
                     ""action"": ""Enter"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""519e2cc2-ec3e-41e9-8e7a-737ee378e116"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cheat"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -315,6 +335,7 @@ public partial class @Player_Input_Map : IInputActionCollection2, IDisposable
         m_Player_Destroy = m_Player.FindAction("Destroy", throwIfNotFound: true);
         m_Player_Back = m_Player.FindAction("Back", throwIfNotFound: true);
         m_Player_Enter = m_Player.FindAction("Enter", throwIfNotFound: true);
+        m_Player_Cheat = m_Player.FindAction("Cheat", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -381,6 +402,7 @@ public partial class @Player_Input_Map : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Destroy;
     private readonly InputAction m_Player_Back;
     private readonly InputAction m_Player_Enter;
+    private readonly InputAction m_Player_Cheat;
     public struct PlayerActions
     {
         private @Player_Input_Map m_Wrapper;
@@ -392,6 +414,7 @@ public partial class @Player_Input_Map : IInputActionCollection2, IDisposable
         public InputAction @Destroy => m_Wrapper.m_Player_Destroy;
         public InputAction @Back => m_Wrapper.m_Player_Back;
         public InputAction @Enter => m_Wrapper.m_Player_Enter;
+        public InputAction @Cheat => m_Wrapper.m_Player_Cheat;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -422,6 +445,9 @@ public partial class @Player_Input_Map : IInputActionCollection2, IDisposable
                 @Enter.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnter;
                 @Enter.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnter;
                 @Enter.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnter;
+                @Cheat.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCheat;
+                @Cheat.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCheat;
+                @Cheat.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCheat;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -447,6 +473,9 @@ public partial class @Player_Input_Map : IInputActionCollection2, IDisposable
                 @Enter.started += instance.OnEnter;
                 @Enter.performed += instance.OnEnter;
                 @Enter.canceled += instance.OnEnter;
+                @Cheat.started += instance.OnCheat;
+                @Cheat.performed += instance.OnCheat;
+                @Cheat.canceled += instance.OnCheat;
             }
         }
     }
@@ -460,5 +489,6 @@ public partial class @Player_Input_Map : IInputActionCollection2, IDisposable
         void OnDestroy(InputAction.CallbackContext context);
         void OnBack(InputAction.CallbackContext context);
         void OnEnter(InputAction.CallbackContext context);
+        void OnCheat(InputAction.CallbackContext context);
     }
 }

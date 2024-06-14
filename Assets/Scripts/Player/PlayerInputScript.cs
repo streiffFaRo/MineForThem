@@ -56,6 +56,7 @@ public class PlayerInputScript : MonoBehaviour
         input.Player.Destroy.performed += OnDestroyInput;
         input.Player.Place.performed += OnPlaceInput;
         input.Player.Enter.performed += OnEnterInput;
+        input.Player.Cheat.performed += OnCheatInput;
     }
 
     private void OnDisable()
@@ -69,6 +70,32 @@ public class PlayerInputScript : MonoBehaviour
         input.Player.Destroy.performed -= OnDestroyInput;
         input.Player.Place.performed -= OnPlaceInput;
         input.Player.Enter.performed -= OnEnterInput;
+        input.Player.Cheat.performed -= OnCheatInput;
+    }
+
+    private void OnCheatInput(InputAction.CallbackContext context)
+    {
+        GameManager gameManager = GameManager.instance;
+        
+        if (context.performed)
+        {
+            if (gameManager.currentDay <= 3)
+            {
+                VolumeManager.instance.GetComponent<AudioManager>().PlayGoldSound();
+                gameManager.currentDay = 4;
+                gameManager.savings = 99;
+                gameManager.hasBullet = true;
+                gameManager.pickaxeStrength = 100;
+                gameManager.familyHappiness = 7;
+            }
+            else
+            {
+                VolumeManager.instance.GetComponent<AudioManager>().PlayPickaxeSound();
+                gameManager.currentDay = 6;
+                gameManager.knowsPlan = true;
+                gameManager.metFriend = true;
+            }
+        }
     }
 
     private void OnMoveInput(InputAction.CallbackContext context)
