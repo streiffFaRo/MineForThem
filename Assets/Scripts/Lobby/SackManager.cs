@@ -11,8 +11,6 @@ public class SackManager : MonoBehaviour
     public GameObject sack3;
     public GameObject sack4;
     public GameObject sack5;
-    public GameObject sack6;
-    public GameObject sack7;
     
     private void Start()
     {
@@ -32,9 +30,6 @@ public class SackManager : MonoBehaviour
                 break;
             case 5:
                 sack5.SetActive(true);
-                break;
-            case 6:
-                sack6.SetActive(true);
                 break;
         }
     }

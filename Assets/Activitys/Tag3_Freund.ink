@@ -57,8 +57,8 @@ Davy: "I've noticed that the foreman always keeps the weeks's takings in his off
 Davy: "The foreman already knows that I'm planning something against him. I sometimes have the feeling that I'm being monitored by people from the mining company."
 Davy: "There's a shooting competition in the village in two days' time. If you take part, just put a bullet in your pocket."
 Davy: "Give it to me the next morning and I'll do the rest."
-Davy: "With the foreman's key, I can plunder his office. I'll give you your fair share."
-Davy: "You don't need to be afraid, they'll come looking for me and I can live with that. All you have to do is hide your share and you can lead a good life. Away from the mine."
+Davy: "With the foreman gone, I can plunder his stash. I'll give you your fair share after you left the scene."
+Davy: "You don't need to be afraid, they'll come looking for me and I can live with that. All you have to do is hide your share for a few weeks and you can lead a good life. Away from the mine."
 Davy: "What do you say? Will you help me?"
 +[Agree]
 -> Helfen

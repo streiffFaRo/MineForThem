@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 863d62804f5d7f64b867f4a9cacd64dc
+guid: f828fdc523f4d8b4889cf57c76f05323
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -102,112 +102,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: "S\xE4cke-Sheet_0"
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 41
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f88eddf5563b1b148ad48386494bf2b1
-      internalID: -1830753894
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "S\xE4cke-Sheet_1"
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 0
-        width: 41
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9af6a6b144fb47048b84892baee02617
-      internalID: -1500316021
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "S\xE4cke-Sheet_2"
-      rect:
-        serializedVersion: 2
-        x: 82
-        y: 0
-        width: 41
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88736d970c91dff41903c6878fc41f87
-      internalID: 1445137341
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "S\xE4cke-Sheet_3"
-      rect:
-        serializedVersion: 2
-        x: 123
-        y: 0
-        width: 41
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fdb04b734ba3c104d8ad4ff7f1c1370e
-      internalID: -677521759
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "S\xE4cke-Sheet_4"
-      rect:
-        serializedVersion: 2
-        x: 164
-        y: 0
-        width: 41
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49ba2f1aad2c63547b613a7dcc7587a8
-      internalID: -1281031183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -218,12 +113,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      "S\xE4cke-Sheet_2": 1445137341
-      "S\xE4cke-Sheet_4": -1281031183
-      "S\xE4cke-Sheet_3": -677521759
-      "S\xE4cke-Sheet_0": -1830753894
-      "S\xE4cke-Sheet_1": -1500316021
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
