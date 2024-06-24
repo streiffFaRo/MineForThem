@@ -15,7 +15,10 @@ public class UISound : MonoBehaviour
 
     public void PlayScribbleSound()
     {
-        audioManager.PlayScribbleSound();
+        if (audioManager != null)
+        {
+            audioManager.PlayScribbleSound();
+        }
     }
 
     public void PlayPaperSound()
