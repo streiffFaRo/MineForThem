@@ -849,8 +849,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -940}
-  m_SizeDelta: {x: 1920, y: 280}
+  m_AnchoredPosition: {x: 960, y: -920}
+  m_SizeDelta: {x: 1925, y: 322}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &615027189
 MonoBehaviour:
@@ -891,14 +891,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 331823b06b381b94b9ed657c3d901dba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a484a7812d9031548bf3739ae51c047a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1412,7 +1412,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 60}
+  m_SizeDelta: {x: 1500, y: 83.4991}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1060002439
 MonoBehaviour:
@@ -1436,8 +1436,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Death
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
+  m_sharedMaterial: {fileID: -1766910192009662871, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2885,8 +2885,8 @@ MonoBehaviour:
   m_text: You were forgotten and left behind. You were lost in the dark and died
     - but don't worry, someone else will work for the company in your stead.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
+  m_sharedMaterial: {fileID: -1766910192009662871, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
