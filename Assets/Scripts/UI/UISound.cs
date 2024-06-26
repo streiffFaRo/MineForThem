@@ -23,12 +23,18 @@ public class UISound : MonoBehaviour
 
     public void PlayPaperSound()
     {
-        audioManager.PlayPaperSound();
+        if (audioManager != null)
+        {
+            audioManager.PlayPaperSound();
+        }
     }
 
     public void PlayHoverSound()
     {
-        audioManager.PlayHoverSound();
+        if (audioManager != null)
+        {
+            audioManager.PlayHoverSound();
+        }
     }
 
     public void PlayClickSound()

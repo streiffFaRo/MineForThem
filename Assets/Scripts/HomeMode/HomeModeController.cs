@@ -28,6 +28,7 @@ public class HomeModeController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI foodAmount;
     [SerializeField] private TextMeshProUGUI totalAmount;
     [SerializeField] private TextMeshProUGUI familyHappinessAmount;
+    [SerializeField] private TextMeshProUGUI currentDayUI;
 
     [Header("Checkboxen")]
     [SerializeField] Toggle heatToggle;
@@ -70,6 +71,8 @@ public class HomeModeController : MonoBehaviour
         setUpActivityText();
 
         SetAmounts();
+
+        currentDayUI.text = (GameManager.instance.currentDay + 1).ToString();
     }
 
     public void SetSavings()
