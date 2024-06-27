@@ -30417,6 +30417,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7528187443257119319, guid: b52aaf4b42b84274b8f4c2546a078867, type: 3}
     - target: {fileID: 3978030645461387513, guid: f926909af797f424ea9b7e8b9a4cd7de, type: 3}
+      propertyPath: particleDust
+      value: 
+      objectReference: {fileID: 3016826025003053072, guid: 8e1681099e28ddd428d678e5109f75b6, type: 3}
+    - target: {fileID: 3978030645461387513, guid: f926909af797f424ea9b7e8b9a4cd7de, type: 3}
       propertyPath: particleGold
       value: 
       objectReference: {fileID: 1761602480086148739, guid: 047cbe10efbe9bf4c846cbdaebb2bbb5, type: 3}

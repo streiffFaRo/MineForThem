@@ -22,6 +22,7 @@ public class MiningSystem : MonoBehaviour
     public ParticleSystem particleDirt;
     public ParticleSystem particleGold;
     public ParticleSystem particleStone;
+    public ParticleSystem particleDust;
     
     [Header("Instances")] 
     public GameManager gameManager;
@@ -156,6 +157,7 @@ public class MiningSystem : MonoBehaviour
                         playerMovement.spriteRenderer.flipX = true;
                     }
                     playerMovement.animator.SetTrigger("Place");
+                    Instantiate(particleDust, new Vector3(mousePos2D.x + 0.5f, mousePos2D.y + 0.1f, 0), Quaternion.identity);
                     audioManager.PlayPlaceBlockSound();
                     
                     //TODO Was wenn Block auf Gold gesetzt?
