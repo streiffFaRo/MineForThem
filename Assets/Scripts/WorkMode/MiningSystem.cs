@@ -17,6 +17,12 @@ public class MiningSystem : MonoBehaviour
     public float maxDistance = 2;
     public GameObject goldNugget;
 
+    [Header("Particles")]
+    public ParticleSystem particleBase;
+    public ParticleSystem particleDirt;
+    public ParticleSystem particleGold;
+    public ParticleSystem particleStone;
+    
     [Header("Instances")] 
     public GameManager gameManager;
     public AudioManager audioManager;
@@ -54,22 +60,27 @@ public class MiningSystem : MonoBehaviour
                     if (foundTile == gridGenerator.blocks[0].tile)
                     {
                         audioManager.PlayPickaxeSound();
+                        Instantiate(particleBase, new Vector3(mousePos2D.x + 0.5f, mousePos2D.y +0.5f, 0), Quaternion.identity);
                     }
                     else if (foundTile == gridGenerator.blocks[1].tile)
                     {
                         audioManager.PlayStoneSound();
+                        Instantiate(particleStone, new Vector3(mousePos2D.x + 0.5f, mousePos2D.y +0.5f, 0), Quaternion.identity);
                     }
                     else if (foundTile == gridGenerator.blocks[2].tile)
                     {
                         audioManager.PlayDirtSound();
+                        Instantiate(particleDirt, new Vector3(mousePos2D.x + 0.5f, mousePos2D.y +0.5f, 0), Quaternion.identity);
                     }
                     else if (foundTile == gridGenerator.blocks[3].tile)
                     {
                         audioManager.PlayGoldSound();
+                        Instantiate(particleGold, new Vector3(mousePos2D.x + 0.5f, mousePos2D.y +0.5f, 0), Quaternion.identity);
                     }
                     else
                     {
                         audioManager.PlayStoneSound();
+                        Instantiate(particleBase, new Vector3(mousePos2D.x + 0.5f, mousePos2D.y +0.5f, 0), Quaternion.identity);
                     }
                     
                     
