@@ -1397,7 +1397,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1663386753}
         m_TargetAssemblyTypeName: HomeModeController, Assembly-CSharp
-        m_MethodName: EndHomeMode
+        m_MethodName: StartEndHomeMode
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2869,7 +2869,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1663386753}
         m_TargetAssemblyTypeName: HomeModeController, Assembly-CSharp
-        m_MethodName: EndHomeMode
+        m_MethodName: StartEndHomeMode
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2985,6 +2985,8 @@ GameObject:
   - component: {fileID: 1121818284}
   - component: {fileID: 1121818286}
   - component: {fileID: 1121818285}
+  - component: {fileID: 1121818287}
+  - component: {fileID: 1121818288}
   m_Layer: 5
   m_Name: FamilyHappiness
   m_TagString: Untagged
@@ -3052,6 +3054,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121818283}
   m_CullTransparentMesh: 1
+--- !u!95 &1121818287
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121818283}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d531d423b368c1443bb34ed411f543eb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1121818288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121818283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15751dca68cfb4c458763110f6a7e6b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  homeModeController: {fileID: 1663386753}
 --- !u!1 &1139839756
 GameObject:
   m_ObjectHideFlags: 0
@@ -3430,6 +3465,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5782925810832783760, guid: 895388dabb9f76f4eb9748b6c8ccc236, type: 3}
+      propertyPath: savings
+      value: 99
+      objectReference: {fileID: 0}
     - target: {fileID: 5782925810832783761, guid: 895388dabb9f76f4eb9748b6c8ccc236, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -4529,6 +4568,9 @@ MonoBehaviour:
   descriptionTextUI: {fileID: 906313976}
   goOutButton: {fileID: 603154280}
   stayHomeButton: {fileID: 1059589621}
+  oldFamilyHappiness: 0
+  familyUIAnimationController: {fileID: 1121818287}
+  playerInputScript: {fileID: 0}
 --- !u!114 &1663386754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4543,6 +4585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lastInput: {x: 0, y: 0}
   canMove: 1
+  allowInput: 1
   pauseMenuCanvas: {fileID: 2116264134}
 --- !u!114 &1663386755
 MonoBehaviour:

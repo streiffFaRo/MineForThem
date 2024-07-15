@@ -18,7 +18,7 @@ public class HomeModeController : MonoBehaviour
     public float food = 1.5f;
     public float money = 3f;
     public float total;
-
+    
     [Header("TextMeshPro Amount Elements")]
     [SerializeField] private TextMeshProUGUI savingAmount;
     [SerializeField] private TextMeshProUGUI earnedAmount;
@@ -39,8 +39,16 @@ public class HomeModeController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI descriptionTextUI;
     [SerializeField] private Button goOutButton;
     [SerializeField] private Button stayHomeButton;
-    
-    
+
+    [Header("Other")]
+    public int oldFamilyHappiness;
+    public Animator familyUIAnimationController;
+    public PlayerInputScript playerInputScript;
+
+    private void Awake()
+    {
+        playerInputScript = FindObjectOfType<PlayerInputScript>();
+    }
 
     private void Start()
     {
@@ -60,7 +68,8 @@ public class HomeModeController : MonoBehaviour
         {
             food = 2.5f;
         }
-        
+
+        oldFamilyHappiness = GameManager.instance.familyHappiness;
         
         SetSavings();
         goldEarned = 11 * GameManager.instance.goldMined;
@@ -71,6 +80,7 @@ public class HomeModeController : MonoBehaviour
         setUpActivityText();
 
         SetAmounts();
+        SetFamilyHappiness();
 
         currentDayUI.text = (GameManager.instance.currentDay + 1).ToString();
     }
@@ -164,7 +174,6 @@ public class HomeModeController : MonoBehaviour
         heatAmount.SetText("$"+heat);
         foodAmount.SetText("$"+food);
         totalAmount.SetText("$"+total);
-        SetFamilyHappiness();
     }
 
     public void SetFamilyHappiness()
@@ -177,9 +186,9 @@ public class HomeModeController : MonoBehaviour
         {
             familyHappinessAmount.color = new Color(255, 181, 0);
         }
-        else if (happiness >= 3)
+        else if (happiness <= 3)
         {
-            familyHappinessAmount.color = new Color(255, 86, 86);
+            familyHappinessAmount.color = new Color(133, 0, 0);
         }
         else
         {
@@ -187,16 +196,43 @@ public class HomeModeController : MonoBehaviour
         }
     }
 
-    public void EndHomeMode(int key)
+    public void StartEndHomeMode(int key)
+    {
+        StartCoroutine(EndHomeMode(key));
+    }
+
+    public IEnumerator EndHomeMode(int key)
     {
         if (total >= 0)
         {
             GameManager.instance.savings = total;
-            Debug.Log(GameManager.instance.savings);
+            foodToggle.enabled = false;
+            heatToggle.enabled = false;
+            goOutButton.enabled = false;
+            stayHomeButton.enabled = false;
+            playerInputScript.allowInput = false;
             CalcualteFamilyHappy();
+            yield return new WaitForSeconds(0.5f);
+            
             if (key == 0)
             {
+                //Animation
+                if (oldFamilyHappiness > GameManager.instance.familyHappiness)
+                {
+                    //Happiness -
+                    familyUIAnimationController.SetTrigger("Family-");
+                }
+                else if (oldFamilyHappiness < GameManager.instance.familyHappiness)
+                {
+                    //Happiness +
+                    familyUIAnimationController.SetTrigger("Family+");
+                }
+                
+                yield return new WaitForSeconds(2.5f);
+                playerInputScript.allowInput = true;
+                CheckIfFamilyLeaves();
                 SceneManager.LoadScene("Activity_Scene");
+                
             }
             else if (key == 1)
             {
@@ -204,8 +240,27 @@ public class HomeModeController : MonoBehaviour
                 {
                     GameManager.instance.GetComponent<EndingManager>().InitEnding(2);
                 }
-                GameManager.instance.familyHappiness++;    //Increases Happiness because Player stayed with Family
-                //TODO Animation
+                
+                if (GameManager.instance.familyHappiness <= 6)
+                {
+                    GameManager.instance.familyHappiness++;    //Increases Happiness because Player stayed with Family
+                }
+                
+                //Animation
+                if (oldFamilyHappiness > GameManager.instance.familyHappiness)
+                {
+                    //Happiness -
+                    familyUIAnimationController.SetTrigger("Family-");
+                }
+                else if (oldFamilyHappiness < GameManager.instance.familyHappiness)
+                {
+                    //Happiness +
+                    familyUIAnimationController.SetTrigger("Family+");
+                }
+                
+                yield return new WaitForSeconds(2.5f);
+                playerInputScript.allowInput = true;
+                CheckIfFamilyLeaves();
                 SceneManager.LoadScene("Lobby_Scene");
                 GameManager.instance.UpdateCurrentDay(); //Updates Current Day
             }
@@ -220,6 +275,7 @@ public class HomeModeController : MonoBehaviour
             GameManager.instance.GetComponent<EndingManager>().InitEnding(4);
             Debug.Log("GameOver - kein Geld mehr");
         }
+        
     }
 
     public void CalcualteFamilyHappy()
@@ -229,8 +285,7 @@ public class HomeModeController : MonoBehaviour
             
             if (GameManager.instance.familyHappiness <= 6)
             {
-                int increaseHappinessAmount = Random.Range(1, 3);
-                GameManager.instance.familyHappiness += increaseHappinessAmount;
+                GameManager.instance.familyHappiness += 1;
             }
 
             if (GameManager.instance.familyHappiness >= 7)
@@ -247,9 +302,6 @@ public class HomeModeController : MonoBehaviour
         {
             GameManager.instance.familyHappiness -= 1;
         }
-        //TODO Animation
-        
-        CheckIfFamilyLeaves();
     }
 
     public void CheckIfFamilyLeaves()
@@ -266,22 +318,12 @@ public class HomeModeController : MonoBehaviour
             {
                 FamilyLeaves();
             }
-            else
-            {
-                Debug.Log("Family might leave");
-                //TODO Info pop up: "Family might leave"
-            }
         }
         else if (GameManager.instance.familyHappiness <= 3)
         {
             if (leaveProbability >= 95)
             {
                 FamilyLeaves();
-            }
-            else
-            {
-                Debug.Log("Family might leave");
-                //TODO Info pop up: "Family might leave"
             }
         }
         

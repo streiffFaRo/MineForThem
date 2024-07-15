@@ -14,6 +14,7 @@ public class PlayerInputScript : MonoBehaviour
     [Header("Variablen")]
     public Vector2 lastInput;
     public bool canMove = true;
+    public bool allowInput = true;
     public Vector2 moveInput { get; private set; }
     
     
@@ -100,7 +101,7 @@ public class PlayerInputScript : MonoBehaviour
 
     private void OnMoveInput(InputAction.CallbackContext context)
     {
-        if (context.performed && canMove)
+        if (context.performed && canMove && allowInput)
         {
             moveInput = context.ReadValue<Vector2>().normalized;
             onMoveEvent?.Invoke();
@@ -114,7 +115,7 @@ public class PlayerInputScript : MonoBehaviour
     private void OnJumpInput(InputAction.CallbackContext context)
     {
 
-        if (context.performed && canMove)
+        if (context.performed && canMove && allowInput)
         {
             onJumpEvent?.Invoke();
         }
@@ -123,7 +124,7 @@ public class PlayerInputScript : MonoBehaviour
 
     private void OnInterationInput(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed & allowInput)
         {
             interactionScript?.Interact();
         }
@@ -132,7 +133,7 @@ public class PlayerInputScript : MonoBehaviour
     private void OnBackInput(InputAction.CallbackContext context)
     {
 
-        if (context.performed && canMove)
+        if (context.performed && canMove && allowInput)
         {
             PauseMenu();
         } 
@@ -140,7 +141,7 @@ public class PlayerInputScript : MonoBehaviour
     
     public void PauseMenu()
     {
-        if (!gameIsPaused)
+        if (!gameIsPaused && allowInput)
         {
             pauseMenuCanvas.gameObject.SetActive(true);
             gameIsPaused = true;
@@ -149,7 +150,7 @@ public class PlayerInputScript : MonoBehaviour
             VolumeManager.instance.GetComponent<AudioManager>().MenuMusic.Play();
             //TODO PauseSound
         }
-        else
+        else if (allowInput)
         {
             pauseMenuCanvas.gameObject.SetActive(false);
             gameIsPaused = false;
@@ -163,7 +164,7 @@ public class PlayerInputScript : MonoBehaviour
     
     private void OnDestroyInput(InputAction.CallbackContext context)
     {
-        if (context.performed && canMove)
+        if (context.performed && canMove && allowInput)
         {
             miningSystem?.DestroyBlock(MousePos2D());
         }
@@ -172,7 +173,7 @@ public class PlayerInputScript : MonoBehaviour
     
     private void OnPlaceInput(InputAction.CallbackContext context)
     {
-        if (context.performed && canMove)
+        if (context.performed && canMove && allowInput)
         {
             miningSystem?.PlaceBlock(MousePos2D());
         }
@@ -187,7 +188,7 @@ public class PlayerInputScript : MonoBehaviour
 
     private void OnEnterInput(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && allowInput)
         {
             
         }
