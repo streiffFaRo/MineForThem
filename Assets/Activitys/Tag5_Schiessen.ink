@@ -82,7 +82,6 @@ On the way to your family, you start to think about your family, your work and y
 {NichtStehlen: ->Snitch} ->end
 
 ===Snitch===
-~Unity_Event("snitched")
 You think of your friend.
 You think about how he tried to talk you into this plan.
 Maybe he's dangerous...
@@ -96,6 +95,7 @@ Will you betray your friend?
 -> Schweigen
 
 ===Verraten===
+~Unity_Event("snitched")
 You decide to go to the sheriff on your way home.
 You describe the events and your friend's criminal plan to him.
 The sheriff immediately believes you and reassures you: "Don't worry, good man, I'll take care of it."

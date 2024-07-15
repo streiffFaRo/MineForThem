@@ -2039,7 +2039,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1043148084}
           m_TargetAssemblyTypeName: Schiessen, Assembly-CSharp
-          m_MethodName: StealRound
+          m_MethodName: Snitched
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2482,10 +2482,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5782925810832783760, guid: 895388dabb9f76f4eb9748b6c8ccc236, type: 3}
-      propertyPath: currentDay
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5782925810832783761, guid: 895388dabb9f76f4eb9748b6c8ccc236, type: 3}
       propertyPath: m_RootOrder
       value: 3

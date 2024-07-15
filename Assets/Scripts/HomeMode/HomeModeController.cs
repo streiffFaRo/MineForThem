@@ -164,7 +164,27 @@ public class HomeModeController : MonoBehaviour
         heatAmount.SetText("$"+heat);
         foodAmount.SetText("$"+food);
         totalAmount.SetText("$"+total);
-        familyHappinessAmount.SetText(GameManager.instance.familyHappiness.ToString());
+        SetFamilyHappiness();
+    }
+
+    public void SetFamilyHappiness()
+    {
+        int happiness = GameManager.instance.familyHappiness;
+        
+        familyHappinessAmount.SetText(happiness.ToString());
+
+        if (happiness >= 7)
+        {
+            familyHappinessAmount.color = new Color(255, 181, 0);
+        }
+        else if (happiness >= 3)
+        {
+            familyHappinessAmount.color = new Color(255, 86, 86);
+        }
+        else
+        {
+            familyHappinessAmount.color = new Color(255, 255, 255);
+        }
     }
 
     public void EndHomeMode(int key)

@@ -77,7 +77,7 @@ public class Schiessen : MonoBehaviour
         }
     }
 
-    public void Snitched()
+    public void Snitched() //Aufgerufen über InkEvent
     {
         GameManager.instance.snitched = true;
     }
