@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private float remainingTime;
+    [SerializeField] private Animator timerAnimator;
     public bool stopTimer;
     
 
@@ -52,6 +53,12 @@ public class Timer : MonoBehaviour
     {
         
             //TODO Timer visuelles feedback wenn Timer unter 30 sec
+            if (remainingTime <= 31 && timerText.color != Color.red)
+            {
+                timerText.color = Color.red;
+                timerAnimator.SetBool("Beat", true);
+                VolumeManager.instance.GetComponent<AudioManager>().PlayBellSound();
+            }
             
             if (remainingTime > 0)
             {

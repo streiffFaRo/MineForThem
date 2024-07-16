@@ -51,7 +51,11 @@ public class Interaction : MonoBehaviour
                 
                 if (FindObjectOfType<LobbyManager>()!= null && !shootoutDone)
                 {
-                    FindObjectOfType<LobbyManager>().LoadMineScene();
+                    if (FindObjectOfType<FadingPanel>() != null)
+                    {
+                        FindObjectOfType<FadingPanel>().FadeIn(0.5f);
+                    }
+                    StartCoroutine(BootMineScene());
                 }
                 
             }
@@ -70,7 +74,12 @@ public class Interaction : MonoBehaviour
 
         
     }
-    
-    
-    
+
+    public IEnumerator BootMineScene()
+    {
+        yield return new WaitForSeconds(0.5f);
+        FindObjectOfType<LobbyManager>().LoadMineScene();
+    }
+
+
 }

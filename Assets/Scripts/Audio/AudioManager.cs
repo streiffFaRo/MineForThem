@@ -15,6 +15,8 @@ public class AudioManager : MonoBehaviour
     
     public AudioSource shotSound;
     public AudioSource photoSound;
+    public AudioSource jumpSound;
+    public AudioSource bellSound;
 
     [Header("Talk Sounds")]
     public PlayRandomSound vorarbeiterTalk;
@@ -25,6 +27,7 @@ public class AudioManager : MonoBehaviour
     public PlayRandomSound uI_ScribbleSound;
     public AudioSource uI_ClickSound;
     public AudioSource uI_HoverSound;
+    public AudioSource familyHappSound;
     
     [Header("Blocks")]
     public PlayRandomSound pickaxeSound;
@@ -97,6 +100,11 @@ public class AudioManager : MonoBehaviour
         uI_HoverSound.Play();
     }
 
+    public void PlayFamilyHappSound()
+    {
+        familyHappSound.Play();
+    }
+    
     // --- Gameplay Sounds ---
     
     public void PlayCollectSound()
@@ -119,6 +127,15 @@ public class AudioManager : MonoBehaviour
         photoSound.Play();
     }
     
+    public void PlayJumpSound()
+    {
+        jumpSound.Play();
+    }
+    
+    public void PlayBellSound()
+    {
+        bellSound.Play();
+    }
 
     // --- Block Sounds ---
     

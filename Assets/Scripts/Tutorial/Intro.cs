@@ -47,6 +47,12 @@ public class Intro : MonoBehaviour
 
     public void LoadLobby()
     {
+        StartCoroutine(BootLobby());
+    }
+
+    public IEnumerator BootLobby()
+    {
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("Lobby_Scene");
     }
 }

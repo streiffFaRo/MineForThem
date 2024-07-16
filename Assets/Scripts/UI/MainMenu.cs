@@ -45,8 +45,13 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         GameManager.instance.SetUpNewGame();
+        StartCoroutine(BootGame());
+    }
+
+    public IEnumerator BootGame()
+    {
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("Intro_Scene");
-        //TODO Cameraswipe right to contract
     }
 
     public void ChangeFPSCap()
@@ -80,8 +85,7 @@ public class MainMenu : MonoBehaviour
                 break;
         }
     }
-
-
+    
 
     public void Credits()
     {

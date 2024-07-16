@@ -213,6 +213,7 @@ public class HomeModeController : MonoBehaviour
             playerInputScript.allowInput = false;
             CalcualteFamilyHappy();
             yield return new WaitForSeconds(0.5f);
+            VolumeManager.instance.GetComponent<AudioManager>().PlayFamilyHappSound();
             
             if (key == 0)
             {
@@ -227,10 +228,20 @@ public class HomeModeController : MonoBehaviour
                     //Happiness +
                     familyUIAnimationController.SetTrigger("Family+");
                 }
+                else if (oldFamilyHappiness == GameManager.instance.familyHappiness)
+                {
+                    //Happiness =
+                    familyUIAnimationController.SetTrigger("Family=");
+                }
                 
                 yield return new WaitForSeconds(2.5f);
                 playerInputScript.allowInput = true;
                 CheckIfFamilyLeaves();
+                if (FindObjectOfType<FadingPanel>() != null)
+                {
+                    FindObjectOfType<FadingPanel>().FadeIn(0.5f);
+                    yield return new WaitForSeconds(0.5f);
+                }
                 SceneManager.LoadScene("Activity_Scene");
                 
             }
@@ -257,10 +268,20 @@ public class HomeModeController : MonoBehaviour
                     //Happiness +
                     familyUIAnimationController.SetTrigger("Family+");
                 }
+                else if (oldFamilyHappiness == GameManager.instance.familyHappiness)
+                {
+                    //Happiness =
+                    familyUIAnimationController.SetTrigger("Family=");
+                }
                 
                 yield return new WaitForSeconds(2.5f);
                 playerInputScript.allowInput = true;
                 CheckIfFamilyLeaves();
+                if (FindObjectOfType<FadingPanel>() != null)
+                {
+                    FindObjectOfType<FadingPanel>().FadeIn(0.5f);
+                    yield return new WaitForSeconds(0.5f);
+                }
                 SceneManager.LoadScene("Lobby_Scene");
                 GameManager.instance.UpdateCurrentDay(); //Updates Current Day
             }
@@ -272,10 +293,19 @@ public class HomeModeController : MonoBehaviour
         }
         else
         {
-            GameManager.instance.GetComponent<EndingManager>().InitEnding(4);
-            Debug.Log("GameOver - kein Geld mehr");
+            StartCoroutine(BootEnding4());
+            if (FindObjectOfType<FadingPanel>() != null)
+            {
+                FindObjectOfType<FadingPanel>().FadeIn(0.5f);
+            }
         }
         
+    }
+
+    public IEnumerator BootEnding4()
+    {
+        yield return new WaitForSeconds(0.5f);
+        GameManager.instance.GetComponent<EndingManager>().InitEnding(4);
     }
 
     public void CalcualteFamilyHappy()
@@ -332,8 +362,17 @@ public class HomeModeController : MonoBehaviour
 
     public void FamilyLeaves()
     {
+        StartCoroutine(BootEnding3());
+        if (FindObjectOfType<FadingPanel>() != null)
+        {
+            FindObjectOfType<FadingPanel>().FadeIn(0.5f);
+        }
+    }
+
+    public IEnumerator BootEnding3()
+    {
+        yield return new WaitForSeconds(0.5f);
         GameManager.instance.GetComponent<EndingManager>().InitEnding(3);
-        Debug.Log("Family left");
     }
 
 }

@@ -67,7 +67,11 @@ public class GridGenerator : MonoBehaviour
         currentGridNumber++;
         if (currentGridNumber > 3)
         {
-            SceneManager.LoadScene("Home_Scene");
+            StartCoroutine(BootHomeMode());
+            if (FindObjectOfType<FadingPanel>() != null)
+            {
+                FindObjectOfType<FadingPanel>().FadeIn(0.5f);
+            }
             return;
         }
 
@@ -87,7 +91,13 @@ public class GridGenerator : MonoBehaviour
         ChanceGoldProbability();
         KillGoldNuggets();
     }
-    
+
+    public IEnumerator BootHomeMode()
+    {
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene("Home_Scene");
+    }
+
     public void SetUpGrid()
     {
         for (int x = -1; x <= gridSizeX; x++)

@@ -105,6 +105,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (IsGrounded())
         {
+            VolumeManager.instance.GetComponent<AudioManager>().PlayJumpSound();
             newRigidbody.AddForce(new Vector2(newRigidbody.velocity.x,jumpForce));
             animator.SetTrigger("IsJumping");
         }
