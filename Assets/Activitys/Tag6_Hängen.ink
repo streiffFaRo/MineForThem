@@ -3,9 +3,9 @@ INCLUDE Utility.ink
 -> main
 
 ===main===
-When you walked onto the market square, you could already see it - a gallows.
-Is it meant for you? You were just fulfilling your duty as a law-abiding citizen.
-Should you perhaps take your family and flee? Or will you be paranuid? What are you doing?
+As you are walking onto the market square, you can already see the gallows.
+Are they meant for you? You were just fulfilling your duty as a law-abiding citizen.
+Should you perhaps take your family and flee? Or will you be paranoid? What are you doing?
 +[Escape]
 -> Flucht
 +[Go to Sheriff]
@@ -18,7 +18,7 @@ You go to your family and flee to the next town.
 
 ===Sheriff===
 You go to the sheriff with a queasy feeling in your stomach.
-He greets you with: "Oh, it's you. Good to see you, you'll be pleased to hear that we were able to arrest the traitor you reported to us."
+He greets you with: "Oh, it's you. Good to see you, you'll be pleased to hear that we were able to arrest the criminal you reported to us."
 Sheriff: "My men are about to finish him off for his just punishment."
 Sheriff: "Tell me, aren't you feeling well? You look a bit worn out."
 +[Badly eaten]
@@ -31,7 +31,7 @@ You: "I think I've eaten something bad"
 ->kommen
 
 ===gut===
-You: "No, everything's fine with me."
+You: "No, everything's fine."
 ->kommen
 
 ===kommen

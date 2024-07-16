@@ -9,7 +9,7 @@ EXTERNAL saloon(betAmount)
 ~Unity_Event("metFriend")
 When you visit the saloon, you see Davy, your friend from the mine. He seems very pleased to see you.
 He waves you over to his table and greets you in a friendly manner.
-He says: "Let's order something first. What do you like to drink? I'll buy it!"
+He says: "Let's order something first. Let me buy you a drink, what would you like?"
 +[Water]
 -> Wasser
 +[Beer]
@@ -74,7 +74,7 @@ You drink and drink until you can't drink any more. You have lost!
 ->WieGehts
 
 === WieGehts
-Davy: "Whatever. How are you doing now?"
+Davy: "Whatever. How are you doing mate?"
 +[Good]
 -> Gut
 +[Decent]
@@ -83,21 +83,21 @@ Davy: "Whatever. How are you doing now?"
 -> Schlecht
 
 === Gut ===
-You: "I'm doing well. I'm getting by and it's not easy to find work."
+You: "I'm doing well. I'm getting by and it was hard finding work. But I am happy I've found something."
 ->end
 
 === Passabel ===
-You: "Well, I'm just about managing. The work is hard but it's not easy to find work"
+You: "Well, I'm just about managing. The work is hard but it's better than nothing"
 ->end
 
 === Schlecht ===
-You: "It was the best thing I found. I need money for my family and it's not easy to find work."
+You: "It was the best thing I found. I need money for my family and I still wish I'd found something better."
 ->end
 
 === end ===
-Davy: "Well, I can tell you frankly that after three months I'm completely exhausted. The mining company earns a fortune from our work and we don't have enough to live a decent life."
-Davy "I'm trying to find a way to avoid this. But enough of that, it's getting late. Have a nice evening."
-You leave the saloon, still thinking about Davy's words.
+Davy: "Well, I can tell you frankly that after three months I'm completely exhausted. The mining company earns a fortune from our work and while we barely have enough to survive."
+Davy "I'm trying to find a different solution. But enough of that, it's getting late. Have a nice evening."
+You leave the saloon, still thinking about Davy's words...
 ~Unity_Event("endDay")
 -->END
 

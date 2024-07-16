@@ -97,7 +97,7 @@ Will you betray your friend?
 ===Verraten===
 ~Unity_Event("snitched")
 You decide to go to the sheriff on your way home.
-You describe the events and your friend's criminal plan to him.
+You describe the events so far and what your former friend is trying to do.
 The sheriff immediately believes you and reassures you: "Don't worry, good man, I'll take care of it."
 You leave the sheriff's office and wonder if that was the right thing to do...
 ->end

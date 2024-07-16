@@ -6,7 +6,7 @@ INCLUDE Utility.ink
 You accept your friend's invitation.
 On the way to his house, you wonder what he's all about.
 Your friend is very happy to see you. He greets you warmly and offers you a glass of water to drink.
-Davy: "What about you now that you know what the work is like?"
+Davy: "How are you holding up, now that you know what work is like?"
 +[Decent]
 -> Passabel
 +[Bad]
@@ -15,7 +15,7 @@ Davy: "What about you now that you know what the work is like?"
 -> Schrecklich
 
 ===Passabel===
-You: "Well, it's okay, I'm dependent on this work. I do it for my family"
+You: "Well, it's okay, I'm dependent on this work. I will do anything for my family"
 ->AnsichtFreund
 
 ===Schlecht===
@@ -38,18 +38,18 @@ Davy: "What would you think if I told you that I might have a way of getting the
 
 ===Interesse===
 You: "That sounds good, but how is that supposed to work?"
-Davy: "I've noticed that the foreman always keeps the weeks's takings in his office."
+Davy: "As you have noticed, the foreman likes to keep his money on display next to him."
 ->Plan
 ===NichtInteresse===
-You: "That doesn't sound good. I'd rather work in the mine than take part in such dodgy activities."
+You: "That sounds too risky. I'd rather work in the mine than take part in such dodgy activities."
 Davy: "Listen to me first, it won't be as dangerous for you as it is for me."
-Davy: "I've noticed that the foreman always keeps the weeks's takings in his office."
+Davy: "As you have noticed, the foreman likes to keep his money on display next to him."
 ->Plan
 
 ===Schweigen===
 You: "..."
 Davy: "Listen to me first, it won't be as dangerous for you as it is for me."
-Davy: "I've noticed that the foreman always keeps the weeks's takings in his office."
+Davy: "As you have noticed, the foreman likes to keep his money on display next to him."
 ->Plan
 
 ===Plan===
@@ -57,7 +57,7 @@ Davy: "I've noticed that the foreman always keeps the weeks's takings in his off
 Davy: "The foreman already knows that I'm planning something against him. I sometimes have the feeling that I'm being monitored by people from the mining company."
 Davy: "There's a shooting competition in the village in two days' time. If you take part, just put a bullet in your pocket."
 Davy: "Give it to me the next morning and I'll do the rest."
-Davy: "With the foreman gone, I can plunder his stash. I'll give you your fair share after you left the scene."
+Davy: "With the foreman gone, I can plunder his stash. I'll give you your fair share after we've left the scene."
 Davy: "You don't need to be afraid, they'll come looking for me and I can live with that. All you have to do is hide your share for a few weeks and you can lead a good life. Away from the mine."
 Davy: "What do you say? Will you help me?"
 +[Agree]
@@ -68,18 +68,18 @@ Davy: "What do you say? Will you help me?"
 -> Schweigen2
 
 ===Helfen===
-You: "Good, I'll get you the ammunition."
+You: "Alright, I'll get you the ammunition."
 Davy: "Wonderful. I knew you were the right person for it."
 -> end
 
 ===NichtHelfen===
 You: "No, I can't take responsibility for that."
-Davy: "What a pity. I was hoping you would help me. I'm asking you to reconsider. I need this ammunition."
+Davy: "What a pity. I was hoping you would help me. I'm asking you to reconsider. I really need the bullet."
 -> end
 
 ===Schweigen2===
 You: "..."
-Davy: "I'm asking you to reconsider. I need this ammunition."
+Davy: "I'm asking you to reconsider. I really need the bullet."
 -> end
 
 === end ===

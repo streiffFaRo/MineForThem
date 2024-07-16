@@ -69,11 +69,11 @@ You start to attach your lure to the fishing hook and lean back a little.
 ..
 ...
 Something has bitten!
-You quickly try to reel in the fish. You crank the fishing line...
+As you quickly try to reel in the fish. You crank the fishing line...
 {Get_State("round") ==1: ->Win1} -> Lose1
 
 ===Win1===
-And that's him! You managed to bring him ashore.
+You successfully managed to bring him ashore.
 You estimate its price at {Get_State("price")}c.
 ~Unity_Event("UpdateMoneyUI")
 ->Durchgang2

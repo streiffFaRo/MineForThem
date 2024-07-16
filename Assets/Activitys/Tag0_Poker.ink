@@ -19,7 +19,7 @@ Round 1: Choose a stake!
 
 === r1_25c ===
 ~ poker("25")
-You've chosen a micrious insert!
+You've chosen a tiny wager!
 .
 ..
 ...
@@ -27,7 +27,7 @@ You've chosen a micrious insert!
 
 === r1_50c ===
 ~ poker("50")
-You have chosen a normal insert!
+You have chosen a normal wager!
 .
 ..
 ...
@@ -35,7 +35,7 @@ You have chosen a normal insert!
 
 === r1_1d ===
 ~ poker("100")
-You have chosen a high insert!
+You have chosen a high wager!
 .
 ..
 ...
@@ -63,7 +63,7 @@ Round 2: Choose a stake!
 
 === r2_25c ===
 ~ poker("25")
-You've chosen a micrious stake!
+You've chosen a tiny wager!
 .
 ..
 ...
@@ -71,7 +71,7 @@ You've chosen a micrious stake!
 
 === r2_50c ===
 ~ poker("50")
-You have chosen a normal stake!
+You have chosen a normal wager!
 .
 ..
 ...
@@ -79,7 +79,7 @@ You have chosen a normal stake!
 
 === r2_1d ===
 ~ poker("100")
-You have chosen a high stake!
+You have chosen a high wager!
 .
 ..
 ...
@@ -107,7 +107,7 @@ Last Round: Choose a stake!
 
 === r3_25c ===
 ~ poker("25")
-You've chosen a micrious stake!
+You've chosen a tiny wager!
 .
 ..
 ...
@@ -115,7 +115,7 @@ You've chosen a micrious stake!
 
 === r3_50c ===
 ~ poker("50")
-You have chosen a normal stake!
+You have chosen a normal wager!
 .
 ..
 ...
@@ -123,7 +123,7 @@ You have chosen a normal stake!
 
 === r3_1d ===
 ~ poker("100")
-You have chosen a high stake!
+You have chosen a high wager!
 .
 ..
 ...

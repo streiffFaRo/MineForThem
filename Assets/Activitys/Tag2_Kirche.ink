@@ -31,7 +31,7 @@ You decide to go to the service alone. Dolores is disappointed that you are goin
 ===Messe===
 In church, the priest preaches about greed, which must be renounced.
 He urges everyone to do their work piously and not to envy others who have more.
-You think of your work and of the mining company, which has so much more and only gives you a pittance.
+You think of your work and of the mining company, which has so much more and only gives you barely enough to survive.
 How can that be fair?
 Now the priest starts a common prayer. What are you doing?
 +[Pray]
@@ -53,7 +53,7 @@ Dolores also says the prayer and looks over at you with a smile.
 ->Spenden
 
 ===BetenFreu===
-Davy just sits there and stares wordlessly at the priest. I wonder what he's thinking about?
+Davy just sits there and stares silently at the priest. I wonder what he's thinking about?
 ->Spenden
 
 ===Schweigen===
@@ -74,7 +74,7 @@ You decide to think about your family. Of what means something to you. Because t
 ->Spenden
 
 ===DenkenFreu===
-Your friend just sits there and stares wordlessly at the priest. I wonder what he's thinking about?
+Your friend just sits there and stares silently at the priest. I wonder what he's thinking about?
 ->Spenden
 
 ===Spenden===
@@ -115,7 +115,7 @@ Dolores thanks you again for going to mass with her.
 {Get_State("segen") ==2: ->Segen}->end
 
 ===EpilogFreu===
-Your friend thanks you again for doing something with him.
+Your friend thanks you for spending time with him.
 {Get_State("segen") ==2: ->Segen}->end
 
 ===EpilogAllein===
