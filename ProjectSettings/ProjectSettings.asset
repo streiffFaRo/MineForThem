@@ -282,12 +282,12 @@ PlayerSettings:
       m_Height: 512
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: a06d120aa08bf3341b10e0ae9acfd2f3, type: 3}
       m_Width: 256
       m_Height: 256
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: ebf3c27903f73c74da24872dd4d9499b, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -302,12 +302,12 @@ PlayerSettings:
       m_Height: 48
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: d81f6653ac4429844a797ba77e16e277, type: 3}
       m_Width: 32
       m_Height: 32
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: 06f6a8482a8548f4c9855f7152f6fa8f, type: 3}
       m_Width: 16
       m_Height: 16
       m_Kind: 0
