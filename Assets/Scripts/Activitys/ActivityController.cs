@@ -235,7 +235,6 @@ public class ActivityController : MonoBehaviour
         if (index >= 2)
         {
             continueButton.SetActive(false);
-            choices[0].GetComponent<Button>().Select();
         }
         else
         {

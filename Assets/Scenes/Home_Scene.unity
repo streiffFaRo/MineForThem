@@ -819,8 +819,8 @@ PrefabInstance:
     - target: {fileID: 3382342088380148150, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_text
       value: You should care about your wife Dolores and your son John. You can see
-        their happiness in the top right corner. If the happiness is 3 or lower there
-        is a chance that they might leave you!
+        their happiness in the top right corner. If the <color="green">happiness
+        is 3 or lower there is a chance that they might leave you</color>!
       objectReference: {fileID: 0}
     - target: {fileID: 3442891958222570761, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_Name
@@ -2068,10 +2068,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3382342088380148150, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_text
-      value: "Here you need to manage your finances. The company cut from your loan
-        and rent are always mandatory. You can choose if you want to pay for heat
-        and food but if you miss out on them your family won't be happy about this.
-        \n\nIf you run out of money, you lose!"
+      value: "Here you need to manage your finances. <color=\"green\">The company
+        cut from your loan and rent are always mandatory</color>. You can <color=\"blue\">choose</color>
+        if you want to pay for <color=\"blue\">heat and food</color> but if you miss
+        out on them your family won't be happy about this. \n\n<color=\"yellow\">If
+        you run out of money, you lose!</color>"
       objectReference: {fileID: 0}
     - target: {fileID: 3442891958222570761, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_Name
@@ -4262,8 +4263,9 @@ PrefabInstance:
     - target: {fileID: 3382342088380148150, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_text
       value: After your shift in the mine, you are able to choose how you want to
-        spend the evening. If you stay home, this will please your family. But Each
-        evening there are new possibilities for money or other bonuses.
+        spend the evening. If you <color="green">stay home, this will please your
+        family</color>. But Each evening there are new possibilities for money or
+        other bonuses.
       objectReference: {fileID: 0}
     - target: {fileID: 3442891958222570761, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_Name

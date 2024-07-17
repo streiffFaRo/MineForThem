@@ -487,8 +487,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3382342088380148150, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_text
-      value: In the top right corner you can see how much gold you have collected
-        and how many blocks you can place.
+      value: In the <color="green">top right corner</color> you can see how much
+        <color="green">gold you have collected</color> and how many <color="green">blocks
+        you can place</color>.
       objectReference: {fileID: 0}
     - target: {fileID: 3382342088380148150, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_fontSize
@@ -6411,9 +6412,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3382342088380148150, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_text
-      value: In the top left corner you can see how much time is left for your daily
-        shift. You need to exit the third shaft befor the day is over or you will
-        be forgotten in the dark.
+      value: In the <color="green">top left corner</color> you can see how much <color="green">time
+        is left for your daily shift</color>. You need to <color="blue">exit the
+        third shaft befor the day is over</color> or you will be forgotten in the
+        dark.
       objectReference: {fileID: 0}
     - target: {fileID: 3382342088380148150, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_fontSize
@@ -31326,7 +31328,8 @@ PrefabInstance:
     - target: {fileID: 3382342088380148150, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_text
       value: With your pickaxe you are able to dig and harvest the stones and gold
-        in the mine. To Dig use L Mouse, to place use R Mouse.
+        in the mine. To <color="green">Dig </color>use <color="green">L Mouse</color>,
+        to <color="blue">place</color> use <color="blue">R Mouse</color>.
       objectReference: {fileID: 0}
     - target: {fileID: 3382342088380148150, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_fontSize
