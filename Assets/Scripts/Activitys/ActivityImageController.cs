@@ -13,10 +13,16 @@ public class ActivityImageController : MonoBehaviour
     public GameObject image5;
     public GameObject image6;
     public GameObject image7;
+    [Header("Images")] 
+    public GameObject imageDolores;
+    public GameObject imageDavy;
     
 
     private void Start()
     {
+        imageDavy.SetActive(false);
+        imageDolores.SetActive(false);
+        
         switch (GameManager.instance.currentDay)
         {
             case 0:
@@ -42,4 +48,16 @@ public class ActivityImageController : MonoBehaviour
                 break;
         }
     }
+
+    public void SetDolores()
+    {
+        imageDolores.SetActive(true);
+    }
+
+    public void SetDavy()
+    {
+        imageDavy.SetActive(true);
+    }
+    
+
 }

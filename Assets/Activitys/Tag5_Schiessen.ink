@@ -10,11 +10,11 @@ There are three prize categories, in the first the stake is 50c, the prize is $2
 The second category costs $2 and the best shooter receives $5
 In the best shooter category, the entry fee is $5 and the grand prize is $10.
 In which price category would you like to participate?
-+[1. category]
++[1. category (50c)]
 -> Eins
-+[2. category]
++[2. category ($2)]
 -> Zwei
-+[3. category]
++[3. category ($5)]
 -> Drei
 
 ===Eins===

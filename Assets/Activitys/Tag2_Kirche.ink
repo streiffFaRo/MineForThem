@@ -15,11 +15,13 @@ Who would you like to go to church with?
 
 ===MitFam===
 ~Unity_Event("happyFamily")
+~Unity_Event("inviteDolores")
 You ask your wife Dolores to accompany you. She thinks it's a wonderful idea.
 ->Messe
 
 ===MitFreu===
 ~Unity_Event("metFriend")
+~Unity_Event("inviteDavy")
 You ask your friend Davy to accompany you. He is pleased about your request and agrees.
 ->Messe
 
@@ -128,11 +130,13 @@ It seems that your prayers have been answered.
 You can go to work tomorrow with more energy than ever.
 ~Unity_Event("segnung")
 ~Unity_Event("endDay")
+~Unity_Event("clearDay3")
 -->END
 
 === end ===
 You're still thinking about the mass the whole evening.
 Everything will certainly be better tomorrow.
 ~Unity_Event("endDay")
+~Unity_Event("clearDay3")
 -->END
 

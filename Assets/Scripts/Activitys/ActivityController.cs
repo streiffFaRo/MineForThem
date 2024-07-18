@@ -5,8 +5,6 @@ using Ink.Runtime;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
-using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
 
 public class ActivityController : MonoBehaviour
@@ -197,6 +195,20 @@ public class ActivityController : MonoBehaviour
         {
             textBox.text = currentStory.Continue();
             DisplayChoices();
+            
+            if (currentStory.currentTags.Contains("Davy"))
+            {
+                VolumeManager.instance.GetComponent<AudioManager>().PlayDavyTalk();
+            }
+            if (currentStory.currentTags.Contains("Jack"))
+            {
+                Debug.Log("Jack Speaks");
+            }
+            if (currentStory.currentTags.Contains("Sheriff"))
+            {
+                Debug.Log("Sheriff Speaks");
+            }
+            
         }
         else
         {

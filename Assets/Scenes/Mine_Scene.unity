@@ -487,7 +487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3382342088380148150, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_text
-      value: In the <color="green">top right corner</color> you can see how much
+      value: In the <color="green">top right corner</color>, you can see how much
         <color="green">gold you have collected</color> and how many <color="green">blocks
         you can place</color>.
       objectReference: {fileID: 0}
@@ -6412,10 +6412,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3382342088380148150, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_text
-      value: In the <color="green">top left corner</color> you can see how much <color="green">time
-        is left for your daily shift</color>. You need to <color="blue">exit the
-        third shaft befor the day is over</color> or you will be forgotten in the
-        dark.
+      value: In the <color="green">top left corner</color>, you can see how much
+        <color="green">time is left for your daily shift</color>. You need to <color="blue">exit
+        the third shaft before the day is over</color> or you will be forgotten in
+        the dark.
       objectReference: {fileID: 0}
     - target: {fileID: 3382342088380148150, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_fontSize
@@ -31482,6 +31482,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3371440074710708082, guid: 9293848b9833cb441872919e790d5c82, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
+    - target: {fileID: 3371440074710708082, guid: 9293848b9833cb441872919e790d5c82, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3536309244397358796, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
     - target: {fileID: 5994453806172519715, guid: 9293848b9833cb441872919e790d5c82, type: 3}
       propertyPath: timerAnimator
       value: 
@@ -31521,11 +31529,11 @@ PrefabInstance:
     - target: {fileID: 8342369062485213763, guid: 9293848b9833cb441872919e790d5c82, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
+      objectReference: {fileID: 11400000, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
     - target: {fileID: 8342369062485213763, guid: 9293848b9833cb441872919e790d5c82, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -1766910192009662871, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
+      objectReference: {fileID: -3536309244397358796, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
     - target: {fileID: 8735696481622922792, guid: 9293848b9833cb441872919e790d5c82, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -31630,6 +31638,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8735696482089574573, guid: 9293848b9833cb441872919e790d5c82, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
+    - target: {fileID: 8735696482089574573, guid: 9293848b9833cb441872919e790d5c82, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3536309244397358796, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
     - target: {fileID: 8735696482405535868, guid: 9293848b9833cb441872919e790d5c82, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -31694,6 +31710,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8735696482768298355, guid: 9293848b9833cb441872919e790d5c82, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
+    - target: {fileID: 8735696482768298355, guid: 9293848b9833cb441872919e790d5c82, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3536309244397358796, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
     - target: {fileID: 8735696482791998462, guid: 9293848b9833cb441872919e790d5c82, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

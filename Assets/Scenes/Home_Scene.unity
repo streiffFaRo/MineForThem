@@ -917,8 +917,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Current Day
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
-  m_sharedMaterial: {fileID: -1766910192009662871, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
+  m_sharedMaterial: {fileID: -3536309244397358796, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1138,8 +1138,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
-  m_sharedMaterial: {fileID: -1766910192009662871, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
+  m_sharedMaterial: {fileID: -3536309244397358796, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2074,6 +2074,10 @@ PrefabInstance:
         out on them your family won't be happy about this. \n\n<color=\"yellow\">If
         you run out of money, you lose!</color>"
       objectReference: {fileID: 0}
+    - target: {fileID: 3382342088380148150, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3536309244397358796, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
     - target: {fileID: 3442891958222570761, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_Name
       value: Infobox1
@@ -2453,8 +2457,8 @@ MonoBehaviour:
   m_text: There's nothing to do tonight. Your family is looking forward to spending
     time with you.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
-  m_sharedMaterial: {fileID: -1766910192009662871, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
+  m_sharedMaterial: {fileID: -3536309244397358796, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3245,8 +3249,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Stay Home
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
-  m_sharedMaterial: {fileID: -1766910192009662871, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
+  m_sharedMaterial: {fileID: -3536309244397358796, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4267,6 +4271,14 @@ PrefabInstance:
         family</color>. But Each evening there are new possibilities for money or
         other bonuses.
       objectReference: {fileID: 0}
+    - target: {fileID: 3382342088380148150, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
+    - target: {fileID: 3382342088380148150, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3442891958222570761, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_Name
       value: Infobox3
@@ -4277,7 +4289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8350874738019982421, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_text
-      value: Evening Activitys
+      value: Evening Activities
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
@@ -4362,8 +4374,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Family Happiness
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
-  m_sharedMaterial: {fileID: -1766910192009662871, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
+  m_sharedMaterial: {fileID: -3536309244397358796, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4753,8 +4765,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
-  m_sharedMaterial: {fileID: -1766910192009662871, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
+  m_sharedMaterial: {fileID: -3536309244397358796, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5281,8 +5293,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
-  m_sharedMaterial: {fileID: -1766910192009662871, guid: ca66ee08283a5f8428ebb87f2b650f5d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
+  m_sharedMaterial: {fileID: -3536309244397358796, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
