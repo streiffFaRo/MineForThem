@@ -560,19 +560,19 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 42fc24f20750f1440aa0042ad3e6fe67, type: 3}
     - target: {fileID: 6001632577123082974, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6001632577123082974, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 12154266}
+      objectReference: {fileID: 12154265}
     - target: {fileID: 6001632577123082974, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1170231354}
     - target: {fileID: 6001632577123082974, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: Credits
       objectReference: {fileID: 0}
     - target: {fileID: 6001632577123082974, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -580,7 +580,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6001632577123082974, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: MainMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6001632577123082974, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -610,6 +610,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6001632577233400471, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
+      propertyPath: credits
+      value: 
+      objectReference: {fileID: 12154266}
     - target: {fileID: 6001632577373411216, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
@@ -731,12 +735,28 @@ PrefabInstance:
       value: Menu-Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 6126300960745724509, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126300960745724509, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 12154265}
+    - target: {fileID: 6126300960745724509, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1563978267}
     - target: {fileID: 6126300960745724509, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseCredits
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126300960745724509, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: PlayClickSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126300960745724509, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6126300960745724509, guid: 7c05b14556fab0c498aafcc14de300ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName

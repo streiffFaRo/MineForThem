@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Color = UnityEngine.Color;
 using Random = UnityEngine.Random;
 
 public class HomeModeController : MonoBehaviour
@@ -32,7 +33,9 @@ public class HomeModeController : MonoBehaviour
 
     [Header("Checkboxen")]
     [SerializeField] Toggle heatToggle;
+    [SerializeField] private TextMeshProUGUI heatText;
     [SerializeField] Toggle foodToggle;
+    [SerializeField] private TextMeshProUGUI foodText;
 
     [Header("Continue Parts")] 
     [SerializeField] private string[] descriptionTexts;
@@ -44,6 +47,10 @@ public class HomeModeController : MonoBehaviour
     public int oldFamilyHappiness;
     public Animator familyUIAnimationController;
     public PlayerInputScript playerInputScript;
+
+    [Header("Colors")]
+    public Color colorRed;
+    public Color colorGrey;
 
     private void Awake()
     {
@@ -112,10 +119,14 @@ public class HomeModeController : MonoBehaviour
         if (heatToggle.isOn)
         {
             money = money - heat;
+            heatAmount.color = colorRed;
+            heatText.color = colorRed;
         }
         else
         {
             money = money + heat;
+            heatAmount.color = colorGrey;
+            heatText.color = colorGrey;
         }
 
         SetAmounts();
@@ -126,10 +137,14 @@ public class HomeModeController : MonoBehaviour
         if (foodToggle.isOn)
         {
             money = money - food;
+            foodAmount.color = colorRed;
+            foodText.color = colorRed;
         }
         else
         {
             money = money + food;
+            foodAmount.color = colorGrey;
+            foodText.color = colorGrey;
         }
         SetAmounts();
     }

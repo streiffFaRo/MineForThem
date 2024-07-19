@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,6 +11,8 @@ public class MainMenu : MonoBehaviour
 {
 
     public TextMeshProUGUI fpsText;
+    public GameObject credits;
+    public Vector3 onScreenPos;
 
     private int currentFPSCap = 0;
     private void Awake()
@@ -40,7 +43,7 @@ public class MainMenu : MonoBehaviour
             fpsText.text = currentFPSCap.ToString();
         }
         
-        
+        onScreenPos = new Vector3(credits.transform.position.x, credits.transform.position.y, credits.transform.position.z);
     }
     
     public void StartGame()
@@ -95,10 +98,18 @@ public class MainMenu : MonoBehaviour
 
     public void Credits()
     {
-        Debug.Log("Credits");
-        //TODO Cameraswipe left
+        credits.SetActive(true);
+        credits.transform.position = new Vector3(-100, -100, 0);
+        credits.transform.DOMove(onScreenPos, 0.5f);
+    }
+
+    public void CloseCredits()
+    {
+        Vector3 offScreenPos = new Vector3(-500, -500, 0);
+        credits.transform.DOMove(offScreenPos, 0.5f);
     }
     
+
     public void LoadMainMenu()
     {
         GameManager.instance.SetUpNewGame();

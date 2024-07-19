@@ -7,6 +7,8 @@ public class ShowButton : MonoBehaviour
 {
 
     private SpriteRenderer sprite;
+    public bool oneTimeUse = false;
+    private bool denyFunction = false;
 
     private void Awake()
     {
@@ -16,13 +18,21 @@ public class ShowButton : MonoBehaviour
     private void Start()
     {
         sprite.gameObject.SetActive(false);
+        if (GameManager.instance.currentDay > 0 && oneTimeUse)
+        {
+            denyFunction = true;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (col.gameObject.CompareTag("Player") && !denyFunction)
         {
             sprite.gameObject.SetActive(true);
+            if (oneTimeUse)
+            {
+                denyFunction = true;
+            }
         }
     }
 

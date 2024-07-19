@@ -6413,7 +6413,7 @@ PrefabInstance:
     - target: {fileID: 3382342088380148150, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_text
       value: In the <color="green">top left corner</color>, you can see how much
-        <color="green">time is left for your daily shift</color>. You need to <color="blue">exit
+        <color="green">time is left for your daily shift</color>. You need to <color="orange">exit
         the third shaft before the day is over</color> or you will be forgotten in
         the dark.
       objectReference: {fileID: 0}
@@ -31329,7 +31329,7 @@ PrefabInstance:
       propertyPath: m_text
       value: With your pickaxe you are able to dig and harvest the stones and gold
         in the mine. To <color="green">Dig </color>use <color="green">L Mouse</color>,
-        to <color="blue">place</color> use <color="blue">R Mouse</color>.
+        to <color="orange">place</color> use <color="orange">R Mouse</color>.
       objectReference: {fileID: 0}
     - target: {fileID: 3382342088380148150, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_fontSize
@@ -31339,6 +31339,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 32
       objectReference: {fileID: 0}
+    - target: {fileID: 3382342088380148150, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3536309244397358796, guid: ec4b1fa1598fbc943b59117ee605d193, type: 2}
     - target: {fileID: 3442891958222570761, guid: 21f2d30d6b7cf27498889058b13c883f, type: 3}
       propertyPath: m_Name
       value: Infobox1
