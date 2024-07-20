@@ -76,26 +76,27 @@ public class PlayerInputScript : MonoBehaviour
 
     private void OnCheatInput(InputAction.CallbackContext context)
     {
-        GameManager gameManager = GameManager.instance;
-        
+        //GameManager gameManager = GameManager.instance;
+        //
         if (context.performed)
         {
-            if (gameManager.currentDay <= 3)
-            {
-                VolumeManager.instance.GetComponent<AudioManager>().PlayGoldSound();
-                gameManager.currentDay = 4;
-                gameManager.savings = 99;
-                gameManager.hasBullet = true;
-                gameManager.pickaxeStrength = 100;
-                gameManager.familyHappiness = 7;
-            }
-            else
-            {
-                VolumeManager.instance.GetComponent<AudioManager>().PlayPickaxeSound();
-                gameManager.currentDay = 6;
-                gameManager.knowsPlan = true;
-                gameManager.metFriend = true;
-            }
+            Debug.Log("Cheated");
+        //    if (gameManager.currentDay <= 3)
+        //    {
+        //        VolumeManager.instance.GetComponent<AudioManager>().PlayGoldSound();
+        //        gameManager.currentDay = 4;
+        //        gameManager.savings = 99;
+        //        gameManager.hasBullet = true;
+        //        gameManager.pickaxeStrength = 100;
+        //        gameManager.familyHappiness = 7;
+        //    }
+        //    else
+        //    {
+        //        VolumeManager.instance.GetComponent<AudioManager>().PlayPickaxeSound();
+        //        gameManager.currentDay = 6;
+        //        gameManager.knowsPlan = true;
+        //        gameManager.metFriend = true;
+        //    }
         }
     }
 
@@ -148,7 +149,6 @@ public class PlayerInputScript : MonoBehaviour
             FindObjectOfType<Timer>()?.ToggleTimer();
             VolumeManager.instance.GetComponent<AudioManager>().currentAtmo.Pause();
             VolumeManager.instance.GetComponent<AudioManager>().MenuMusic.Play();
-            //TODO PauseSound
         }
         else if (allowInput)
         {
@@ -157,7 +157,6 @@ public class PlayerInputScript : MonoBehaviour
             FindObjectOfType<Timer>()?.ToggleTimer();
             VolumeManager.instance.GetComponent<AudioManager>().MenuMusic.Stop();
             VolumeManager.instance.GetComponent<AudioManager>().currentAtmo.UnPause();
-            //TODO UnpauseGameSound
         }
         
     }

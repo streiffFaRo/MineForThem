@@ -12,6 +12,5 @@ public class LobbyManager : MonoBehaviour
     public void LoadMineScene()
     {
         SceneManager.LoadScene("Mine_Scene");
-        //TODO Fade
     }
 }

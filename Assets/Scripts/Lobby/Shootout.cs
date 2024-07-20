@@ -19,7 +19,6 @@ public class Shootout : MonoBehaviour
     public GameObject säcke;
     public GameObject vorarbeiterDead;
     private bool shootoutDone = false;
-    //TODO VorarbeiterAnimator
 
     private void Awake()
     {

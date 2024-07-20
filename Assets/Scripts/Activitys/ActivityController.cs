@@ -177,6 +177,7 @@ public class ActivityController : MonoBehaviour
                 }
                 else
                 {
+                    currentStory = new Story(inkDay5Snitched.text);
                     Debug.Log("Error: Playing Day 6 without snitched!");
                 }
                 break;
@@ -202,11 +203,11 @@ public class ActivityController : MonoBehaviour
             }
             if (currentStory.currentTags.Contains("Jack"))
             {
-                Debug.Log("Jack Speaks");
+                VolumeManager.instance.GetComponent<AudioManager>().PlayJackTalk();
             }
             if (currentStory.currentTags.Contains("Sheriff"))
             {
-                Debug.Log("Sheriff Speaks");
+                VolumeManager.instance.GetComponent<AudioManager>().PlaySheriffTalk();
             }
             
         }

@@ -52,7 +52,6 @@ public class Timer : MonoBehaviour
     public void Countdown()
     {
         
-            //TODO Timer visuelles feedback wenn Timer unter 30 sec
             if (remainingTime <= 31 && timerText.color != Color.red)
             {
                 timerText.color = Color.red;

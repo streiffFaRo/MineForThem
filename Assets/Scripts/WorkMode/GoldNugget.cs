@@ -24,7 +24,6 @@ public class GoldNugget : MonoBehaviour
             GameManager.instance.UpdateGoldCount();
             uIController.UpdateGoldMined();
             collectSound.PlayCollectSound();
-            //TODO Play CollectSound
             Destroy(nugget);
         }
     }

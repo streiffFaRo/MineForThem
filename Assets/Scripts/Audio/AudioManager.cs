@@ -21,6 +21,8 @@ public class AudioManager : MonoBehaviour
     [Header("Talk Sounds")]
     public PlayRandomSound vorarbeiterTalk;
     public PlayRandomSound davyTalk;
+    public PlayRandomSound sheriffTalk;
+    public PlayRandomSound jackTalk;
     
     [Header("UI")]
     public PlayRandomSound uI_FlipPageSound;
@@ -76,7 +78,16 @@ public class AudioManager : MonoBehaviour
     {
         davyTalk.PlaySound();
     }
+    
+    public void PlaySheriffTalk()
+    {
+        sheriffTalk.PlaySound();
+    }
 
+    public void PlayJackTalk()
+    {
+        jackTalk.PlaySound();
+    }
     
     // --- UI Sounds
     

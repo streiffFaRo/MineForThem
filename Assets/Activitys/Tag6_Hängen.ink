@@ -44,7 +44,7 @@ Sheriff: "Good people, this scoundrel tried to defraud the mining company that s
 Sheriff: "Because of the attempted betrayal and the planned murder of a foreman, I hereby sentence him to death! Execute!" #Sheriff
 The lever is pulled and the platform that was still holding your friend falls away.
 You leave the square and on the way home you ask yourself whether you did the right thing.
-~Unity_Event("snitched")
+~Unity_Event("triggerEnding")
 -->END
 
 

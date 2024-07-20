@@ -366,7 +366,6 @@ public class GridGenerator : MonoBehaviour
         float reduceCleanGoldProbability = (cleanGoldProbability / 100) * goldChangeRate;
         blocks[2].probability += Mathf.RoundToInt(reduceCleanGoldProbability);
         blocks[3].probability = 100;
-        //TODO 100% Modular machen
     }
 
     public void KillGoldNuggets()
@@ -444,7 +443,6 @@ public class GridGenerator : MonoBehaviour
                         tilemap.SetTile(tileToCheck,null);
                         Instantiate(FindObjectOfType<MiningSystem>().goldNugget, middleBlockPos, Quaternion.identity);
                         i++;
-                        //TODO Modular machen -> In Miningsystem evtl eine Funktion erstellen
                     }
                 }
             }

@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
 
     public TextMeshProUGUI fpsText;
     public GameObject credits;
-    public Vector3 onScreenPos;
+    private Vector3 onScreenPos;
 
     private int currentFPSCap = 0;
     private void Awake()
@@ -42,8 +42,12 @@ public class MainMenu : MonoBehaviour
         {
             fpsText.text = currentFPSCap.ToString();
         }
+
+        if (credits != null)
+        {
+            onScreenPos = new Vector3(credits.transform.position.x, credits.transform.position.y, credits.transform.position.z);
+        }
         
-        onScreenPos = new Vector3(credits.transform.position.x, credits.transform.position.y, credits.transform.position.z);
     }
     
     public void StartGame()
